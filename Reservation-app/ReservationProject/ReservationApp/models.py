@@ -2,7 +2,7 @@
 from django.db import models
 
 
-def Flight_number(models.Model):
+class Flight_number(models.Model):
     number = models.CharField(max_length=200)
 
 
