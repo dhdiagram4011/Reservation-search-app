@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 """
 Django settings for ReservationProject project.
 
@@ -38,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'ReservationApp',
+    'authapp',
 ]
 
 MIDDLEWARE = [
