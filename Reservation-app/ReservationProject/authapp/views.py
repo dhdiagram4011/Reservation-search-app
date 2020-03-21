@@ -6,21 +6,19 @@ from django.views.generic import TemplateView
 
 
 class registration(TemplateView):
-    return render(request, 'authapp/registration.html')
+    template_name = 'authapp/registration.html'
 
 
 class login(TemplateView):
-    return render(request, 'authapp/login.html')
+    template_name = 'authapp/login.html'
 
 
 class logout(TemplateView):
-    return render(request, 'authapp/logout.html')
+    template_name = 'authapp/logout.html'
 
 
-class registrationSuccess(DetailView):
-    return render(request, 'authapp/registration_success.html')
-
-
+class registrationSuccess(TemplateView):
+    template_name = 'authapp/registration_success.html'
 
 
 
