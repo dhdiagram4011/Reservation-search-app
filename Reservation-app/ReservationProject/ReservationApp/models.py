@@ -2,31 +2,31 @@
 from django.db import models
 
 
-class Flight_number(models.Model):
+class flightNumber(models.Model):
     number = models.CharField(max_length=200)
 
 
-class Flight_aircraft(models.Model):
+class flightAircraft(models.Model):
     aircraft_name = models.CharField(max_length=200)
     aircraft_number = models.CharField(max_length=200)
 
 
-class Flight_section(models.Model):
+class flightSection(models.Model):
     starting_point = models.CharField(max_length=200)
     arrival = models.CharField(max_length=200)
     flight_time = models.CharField(max_length=200)
 
 
-class Seat_class(models.Model):
+class seatClass(models.Model):
     ranking = models.CharField(max_length=200)
 
 
-class Price(models.Model):
+class price(models.Model):
     peak_season_price = models.DecimalField(decimal_places=2, max_digits=8)
     low_season_price = models.DecimalField(decimal_places=2, max_digits=8)
 
 
-class Email_ticket(models.Model):
+class emailTicket(models.Model):
     method_of_payment = models.CharField(max_length=200)
     price = models.DecimalField(decimal_places=2, max_digits=8)
     ranking = models.CharField(max_length=200)
