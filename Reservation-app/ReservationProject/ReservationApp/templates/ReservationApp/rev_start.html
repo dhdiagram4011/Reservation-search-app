@@ -1,5 +1,5 @@
 {% block content %}
-<form action="/revstart" method="get">
+<form action="/revstart/schedule/" method="get">
 
 
 <!--
@@ -11,12 +11,22 @@ starting_point = forms.ChoiceField(label='출발지', choices=STARTINGPOINT)
 -->
 
 {% csrf_token %}
-가는날 | {{ form.daytogo }}<br/>
-오는날 | {{ form.comingDay }}<br/>
-출발지 | {{ form.starting_point }}<br/>
-도착지 | {{ form.arrival }}<br/>
-좌석등급 | {{ form.ranking }}<br/>
+<div>
+항공권 예매 페이지 입니다.<br/>
+구간별 검색이 가능합니다.<br/>
+비수기에는 성수기보다 10% 가격 할인으로 제공되며 성수기에는 평소보다 10% 인상된 기격으로 제공됩니다.<br/>
+<br/>
+<br/>
+<br/>
+<div>
+가는날 | {{ form.daytogo }}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;오는날 | {{ form.comingDay }}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;출발지 | {{ form.starting_point }}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;도착지 | {{ form.arrival }}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;좌석등급 | {{ form.ranking }}
 {% endblock %}
-
+<br/>
+<br/>
+<div>
+<br/>
+<br/>
+<input type="submit" , value="항공권 조회하기">
+</div>
 
 

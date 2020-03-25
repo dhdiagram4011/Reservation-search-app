@@ -3,6 +3,12 @@ from .models import flightNumber, flightAircraft, flightSection, seatClass, pric
 
 
 class reservationForm(forms.ModelForm):
+
+    class Meta:
+        model = flightSection
+        fields = "__all__"
+
+
     STARTINGPOINT = (
         ('GMP', '김포'),
         ('CJU', '제주'),

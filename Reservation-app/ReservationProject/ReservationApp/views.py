@@ -1,11 +1,10 @@
 # -*- coding: utf-8 -*-
 from django.shortcuts import render
+from .forms import reservationForm
 
-from django.views.generic.list
 
-
-#def index(request):
-#    return render(request, 'ReservationApp/index.html')
+def index(request):
+    return render(request, 'ReservationApp/index.html')
 
 
 def revstart(request):
@@ -17,7 +16,6 @@ def revstart(request):
         form = reservationForm()
     return render(request, 'ReservationApp/rev_start.html', {'form':form})
 
-    
 
-#def revsuccess(request):
-#    return render(request, 'ReservationApp/rev_success.html')
+def revsuccess(request):
+    return render(request, 'ReservationApp/rev_success.html')
