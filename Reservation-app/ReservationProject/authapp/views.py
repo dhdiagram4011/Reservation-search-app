@@ -1,12 +1,17 @@
 # -*- coding: utf-8 -*-
 from django.shortcuts import render
-from django.views.generic import ListView
-from django.views.generic import DetailView
+from .forms import registrationForm
 from django.views.generic import TemplateView
 
 
-class registration(TemplateView):
-    template_name = 'authapp/registration.html'
+def registration(request):
+    if request.method == 'POST':
+        form = registrationForm(request.POST)
+        if form.is_valid():
+            return render(request, 'authapp/registration_success.html')
+    else:
+        form = registrationForm()
+        return render(request, 'authapp/registration.html', {'form': form})
 
 
 class login(TemplateView):

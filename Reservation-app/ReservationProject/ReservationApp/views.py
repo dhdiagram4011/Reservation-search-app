@@ -7,6 +7,10 @@ def index(request):
     return render(request, 'ReservationApp/index.html')
 
 
+def schedule(request):
+    pass
+
+
 def revstart(request):
     if request.method == 'POST':
         form = reservationForm(request.POST)

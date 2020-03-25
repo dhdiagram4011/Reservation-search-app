@@ -1,1 +1,46 @@
-registration page
+{% block content %}
+<form action="/auth/registrationSuccess/" method="get">
+
+{% csrf_token %}
+<div>
+회원가입 페이지 입니다.<br/>
+아래의 정보를 모두 빠짐없이 정확하게 입력하여 주세요<br/>
+<br/>
+<br/>
+<br/>
+<div>
+한국(성) | {{ form.koreanLastname }}<br/>
+<br/>
+한국(이름) | {{ form.koreanFristname }}<br/>
+<br/>
+영문(이름) | {{ form.englishLastname }}<br/>
+<br/>
+영문(성) | {{ form.englishFirstname }}<br/>
+<br/>
+생년월일 ㅣ {{ form.birthday }}<br/>
+<br/>
+이메일 | {{ form.email }}<br/>
+<br/>
+주소 | {{ form.address }}<br/>
+<br/>
+상세주소 | {{ form.detailAddress }}<br/>
+<br/>
+핸드폰번호 | {{ form.phoneNumber }}<br/>
+<br/>
+회사명 | {{ form.companyName }}<br/>
+<br/>
+부서명 | {{ form.deaprtment }}<br/>
+<br/>
+직급 | {{ form.position }}<br/>
+<br/>
+유선전화번호 | {{ form.fixedlineTelephone }}<br/>
+{% endblock %}
+<br/>
+<br/>
+<div>
+<br/>
+<br/>
+<input type="submit" , value="가입하기">
+</div>
+
+
