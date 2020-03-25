@@ -4,22 +4,22 @@ from .models import flightNumber, flightAircraft, flightSection, seatClass, pric
 
 class reservationForm(forms.ModelForm):
     STARTINGPOINT = (
-        ('GMP','김포'),
-        ('CJU','제주'),
-        ('PUS','부산'),
+        ('GMP', '김포'),
+        ('CJU', '제주'),
+        ('PUS', '부산'),
     )
 
 
     ARRIVAL = (
-        ('GMP','김포'),
-        ('CJU','제주'),
-        ('PUS','부산'),
+        ('GMP', '김포'),
+        ('CJU', '제주'),
+        ('PUS', '부산'),
     )
 
 
     RANKING = (
-        ('PRES','프레스티지석'),
-        ('GEN','일반석'),
+        ('PRES', '프레스티지석'),
+        ('GEN', '일반석'),
     )
 
 

@@ -1,1 +1,22 @@
-rev_start page
+{% block content %}
+<form action="/revstart" method="get">
+
+
+<!--
+starting_point = forms.ChoiceField(label='출발지', choices=STARTINGPOINT)
+    arrival = forms.ChoiceField(label='도착지', choices=ARRIVAL)
+    ranking = forms.ChoiceField(label='좌석등급', choices=RANKING)
+    daytogo = forms.DateField(label='가는날')
+    comingDay = forms.DateField(label='오는날')
+-->
+
+{% csrf_token %}
+가는날 | {{ form.daytogo }}<br/>
+오는날 | {{ form.comingDay }}<br/>
+출발지 | {{ form.starting_point }}<br/>
+도착지 | {{ form.arrival }}<br/>
+좌석등급 | {{ form.ranking }}<br/>
+{% endblock %}
+
+
+
