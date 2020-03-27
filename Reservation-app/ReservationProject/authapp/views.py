@@ -1,7 +1,6 @@
 # -*- coding: utf-8 -*-
 from django.shortcuts import render
-from .forms import registrationForm
-from django.views.generic import TemplateView
+from .forms import registrationForm, loginForm
 
 
 def registration(request):
@@ -14,16 +13,28 @@ def registration(request):
         return render(request, 'authapp/registration.html', {'form': form})
 
 
-class login(TemplateView):
-    template_name = 'authapp/login.html'
+def login(request):
+    if request.method == 'POST':
+        form = loginForm(request.POST)
+        if form.is_valid():
+            return render(request, 'ReservationApp/index.html')
+    else:
+        form = loginForm()
+        return render(request, 'authapp/login.html', {'form': form})
 
 
-class logout(TemplateView):
-    template_name = 'authapp/logout.html'
+def logout(request):
+    if request.method == 'POST':
+        return render(request, 'ReservationApp/index.html')
+    else:
+        return render(request, 'ReservationApp/logout_error.html')
 
 
-class registrationSuccess(TemplateView):
-    template_name = 'authapp/registration_success.html'
-
-
-
+def registrationSuccess(request):
+    if request.method == 'POST':
+        form = registrationForm(request.POST)
+        if form.is_valid():
+            return render(request, 'authapp/registration_success.html')
+    else:
+        form = registrationForm()
+        return render(request, 'authapp/registration.html', {"form": form})

@@ -24,3 +24,9 @@ class registrationForm(forms.ModelForm):
     fixedlineTelephone = forms.CharField(label="유선전화번호")
 
 
+class loginForm(forms.ModelForm):
+
+    class Meta:
+        model = joinMembership
+        fields = "__all__"
+
