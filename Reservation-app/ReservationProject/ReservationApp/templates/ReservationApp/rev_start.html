@@ -1,16 +1,7 @@
 {% block content %}
-<form action="/revstart/schedule/" method="get">
-
-
-<!--
-starting_point = forms.ChoiceField(label='출발지', choices=STARTINGPOINT)
-    arrival = forms.ChoiceField(label='도착지', choices=ARRIVAL)
-    ranking = forms.ChoiceField(label='좌석등급', choices=RANKING)
-    daytogo = forms.DateField(label='가는날')
-    comingDay = forms.DateField(label='오는날')
--->
-
+<form action="/reservation/course_search/" method="get">
 {% csrf_token %}
+
 <div>
 항공권 예매 페이지 입니다.<br/>
 구간별 검색이 가능합니다.<br/>
@@ -26,7 +17,7 @@ starting_point = forms.ChoiceField(label='출발지', choices=STARTINGPOINT)
 <div>
 <br/>
 <br/>
-<input type="submit" , value="항공권 조회하기">
+<input type="submit" , name="arrival", value="항공권 조회하기">
 </div>
 
 
