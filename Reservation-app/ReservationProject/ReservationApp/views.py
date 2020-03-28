@@ -4,6 +4,7 @@ from .forms import reservationForm
 from .models import flightSection
 from django.http import HttpResponse
 
+
 def index(request):
     return render(request, 'ReservationApp/index.html')
 
@@ -27,16 +28,9 @@ def revsuccess(request):
 
 
 def course_search(request):
-    #courses = flightSection.objects.filter(request.GET[flightSection.arrival])  # 도착지 기준 조회
-    #courses = flightSection.objects.all(filter=request.GET[flightSection.arrival])
+    #courses = flightSection.objects.filter(request.GET[flightSection.starting_point,flightSection.arrival,flightSection.flight_time,flightSection.daytogo,flightSection.comingDay
+    #])  # 도착지 기준 조회
     courses = flightSection.objects.all()  # 전체 리스트 조회
     return render(request, 'ReservationApp/course_list.html', {
         'courses': courses,
     })
-
-
-
-#    context = {
-#        'courses' : courses,
-#    }
-#    return HttpResponse(template.render(context, request))
