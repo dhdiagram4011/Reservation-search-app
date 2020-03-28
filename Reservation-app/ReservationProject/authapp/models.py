@@ -9,6 +9,7 @@ class joinMembership(models.Model):
     englishFirstname = models.CharField(max_length=3, help_text='영문 성을 입력해 주세요')
     birthday = models.DateField()
     email = models.EmailField(max_length=50, help_text="해당 이메일 주소로 이메일 티켓이 발송됩니다")
+    password = models.CharField(max_length=20, help_text="패스워드를 입력하여 주세요")
     address = models.CharField(max_length=50)
     detailAddress = models.CharField(max_length=50, help_text='상세 주소를 입력해 주세요')
     phoneNumber = models.CharField(max_length=20, help_text='핸드폰 번호를 입력해 주세요')

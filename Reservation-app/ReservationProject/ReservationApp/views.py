@@ -18,7 +18,7 @@ def revstart(request):
             return render(request, 'ReservationApp/rev_success.html')
     else:
         form = reservationForm()
-    return render(request, 'ReservationApp/rev_start.html', {'form':form})
+    return render(request, 'ReservationApp/rev_start.html', {'form': form})
 
 
 def revsuccess(request):
