@@ -1,1 +1,15 @@
-registration_success page
+*_아래와 같이 회원가입이 완료되었습니다.<br/>
+<br/>
+<form action="/reservation/revstart/" method="post">
+{% block content %}
+{% for member in members %}
+{% csrf_token %}
+<br/>
+이메일(아이디) | {{ memeber.email }}<br/>     
+국문이름 | {{ member.koreanLastname }}<br/>     
+국문성 | {{ member.koreanFirstname }}<br/>     
+<br/>
+<input type="button">예악페이지바로가기
+<br/>
+{% endfor %}
+{% endblock %}

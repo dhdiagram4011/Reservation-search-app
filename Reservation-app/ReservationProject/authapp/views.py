@@ -1,12 +1,14 @@
 # -*- coding: utf-8 -*-
 from django.shortcuts import render
 from .forms import registrationForm, loginForm
+from .models import joinMembership
 
 
 def registration(request):
     if request.method == 'POST':
         form = registrationForm(request.POST)
         if form.is_valid():
+            members = joinMembership.objects.all().order_by('-id')[:1]
             return render(request, 'authapp/registration_success.html')
     else:
         form = registrationForm()
