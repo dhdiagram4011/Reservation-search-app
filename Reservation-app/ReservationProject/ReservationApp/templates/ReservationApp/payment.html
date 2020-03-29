@@ -1,19 +1,15 @@
-<form action="/reservation/payment/" method="post">
+<form action="" method="post">
 {% block content %}
-{% for course in courses %}
-{% csrf_token %}
+<br/>
+*_결제 및 예약정보 확인
 <br/>
 출발지 | {{ course.starting_point }}<br/>     
 도착지 | {{ course.arrival }}<br/>     
 비행시간 | {{ course.flight_time }}<br/>     
 가는날 | {{ course.daytogo }}<br/>    
-오는날 | {{ course.comingDay }} <input type="submit" , name="arrival", value="해당구간 예약하기">
+오는날 | {{ course.comingDay }}<br/>
 <br/>
 <br/>
-{% endfor %}
+<input type="submit" , name="arrival", value="결제하기">
 {% endblock %}
-
-
-
-
 

@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 from django.urls import path
-from .views import revstart, revsuccess, index, course_search
+from .views import revstart, revsuccess, index, course_search, payment
 
 
 urlpatterns = [
@@ -9,4 +9,5 @@ urlpatterns = [
     #path('revstart/schedule', schedule, name='schedule'),
     path('revsuccess/', revsuccess, name='revsuccess'),
     path('course_search/', course_search, name='course_search'),
+    path('payment/', payment, name='payment'),
 ]
