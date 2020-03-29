@@ -7,8 +7,7 @@
 도착지 | {{ course.arrival }}<br/>     
 비행시간 | {{ course.flight_time }}<br/>     
 가는날 | {{ course.daytogo }}<br/>    
-오는날 | {{ course.comingDay }} <input type="submit" , name="arrival", value="해당구간 예약하기">
-<br/>
+오는날 | {{ course.comingDay }} <button name="choice" value="{{ id }}">해당구간 예약하기</button>
 <br/>
 {% endfor %}
 {% endblock %}
