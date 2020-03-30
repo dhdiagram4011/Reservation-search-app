@@ -32,9 +32,10 @@ def payment(request):
 
 
 def course_search(request):
+    courses = flightSection.objects.all()
     #courses = flightSection.objects.order_by('arrival')
     #arrival = flightSection.objects.filter(arrival=arrival)
-    courses = flightSection.objects.filter(arrival=request.GET[flightSection.arrival])
+    #courses = flightSection.objects.filter(arrival=request.GET[flightSection.arrival])
     return render(request, 'ReservationApp/course_list.html', {
         'courses': courses,
     })

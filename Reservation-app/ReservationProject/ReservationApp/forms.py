@@ -13,6 +13,9 @@ class reservationForm(forms.ModelForm):
         ('GMP', '김포'),
         ('CJU', '제주'),
         ('PUS', '부산'),
+        ('ULS', '울산'),
+        ('DGU', '대구'),
+        ('CHJ', '청주'),
     )
 
 
@@ -20,6 +23,9 @@ class reservationForm(forms.ModelForm):
         ('GMP', '김포'),
         ('CJU', '제주'),
         ('PUS', '부산'),
+        ('ULS', '울산'),
+        ('DGU', '대구'),
+        ('CHJ', '청주'),
     )
 
 
