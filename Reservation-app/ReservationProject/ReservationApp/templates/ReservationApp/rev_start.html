@@ -10,7 +10,8 @@
 <br/>
 <br/>
 <div>
-가는날 | {{ form.daytogo }}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;오는날 | {{ form.comingDay }}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;출발지 | {{ form.starting_point }}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;도착지 | {{ form.arrival }}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;좌석등급 | {{ form.ranking }}
+가는날 | <input type="date" value='{{form.daytogo}}'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;오는날 | <input type="date" value='{{form.comingDay}}'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;출발지 | {{ form.starting_point }}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;도착지 | {{ form.arrival }}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!--좌석등급 | {{ form.ranking }}-->
+
 {% endblock %}
 <br/>
 <br/>

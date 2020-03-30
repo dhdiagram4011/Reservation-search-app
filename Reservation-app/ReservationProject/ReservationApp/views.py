@@ -1,8 +1,9 @@
 # -*- coding: utf-8 -*-
 from django.shortcuts import render
 from .forms import reservationForm
-from .models import flightSection
+from .models import flightSection, seatClass
 from django.http import HttpResponse
+from django.db.models import Q
 
 
 def index(request):
@@ -32,10 +33,8 @@ def payment(request):
 
 
 def course_search(request):
-    courses = flightSection.objects.all()
-    #courses = flightSection.objects.order_by('arrival')
-    #arrival = flightSection.objects.filter(arrival=arrival)
-    #courses = flightSection.objects.filter(arrival=request.GET[flightSection.arrival])
+    #courses = flightSection.objects.all()
+    courses = flightSection.objects.filter(starting_point=str(flightSection.starting_point), arrival=str(flightSection.arrival), daytogo=str(flightSection.daytogo), comingDay=str(flightSection.comingDay))
     return render(request, 'ReservationApp/course_list.html', {
         'courses': courses,
     })
