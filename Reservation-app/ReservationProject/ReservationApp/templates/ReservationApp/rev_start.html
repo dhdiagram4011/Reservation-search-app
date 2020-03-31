@@ -1,24 +1,31 @@
 {% block content %}
 <form action="/reservation/course_search/" method="get">
-{% csrf_token %}
-
 <div>
-항공권 예매 페이지 입니다.<br/>
+<p style=font-size:12px>항공권 예매 페이지 입니다.<br/>
 구간별 검색이 가능합니다.<br/>
 비수기에는 성수기보다 10% 가격 할인으로 제공되며 성수기에는 평소보다 10% 인상된 기격으로 제공됩니다.<br/>
+</p>
 <br/>
 <br/>
 <br/>
 <div>
-가는날 | <input type="date" value='{{form.daytogo}}'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;오는날 | <input type="date" value='{{form.comingDay}}'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;출발지 | {{ form.starting_point }}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;도착지 | {{ form.arrival }}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!--좌석등급 | {{ form.ranking }}-->
+{% csrf_token %}
+가는날 | <input type="date" value="{{form.daytogo}}">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;오는날 | <input type="date" value="{{form.comingDay}}">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;출발지 | {{ form.starting_point }}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;도착지 | {{ form.arrival }}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="submit", value="항공권 조회하기"><br/><!--좌석등급 | {{ form.ranking }}-->
+<!--가는날 | <input type="date" value="{{form.daytogo}}">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;오는날 | <input type="date" value="{{form.comingDay}}">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;출발지 | {{ form.starting_point }}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;도착지 | {{ form.arrival }}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;좌석등급 | {{ form.ranking }}-->
 
 {% endblock %}
 <br/>
 <br/>
+<br/>
 <div>
+<div>
+<p style=font-size:12px>주) 대한항공DEV | 대표이사 : 우기홍 외 1명 | 주소 : 서울특별시 강서구 하늘길 260<br/>
+대표전화 : 1588-2001 / 02-2656-2001<br/>
+사업자 등록번호 : 110-81-14794 | 통신판매업신고 : 강서 제 16-3010<br/>
+개인정보보호책임자 : 여객사업본부장 이진호 전무<br/>
+© 1997-2020 KOREAN AIR<br/></p>
 <br/>
-<br/>
-<input type="submit", value="항공권 조회하기">
+</div>
 </div>
 
 

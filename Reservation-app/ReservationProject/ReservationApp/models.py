@@ -15,8 +15,8 @@ class flightSection(models.Model):
     starting_point = models.CharField(max_length=5)
     arrival = models.CharField(max_length=5)
     flight_time = models.DateTimeField()
-    daytogo = models.DateField(blank=True, null=True, default='')
-    comingDay = models.DateField(blank=True, null=True, default='')
+    daytogo = models.DateField()
+    comingDay = models.DateField()
 
 class seatClass(models.Model):
     ranking = models.CharField(max_length=10)
