@@ -1,21 +1,16 @@
 # -*- coding: utf-8 -*-
 from django.shortcuts import render, redirect
 from .forms import registrationForm, loginForm
-from .models import joinMembership
-
-
-def registersuccess(request):
-    members = joinMembership.objects.all().order_byO('-id')[:1]
-    return render(request, 'authapp/registration_success.html', {"members": members})
+from .models import joinmembership
 
 
 def registration(request):
     if request.method == 'POST':
         form = registrationForm(request.POST)
         if form.is_valid():
-            members = joinMembership.objects.all().order_by('-id')[:1]
-            #return render(request, 'authapp/registration_success.html')
-            return redirect('registrationSuccess')
+            members = joinmembership.objects.all().order_by('-id')[:1]
+        return render(request, 'authapp/registration_success.html', {'members': members})
+        #return redirect('registrationSuccess')
     else:
         form = registrationForm()
         return render(request, 'authapp/registration.html', {'form': form})
@@ -38,6 +33,18 @@ def logout(request):
         return render(request, 'ReservationApp/logout_error.html')
 
 
+#def registrationSuccess(request):
+#    if request.method == 'POST':
+#        members = joinMembership.objects.all()
+#        form = registrationForm(request.POST)
+#        return render(request, 'authapp/registration_success.html', {'members': members})
+#    else:
+#        form = registrationForm()
+#    return render(request, 'authapp/registration.html', {'form': form})
+
+
 def registrationSuccess(request):
-        members = joinMembership.objects.all().order_by('-id')[:1]
-        return render(request, 'authapp/registration_success.html', {"members": members})
+    members = joinmembership.objects.all().order_by('-id')[:1]
+    return render(request, 'authapp/registration_success.html', {'members': members})
+
+

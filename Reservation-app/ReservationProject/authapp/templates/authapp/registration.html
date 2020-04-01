@@ -1,21 +1,28 @@
 {% block content %}
-<form action="/auth/registrationSuccess/" method="post">
-
-{% csrf_token %}
+<form action="" method="post">
 <div>
+{% csrf_token %}
+<p style=font-size:13px;>
+<br/>
+<br/>
 회원가입 페이지 입니다.<br/>
 아래의 정보를 모두 빠짐없이 정확하게 입력하여 주세요<br/>
 <br/>
+로그인 시 "이메일" 주소를 기반으로 로그인 합니다.<br/> 
+"이메일" 주소와 "패스워드"를 정확하게 입력하여 주세요<br/>
+</p>
+<br/>
 <br/>
 <br/>
 <div>
+
 한국(성) | {{ form.koreanLastname }}      한국(이름) | {{ form.koreanFristname }}<br/>      
 <br/>
 영문(이름) | {{ form.englishLastname }}      영문(성) | {{ form.englishFirstname }}<br/>
 <br/>
 생년월일 ㅣ {{ form.birthday }}<br/>
 <br/>
-이메일 | {{ form.email }}      패스워드 | {{ form.password }}<br/>
+<strong>이메일</strong> | {{ form.email }}      <strong>패스워드</strong> | {{ form.password }}<br/>
 <br/>
 주소 | {{ form.address }}      상세주소 | {{ form.detailAddress }}<br/>
 <br/>
@@ -24,13 +31,16 @@
 회사명 | {{ form.companyName }}      부서명 | {{ form.deaprtment }}      직급 | {{ form.position }}<br/>
 <br/>
 유선전화번호 | {{ form.fixedlineTelephone }}<br/>
+<br/>
+<br/>
+<!--<a class="btn btn-lg btn-info" href="{% url 'registrationSuccess' %}">가입하기</a>-->
+<input type="submit" value="가입하기">
 {% endblock %}
 <br/>
 <br/>
 <div>
 <br/>
 <br/>
-<input type="submit" , value="가입하기">
 </div>
 
 

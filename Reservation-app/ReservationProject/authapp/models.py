@@ -2,7 +2,7 @@
 from django.db import models
 
 
-class joinMembership(models.Model):
+class joinmembership(models.Model):
     koreanLastname = models.CharField(max_length=1, help_text='국문 이름을 입력해 주세요')
     koreanFirstname = models.CharField(max_length=3, help_text='국문 성을 입력해 주세요')
     englishLastname = models.CharField(max_length=10, help_text='영문 이름을 입력해 주세요')

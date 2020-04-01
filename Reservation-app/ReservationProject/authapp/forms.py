@@ -1,13 +1,13 @@
 from django import forms
-from .models import joinMembership
+from .models import joinmembership
 
 
 class registrationForm(forms.ModelForm):
 
     class Meta:
-        model = joinMembership
+        model = joinmembership
         fields = "__all__"
-
+        #fields = ['email', 'koreanLastname', 'koreanFirstname']
 
     koreanLastname = forms.CharField(label='한국(성)')
     koreanFristname = forms.CharField(label='한국(이름)')
@@ -28,7 +28,7 @@ class registrationForm(forms.ModelForm):
 class loginForm(forms.ModelForm):
 
     class Meta:
-        model = joinMembership
+        model = joinmembership
         fields = "__all__"
 
     email = forms.EmailField(label="이메일", help_text="가입시 입력하신 이메일을 입력하여 주세요")
