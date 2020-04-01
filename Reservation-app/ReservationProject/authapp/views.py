@@ -4,13 +4,18 @@ from .forms import registrationForm, loginForm
 from .models import joinmembership
 
 
+def registrationSuccess(request):
+    userlists = joinmembership.objects.all()
+    return render(request, 'authapp/registration_success.html', {'userlists': userlists})
+
+
 def registration(request):
     if request.method == 'POST':
         form = registrationForm(request.POST)
         if form.is_valid():
-            members = joinmembership.objects.all().order_by('-id')[:1]
-        return render(request, 'authapp/registration_success.html', {'members': members})
-        #return redirect('registrationSuccess')
+            userlists = joinmembership.objects.all()
+            #  return render(request, 'authapp/registration_success.html', {'members': members})
+        return redirect('registrationSuccess')
     else:
         form = registrationForm()
         return render(request, 'authapp/registration.html', {'form': form})
@@ -41,10 +46,3 @@ def logout(request):
 #    else:
 #        form = registrationForm()
 #    return render(request, 'authapp/registration.html', {'form': form})
-
-
-def registrationSuccess(request):
-    members = joinmembership.objects.all().order_by('-id')[:1]
-    return render(request, 'authapp/registration_success.html', {'members': members})
-
-

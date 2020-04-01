@@ -1,5 +1,5 @@
 {% block content %}
-<form action="" method="post">
+<form action="{% url 'registrationSuccess' %}" method="post">
 <div>
 {% csrf_token %}
 <p style=font-size:13px;>
@@ -15,7 +15,6 @@
 <br/>
 <br/>
 <div>
-
 한국(성) | {{ form.koreanLastname }}      한국(이름) | {{ form.koreanFristname }}<br/>      
 <br/>
 영문(이름) | {{ form.englishLastname }}      영문(성) | {{ form.englishFirstname }}<br/>

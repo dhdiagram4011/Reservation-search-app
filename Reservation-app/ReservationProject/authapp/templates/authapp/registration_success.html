@@ -1,13 +1,12 @@
 *_아래와 같이 회원가입이 완료되었습니다.<br/>
 <br/>
 {% block content %}
-{% for member in members %}
+{% for userlist in userlists %}
 <br/>
-<strong>이메일(아이디)</strong> | {{ memeber.email }}<br/>     
-국문이름 | {{ member.koreanLastname }}<br/>     
-국문성 | {{ member.koreanFirstname }}<br/>     
+<strong>이메일(아이디)</strong> | {{ userlist.email }}<br/>     
+국문이름 | {{ userlist.koreanLastname }}<br/>     
+국문성 | {{ userlist.koreanFirstname }}<br/>     
 <br/>
-<input type="button">예약페이지바로가기
 <br/>
 {% endfor %}
 {% endblock %}

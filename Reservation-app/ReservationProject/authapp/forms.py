@@ -6,8 +6,8 @@ class registrationForm(forms.ModelForm):
 
     class Meta:
         model = joinmembership
-        fields = "__all__"
-        #fields = ['email', 'koreanLastname', 'koreanFirstname']
+        #fields = "__all__"
+        fields = ['email', 'koreanLastname', 'koreanFirstname']
 
     koreanLastname = forms.CharField(label='한국(성)')
     koreanFristname = forms.CharField(label='한국(이름)')
