@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 from django.shortcuts import render, redirect
 from .forms import registrationForm, loginForm
-from .models import skyuser
+from .models import MyUser
 from django.utils import timezone
 from django.template.loader import render_to_string
 from django.core.mail import EmailMessage
@@ -9,13 +9,13 @@ from django.core.mail import EmailMessage
 
 def registrationSuccess(request):
     #userlists = joinmembership.objects.all().order_by('-id')[:1]
-    userlists = skyuser.objects.filter(published_date__lte=timezone.now()).order_by('published_date')[:1]
+    userlists = MyUser.objects.filter(published_date__lte=timezone.now()).order_by('published_date')[:1]
     return render(request, 'authapp/registration_success.html', {'userlists': userlists})
 
 
 # 회원가입 후 가입정보 이메일 발송
 def usermail(request):
-    userlists = skyuser.objects.filter(published_date__lte=timezone.now()).order_by('published_date')[:1]
+    userlists = MyUser.objects.filter(published_date__lte=timezone.now()).order_by('published_date')[:1]
     title = "[KOREANAIR]회원가입을 환영합니다"
     html_messsage = render_to_string('authapp/registration_success.html', {'userlists': userlists})
     email = EmailMessage(title, html_messsage, to=[skyuser.email])

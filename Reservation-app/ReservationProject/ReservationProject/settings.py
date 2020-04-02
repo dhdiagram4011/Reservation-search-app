@@ -98,7 +98,7 @@ EMAIL_PORT = '587'
 EMAIL_HOST_USER = 'dhdiagram@gmail.com'
 EMAIL_USE_TLS = True
 
-# AUTH_USER_MODEL = 'authapp.User'
+AUTH_USER_MODEL = 'authapp.MyUser'
 
 
 #DATETIME_FORMAT = '%Y-%m-%d'
