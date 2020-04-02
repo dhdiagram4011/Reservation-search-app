@@ -1,5 +1,5 @@
 {% block content %}
-<form action="{% url 'registrationSuccess' %}" method="post">
+<form method="POST" class="">{% csrf_token %}
 <div>
 {% csrf_token %}
 <p style=font-size:13px;>
@@ -15,7 +15,7 @@
 <br/>
 <br/>
 <div>
-한국(성) | {{ form.koreanLastname }}      한국(이름) | {{ form.koreanFristname }}<br/>      
+한국(성) | {{ form.koreanLastname }}      한국(이름) | {{ form.koreanFirstname }}<br/>      
 <br/>
 영문(이름) | {{ form.englishLastname }}      영문(성) | {{ form.englishFirstname }}<br/>
 <br/>
@@ -27,13 +27,13 @@
 <br/>
 핸드폰번호 | {{ form.phoneNumber }}<br/>
 <br/>
-회사명 | {{ form.companyName }}      부서명 | {{ form.deaprtment }}      직급 | {{ form.position }}<br/>
+회사명 | {{ form.companyName }}      부서명 | {{ form.department }}      직급 | {{ form.position }}<br/>
 <br/>
 유선전화번호 | {{ form.fixedlineTelephone }}<br/>
 <br/>
 <br/>
 <!--<a class="btn btn-lg btn-info" href="{% url 'registrationSuccess' %}">가입하기</a>-->
-<input type="submit" value="가입하기">
+<button type="submit" class="">가입하기</button>
 {% endblock %}
 <br/>
 <br/>

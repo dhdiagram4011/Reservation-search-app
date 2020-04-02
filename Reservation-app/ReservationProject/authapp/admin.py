@@ -1,16 +1,16 @@
 # -*- coding: utf-8 -*-
 from django.contrib import admin
-from .models import joinmembership
+from .models import skyuser
 
 
-class joinmembershipAdmin(admin.ModelAdmin):
+class skyuserAdmin(admin.ModelAdmin):
     list_display = ['id','koreanLastname', 'koreanFirstname', 'englishLastname',
                     'englishFirstname', 'birthday', 'email',
                     'email', 'address', 'detailAddress', 'phoneNumber',
                     'companyName', 'department', 'position', 'fixedlineTelephone']
 
 
-admin.site.register(joinmembership, joinmembershipAdmin)
+admin.site.register(skyuser, skyuserAdmin)
 
 
 

@@ -1,12 +1,16 @@
-*_아래와 같이 회원가입이 완료되었습니다.<br/>
+입력하신 가입정보는 다음과 같습니다.<br/>
 <br/>
-{% block content %}
+다시한번 확인을 해주시기 바랍니다.<br/>
+<br/>
+<br/>
+<br/>
 {% for userlist in userlists %}
-<br/>
 <strong>이메일(아이디)</strong> | {{ userlist.email }}<br/>     
 국문이름 | {{ userlist.koreanLastname }}<br/>     
-국문성 | {{ userlist.koreanFirstname }}<br/>     
-<br/>
-<br/>
+국문성 | {{ userlist.koreanFirstname }}<br/>    
 {% endfor %}
-{% endblock %}
+<br/>
+<strong>가입해 주셔서 대단히 감사합니다.</strong>
+<br/>
+<br/>
+<a class="save btn-default" href="{% url 'login' %}">로그인 바로가기</a>
