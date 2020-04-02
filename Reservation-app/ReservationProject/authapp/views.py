@@ -70,13 +70,7 @@ def logout(request):
         return render(request, 'ReservationApp/logout_error.html')
 
 
-
-
-
-
-
-
-#def registrationSuccess(request):
+# def registrationSuccess(request):
 #    if request.method == 'POST':
 #        members = joinMembership.objects.all()
 #        form = registrationForm(request.POST)

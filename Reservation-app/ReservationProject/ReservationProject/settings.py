@@ -89,6 +89,18 @@ DATABASES = {
     }
 }
 
+from django.urls import reverse_lazy
+LOGIN_REDIRECT_URL = '/reservation/revstart'
+
+# EMAIL
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = '587'
+EMAIL_HOST_USER = 'dhdiagram@gmail.com'
+EMAIL_USE_TLS = True
+
+# AUTH_USER_MODEL = 'authapp.User'
+
+
 #DATETIME_FORMAT = '%Y-%m-%d'
 
 # Password validation
