@@ -39,7 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'ReservationApp',
-    'authapp',
+    'SignupApp',
     'debug_toolbar',
 ]
 
@@ -98,7 +98,7 @@ EMAIL_PORT = '587'
 EMAIL_HOST_USER = 'dhdiagram@gmail.com'
 EMAIL_USE_TLS = True
 
-AUTH_USER_MODEL = 'authapp.MyUser'
+AUTH_USER_MODEL = 'SignupApp.MyUser'
 
 
 #DATETIME_FORMAT = '%Y-%m-%d'
@@ -146,4 +146,10 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
-STATIC_URL = '/static/'
+STATIC_URL = '/Users/dohyoungkim/Downloads/Reservation-search-app/Reservation-app/ReservationProject/static/'
+
+
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, "static"),
+    '/Users/dohyoungkim/Downloads/Reservation-search-app/Reservation-app/ReservationProject/static/',
+)

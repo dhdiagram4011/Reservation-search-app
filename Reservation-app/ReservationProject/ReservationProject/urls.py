@@ -22,7 +22,7 @@ from django.conf import settings
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('reservation/', include('ReservationApp.urls')),
-    path('auth/', include('authapp.urls')),
+    path('auth/', include('SignupApp.urls')),
 ]
 
 if settings.DEBUG:

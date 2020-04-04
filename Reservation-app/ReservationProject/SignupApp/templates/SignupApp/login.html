@@ -1,0 +1,33 @@
+{% block content %}
+<head>
+<style>
+body {    
+background-image:url('{{ STATIC_URL }}/asian01.jpeg')
+}
+</style>
+</head>
+<body>
+<form action="/reservation/revstart/" method="get">
+
+{% csrf_token %}
+<div>
+<p style="backgroud-color:white;">
+항공권 예약을 위한 로그인 페이지 입니다.<br/>
+가입시 입력한 이메일/패스워드를 정확히 입력하여 주세요<br/>
+</p>
+<br/>
+<br/>
+<br/>
+<div>
+<strong>아이디</strong> | {{ form.username }}      <strong>패스워드</strong> | {{ form.password }}<br/>
+{% endblock %}
+<br/>
+<br/>
+<div>
+<br/>
+<br/>
+<input type="submit" , value="로그인">
+</div>
+</body>
+
+

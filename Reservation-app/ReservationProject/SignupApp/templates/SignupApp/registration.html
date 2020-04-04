@@ -1,7 +1,7 @@
 {% block content %}
-<form method="POST" class="">{% csrf_token %}
+<form action="" method="post">
+    {% csrf_token %}
 <div>
-{% csrf_token %}
 <p style=font-size:13px;>
 <br/>
 <br/>
@@ -15,25 +15,21 @@
 <br/>
 <br/>
 <div>
-한국(성) | {{ form.koreanLastname }}      한국(이름) | {{ form.koreanFirstname }}<br/>      
+{{ form.as_p }}
+<!--한국(성) | {{ form.koreanLastname }}      한국(이름) | {{ form.koreanFirstname }}<br/>      
 <br/>
 영문(이름) | {{ form.englishLastname }}      영문(성) | {{ form.englishFirstname }}<br/>
-<br/>
-생년월일 ㅣ {{ form.birthday }}<br/>
 <br/>
 <strong>이메일</strong> | {{ form.email }}      <strong>패스워드</strong> | {{ form.password }}<br/>
 <br/>
 주소 | {{ form.address }}      상세주소 | {{ form.detailAddress }}<br/>
 <br/>
-핸드폰번호 | {{ form.phoneNumber }}<br/>
+핸드폰번호 | {{ form.phoneNumber }}<br/>-->
 <br/>
-회사명 | {{ form.companyName }}      부서명 | {{ form.department }}      직급 | {{ form.position }}<br/>
-<br/>
-유선전화번호 | {{ form.fixedlineTelephone }}<br/>
 <br/>
 <br/>
 <!--<a class="btn btn-lg btn-info" href="{% url 'registrationSuccess' %}">가입하기</a>-->
-<button type="submit" class="">가입하기</button>
+<input type="submit" value="가입하기">
 {% endblock %}
 <br/>
 <br/>
