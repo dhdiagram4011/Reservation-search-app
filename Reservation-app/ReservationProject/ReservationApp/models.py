@@ -42,8 +42,8 @@ class flightAircraft(models.Model):
 
 
 class flightSection(models.Model):
-    starting_point = models.CharField(max_length=5, choices=STARTINGPOINT)
-    arrival = models.CharField(max_length=5, choices=ARRIVAL)
+    starting_point = models.CharField(max_length=5, choices=STARTINGPOINT, default='김포')
+    arrival = models.CharField(max_length=5, choices=ARRIVAL, default='김포')
     flight_time = models.DateTimeField()
     daytogo = models.DateField()
     comingDay = models.DateField()
