@@ -151,5 +151,5 @@ STATIC_URL = '/Users/dohyoungkim/Downloads/Reservation-search-app/Reservation-ap
 
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, "static"),
-    '/Users/dohyoungkim/Downloads/Reservation-search-app/Reservation-app/ReservationProject/static/',
+    '/Users/dohyoungkim/Downloads/Reservation-search-app/Reservation-app/ReservationProject/static',
 )

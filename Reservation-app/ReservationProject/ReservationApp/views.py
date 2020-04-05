@@ -35,13 +35,12 @@ def payment(request):
 
 
 def course_search(request):
-    #  courses = flightSection.objects.all()
-    #  courses = flightSection.objects.filter(Q(starting_point=str(flightSection.starting_point) | Q(arrival=str(flightSection.arrival)) | Q(daytogo=str(flightSection.daytogo)) | Q(comingDay=str(flightSection.comingDay))))
-    courses = flightSection.objects.filter(arrival=request.GET['arrival'])
-    #  courses = flightSection.objects.all()
+    courses = flightSection.objects.filter(daytogo=request.GET['daytogo'],comingDay=request.GET['comingDay'],starting_point=request.GET['starting_point'],arrival=request.GET['arrival'])
     print(courses)
+    print(request.GET['starting_point'])
     print(request.GET['arrival'])
-    #  courses = flightSection.objects.filter(starting_point=str(flightSection.starting_point), arrival=str(flightSection.arrival), daytogo=str(flightSection.daytogo), comingDay=str(flightSection.comingDay))
+    print(request.GET['daytogo'])
+    print(request.GET['comingDay'])
     return render(request, 'ReservationApp/course_list.html', {
         'courses': courses,
     })

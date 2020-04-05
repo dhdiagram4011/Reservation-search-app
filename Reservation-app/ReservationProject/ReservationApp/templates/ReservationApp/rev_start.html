@@ -1,8 +1,9 @@
 {% block content %}
+{% load static %}
 <head>
 <style>
 body {    
-background-image:url('{{ STATIC_URL }}/korean-air-img.png')
+background-image:url("{{ STATIC_URL }}/korean-air-img.png")
 }
 </style>
 </head>
@@ -18,8 +19,8 @@ background-image:url('{{ STATIC_URL }}/korean-air-img.png')
 <br/>
 <div>
 {% csrf_token %}
-가는날 | {{form.daytogo}}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;오는날 | {{form.comingDay}}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;출발지 | {{ form.starting_point }}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;도착지 | {{ form.arrival }}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="submit", value="항공권 조회하기"><br/><!--좌석등급 | {{ form.ranking }}-->
-<!--가는날 | <input type="date" value="{{form.daytogo}}">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;오는날 | <input type="date" value="{{form.comingDay}}">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;출발지 | {{ form.starting_point }}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;도착지 | {{ form.arrival }}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;좌석등급 | {{ form.ranking }}-->
+가는날 | {{form.daytogo}}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;오는날 | {{form.comingDay}}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;출발지 | {{ form.starting_point }}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;도착지 | {{ form.arrival }}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;좌석등급 | {{ form.ranking }}&nbsp;&nbsp;&nbsp;&nbsp;<input type="submit", value="항공권 조회하기"><br/>
+<!--가는날 | <input type="date" value="{{form.daytogo}}">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;오는날 | <input type="date" value="{{form.comingDay}}">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;출발지 | {{ form.starting_point }}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;도착지 | {{ form.arrival }}&nbsp;&nbsp;&nbsp;&nbsp;좌석등급 | {{ form.ranking }}-->
 
 {% endblock %}
 <br/>
