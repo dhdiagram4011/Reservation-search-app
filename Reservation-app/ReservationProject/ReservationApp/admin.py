@@ -13,7 +13,7 @@ class flightNumberAdmin(admin.ModelAdmin):
 
 
 class flightSectionAdmin(admin.ModelAdmin):
-    list_display = ['id', 'starting_point','arrival','flight_time', 'daytogo', 'comingDay']
+    list_display = ['id', 'starting_point','arrival','flight_time', 'daytogo', 'comingDay','seatClass','price']
     #list_display = ['arrival', 'starting_point','flight_time', 'daytogo', 'comingDay']
 
 

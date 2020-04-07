@@ -2,8 +2,9 @@
 from django.shortcuts import render
 from .forms import reservationForm
 from .models import flightSection, seatClass
-from django.http import HttpResponse
+from django.http import HttpResponse, Http404, HttpResponseNotFound
 from datetime import datetime
+
 #  from django.db.models import Q
 
 
@@ -34,17 +35,13 @@ def payment(request):
     return render(request, 'ReservationApp/payment.html')
 
 
+# 티켓조회 
 def course_search(request):
     courses = flightSection.objects.filter(daytogo=request.GET['daytogo'],comingDay=request.GET['comingDay'],starting_point=request.GET['starting_point'],arrival=request.GET['arrival'])
-    print(courses)
-    print(request.GET['starting_point'])
-    print(request.GET['arrival'])
-    print(request.GET['daytogo'])
-    print(request.GET['comingDay'])
     return render(request, 'ReservationApp/course_list.html', {
         'courses': courses,
     })
-
+    
 
 #def course_search(request):
 #    course_pk = request.GET['arrival']
