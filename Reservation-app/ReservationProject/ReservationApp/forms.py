@@ -51,7 +51,3 @@ class reservationForm(forms.ModelForm):
     ranking = forms.ChoiceField(label='좌석등급', choices=RANKING)
     daytogo = forms.DateField(label='가는날', input_formats=['%m-%d-%Y', ])
     comingDay = forms.DateField(label='오는날', input_formats=['%m-%d-%Y', ])
-
-
-
-

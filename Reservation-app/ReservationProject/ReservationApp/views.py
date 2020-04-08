@@ -5,9 +5,6 @@ from .models import flightSection, seatClass
 from django.http import HttpResponse, Http404, HttpResponseNotFound
 from datetime import datetime
 
-#  from django.db.models import Q
-
-
 
 def index(request):
     return render(request, 'ReservationApp/index.html')
@@ -21,7 +18,7 @@ def revstart(request):
     if request.method == 'POST':
         form = reservationForm(request.POST)
         if form.is_valid():
-            return render(request, 'ReservationApp/rev_success.html')  # redirect
+            return render(request, 'ReservationApp/rev_success.html') 
     else:
         form = reservationForm()
     return render(request, 'ReservationApp/rev_start.html', {'form': form})
@@ -35,13 +32,16 @@ def payment(request):
     return render(request, 'ReservationApp/payment.html')
 
 
-# 티켓조회 
+# 티켓조회 및 해당 일자에 티켓이 없을 시 예외처리
 def course_search(request):
-    courses = flightSection.objects.filter(daytogo=request.GET['daytogo'],comingDay=request.GET['comingDay'],starting_point=request.GET['starting_point'],arrival=request.GET['arrival'])
+    try:
+        courses = flightSection.objects.filter(daytogo=request.GET['daytogo'],comingDay=request.GET['comingDay'],starting_point=request.GET['starting_point'],arrival=request.GET['arrival'])
+    except courses.DoesNotExist:
+        raise Http404("해당 출발일에 예약 가능한 항공권이 없습니다")
     return render(request, 'ReservationApp/course_list.html', {
         'courses': courses,
     })
-    
+
 
 #def course_search(request):
 #    course_pk = request.GET['arrival']
