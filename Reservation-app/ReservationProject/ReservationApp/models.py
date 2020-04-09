@@ -42,13 +42,19 @@ class flightAircraft(models.Model):
 
 
 class flightSection(models.Model):
-    price = models.ForeignKey('price', on_delete=models.CASCADE, default='', null=True)
-    seatClass = models.ForeignKey('seatClass', on_delete=models.CASCADE, default='', null=True)
+    #price = models.ForeignKey('price', on_delete=models.CASCADE, default='', null=True)
+    #seatClass = models.ForeignKey('seatClass', on_delete=models.CASCADE, default='', null=True)
     starting_point = models.CharField(max_length=5, choices=STARTINGPOINT, default='구간선택', null=True)
     arrival = models.CharField(max_length=5, choices=ARRIVAL, default='구간선택', null=True)
     flight_time = models.DateTimeField()
     daytogo = models.DateField()
     comingDay = models.DateField()
+
+    #def __str__(self):
+    #    return self.price
+
+    #def __str__(self):
+    #    return self.seatClass
 
 
 class seatClass(models.Model):

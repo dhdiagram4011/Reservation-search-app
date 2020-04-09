@@ -3,12 +3,21 @@
 {% for course in courses %}
 {% csrf_token %}
 <br/>
-출발지 | {{ course.starting_point }}<br/>     
-도착지 | {{ course.arrival }}<br/>     
-비행시간 | {{ course.flight_time }}<br/>     
-가는날 | {{ course.daytogo }}<br/>    
-오는날 | {{ course.comingDay }} <br/>
-<button name="choice" value="{{ id }}">해당구간 예약하기</button>
+<style>
+ul{
+    list-style:none;
+}
+</style>
+<div id="wrapper" style="margin-bottom:30px;">
+<ul style="border:1px; color:gray;">
+<li style="float:left"><strong>출발지 | {{ course.starting_point }}</strong><br/></li>
+<li style="float:left; margin-left:30px;"><strong>도착지 | {{ course.arrival }}</strong><br/></li>
+<li style="float:left; margin-left:30px;">가는날 | {{ course.daytogo }}<br/></li>
+<li style="float:left; margin-left:30px;">오는날 | {{ course.comingDay }} <br/></li>
+<li style="float:left; margin-left:30px;">비행시간 | {{ course.flight_time }}<br/></li>
+<li style="float:left; margin-left:900px; position:absolute;"><button name="choice" value="{{ id }}">해당구간 예약하기</button></li>
+</ul>
+
 <br/>
 {% endfor %}
 {% endblock %}
