@@ -9,12 +9,8 @@ background-image:url('{{ STATIC_URL }}/korean-air-img.png')
 </style>
 </head>
 <body>
-<form action="/reservation/course_search/" method="get">
+<form action="/reservation/date_search_result/" method="get">
 <div>
-<p style=font-size:12px>항공권 예매 페이지 입니다.<br/>
-구간별 검색이 가능합니다.<br/>
-비수기에는 성수기보다 10% 가격 할인으로 제공되며 성수기에는 평소보다 10% 인상된 기격으로 제공됩니다.<br/>
-</p>
 <br/>
 <br/>
 <br/>
@@ -25,15 +21,13 @@ ul{
     list-style:none;
 }
 </style>
-<div id="wrapper" style="margin-bottom:30px;">
+<div id="daybox" style="position:absolute; margin-top:100px;">
+<p style="font-size:12px;"><strong>출발일 기준 전체 항공권 조회하기</strong> | 아래에서 출발하시고 싶으신 날짜를 선택해 주세요</p>
 <ul style="border:1px; color:gray;">
-<li style="float:left"><strong>가는날 | {{form.daytogo}}</strong></li>
-<li style="float:left; margin-left:30px;"><strong>오는날 | {{form.comingDay}}</strong></li>
-<li style="float:left; margin-left:30px;">출발지 | {{ form.starting_point }}</li>
-<li style="float:left; margin-left:30px;">도착지 | {{ form.arrival }}</li>
+<li style="float:left"><strong>출발일 | {{form.daytogo}}</strong></li>
 <li style="float:left; margin-left:30px;"><input type="submit", value="항공권 조회하기"></li>
 </ul>
-
+</div>
 {% endblock %}
 <br/>
 <br/>

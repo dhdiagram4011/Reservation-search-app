@@ -3,6 +3,14 @@ from .models import flightNumber, flightAircraft, flightSection, seatClass, pric
 import datetime
 
 
+class datesearchForm(forms.ModelForm):
+    class Meta:
+        model = flightSection
+        fields = "__all__"
+
+    daytogo = forms.DateField(label='가는날', input_formats=['%m-%d-%Y', ])
+
+
 class reservationForm(forms.ModelForm):
 
     class Meta:
