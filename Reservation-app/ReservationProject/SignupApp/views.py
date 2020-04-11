@@ -32,11 +32,6 @@ def registration(request):
         return render(request, 'SignupApp/registration.html', {'form': form})
 
 
-#def registrationSuccess(request):
-#    userlists = MyUser.objects.all().order_by('-id')[:1]
-#    return render(request, 'SignupApp/registration_success.html', {'userlists': userlists})
-
-
 def login(request):
     if request.method == 'POST':
         form = loginForm(request.POST)
