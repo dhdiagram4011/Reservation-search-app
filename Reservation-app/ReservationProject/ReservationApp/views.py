@@ -14,6 +14,9 @@ def schedule(request):
     pass
 
 
+def intro(request):
+    return render(request, 'ReservationApp/intro.html')
+
 def date_search(request):
     if request.method == 'POST':
         form = datesearchForm(request.POST)
