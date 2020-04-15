@@ -5,7 +5,7 @@ from .models import MyUser
 class registrationForm(forms.ModelForm):
     class Meta:
         model = MyUser
-        fields = ['username','email','password','koreanLastname', 'koreanFirstname', 'englishLastname','englishFirstname','address','detailAddress','phoneNumber']
+        fields = ['username','email','password','koreanLastname','koreanFirstname', 'englishLastname','englishFirstname','address','detailAddress','phoneNumber']
         #fields = "__all__"
 
     username = forms.CharField(label="로그인아이디")

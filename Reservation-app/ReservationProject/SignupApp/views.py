@@ -25,7 +25,7 @@ def registration(request):
         form = registrationForm(request.GET)
         return render(request, 'SignupApp/registration.html' , {'form':form})
     elif request.method == 'POST':
-        form = loginForm(request.POST)
+        form = registrationForm(request.POST)
         post = form.save()
         username = request.POST['username']
         email = request.POST['email']
