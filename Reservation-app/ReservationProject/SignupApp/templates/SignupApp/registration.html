@@ -1,6 +1,5 @@
 {% block content %}
-<form action="" method="post">
-    {% csrf_token %}
+<form method="POST">{% csrf_token %}
 <div>
 <p style=font-size:13px;>
 <br/>
@@ -15,8 +14,10 @@
 <br/>
 <br/>
 <div>
-{{ form.as_p }}
-<!--한국(성) | {{ form.koreanLastname }}      한국(이름) | {{ form.koreanFirstname }}<br/>      
+<!--{ form.as_p }}-->
+아이디 | {{ form.username }}<br/>
+<br/>
+한국(성) | {{ form.koreanLastname }}      한국(이름) | {{ form.koreanFirstname }}<br/>      
 <br/>
 영문(이름) | {{ form.englishLastname }}      영문(성) | {{ form.englishFirstname }}<br/>
 <br/>
@@ -24,7 +25,7 @@
 <br/>
 주소 | {{ form.address }}      상세주소 | {{ form.detailAddress }}<br/>
 <br/>
-핸드폰번호 | {{ form.phoneNumber }}<br/>-->
+핸드폰번호 | {{ form.phoneNumber }}<br/>
 <br/>
 <br/>
 <br/>

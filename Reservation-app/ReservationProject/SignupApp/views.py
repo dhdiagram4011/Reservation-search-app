@@ -20,23 +20,36 @@ def usermail(request):
 
 # 회원가입
 def registration(request):
-    if request.method == 'POST':
-        form = registrationForm(request.POST)
-        if form.is_valid():
-            new_user = form.save(commit=False)
-            new_user.set_password(form.cleaned_date['password'])
-            new_user.save()
-        return redirect('registrationSuccess')
-    else:
-        form = registrationForm()
-        return render(request, 'SignupApp/registration.html', {'form': form})
+    if request.method == 'GET':
+        form = registrationForm(request.GET)
+        return render(request, 'SignupApp/registration.html' , {'form':form})
+    elif request.method == 'POST':
+        form = loginForm(request.POST)
+        post = form.save()
+        username = request.POST["username"]
+        email = request.POST["email"]
+        password = request.POST["password"]
+        koreanLastname = request.POST["koreanLastname"]
+        koreanFirstname = request.POST["koreanFirstname"]
+        englishLastname = request.POST["englishLastname"]
+        englishFirstname = request.POST["englishFirstname"]
+        address = request.POST["address"]
+        detailAddress = request.POST["detailAddress"]
+        phoneNumber = request.POST["phoneNumber"]
+        ###post.published_date = timezone.now()
+    return redirect('registrationSuccess')
+
+
+def registrationSuccess(request):
+    userlists = MyUser.objects.filter(created_date__lte=timezone.now()).order_by('-created_date')[:1]
+    return render(request, 'SignUpApp/registration_success.html', {'userlists': userlists})
 
 
 def login(request):
     if request.method == 'POST':
         form = loginForm(request.POST)
-        if form.is_valid():
-            return render(request, 'ReservationApp/index.html')
+        if MyUser.objects.filter(username=request.GET['username'],password=request.GET['password']).exists():
+            return render(request, 'ReservationApp/rev_start.html')
     else:
         form = loginForm()
         return render(request, 'SignupApp/login.html', {'form': form})
@@ -49,11 +62,3 @@ def logout(request):
         return render(request, 'ReservationApp/logout_error.html')
 
 
-def registrationSuccess(request):
-    if request.method == 'GET':
-        userlists = MyUser.objects.all().order_by('-id')[:1]
-        form = registrationForm(request.POST)
-        return render(request, 'SignUpApp/registration_success.html', {'userlists': userlists})
-    else:
-        form = registrationForm()
-    return render(request, 'SignUpApp/registration.html', {'form': form})
