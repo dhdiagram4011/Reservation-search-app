@@ -13,7 +13,7 @@ class MyUser(AbstractUser):
     detailAddress = models.CharField(max_length=200, help_text='상세 주소를 입력해 주세요')
     phoneNumber = models.CharField(max_length=15, help_text='핸드폰 번호를 입력해 주세요')
     created_date = models.DateTimeField(default=timezone.now)
-    published_date = models.DateTimeField(blank=True, null=True)
+    published_date = models.DateTimeField(default=timezone.now)
 
     def publish(self):
         self.published_date = timezone.now()

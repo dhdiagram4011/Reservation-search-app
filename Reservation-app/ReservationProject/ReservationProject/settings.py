@@ -90,7 +90,7 @@ DATABASES = {
 }
 
 from django.urls import reverse_lazy
-LOGIN_REDIRECT_URL = '/reservation/revstart'
+LOGIN_REDIRECT_URL = '/reservation/revstart/'
 
 # EMAIL
 EMAIL_HOST = 'smtp.gmail.com'

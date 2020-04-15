@@ -6,6 +6,7 @@ class registrationForm(forms.ModelForm):
     class Meta:
         model = MyUser
         fields = ['username','email','password','koreanLastname', 'koreanFirstname', 'englishLastname','englishFirstname','address','detailAddress','phoneNumber']
+        #fields = "__all__"
 
     username = forms.CharField(label="로그인아이디")
     email = forms.EmailField(label="이메일")
@@ -22,7 +23,8 @@ class registrationForm(forms.ModelForm):
 class loginForm(forms.ModelForm):
     class Meta:
         model = MyUser
-        fields = ('username', 'password')
+        fields = ['username', 'password']
+        #fields = "__all__"
 
     username = forms.CharField(label="아이디", help_text="가입시 입력하신 아이디를 입력하여 주세요")
     password = forms.CharField(label="패스워드", help_text="가입시 입력하신 패스워드를 입력하여 주세요", widget=forms.PasswordInput())

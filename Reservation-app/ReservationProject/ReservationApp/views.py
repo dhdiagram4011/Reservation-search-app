@@ -19,7 +19,7 @@ def intro(request):
     return render(request, 'ReservationApp/intro.html')
 
 
-@login_required
+# @login_required
 def date_search(request):
     if request.method == 'POST':
         form = datesearchForm(request.POST)
@@ -30,7 +30,7 @@ def date_search(request):
     return render(request, 'ReservationApp/date_search.html', {'form': form})
 
 
-@login_required
+# @login_required
 def revstart(request):
     if request.method == 'POST':
         form = reservationForm(request.POST)
@@ -54,10 +54,14 @@ def payment(request):
 
 
 # 티켓조회 및 해당 일자에 티켓이 없을 시 별도 안내 페이지 요청
-@login_required
+# @login_required
 def course_search(request):
     if flightSection.objects.filter(starting_point=request.GET['starting_point'],arrival=request.GET['arrival'],daytogo=request.GET['daytogo'],comingDay=request.GET['comingDay']).exists():
         courses = flightSection.objects.filter(starting_point=request.GET['starting_point'],arrival=request.GET['arrival'],daytogo=request.GET['daytogo'],comingDay=request.GET['comingDay'])
+        print(request.GET['starting_point'])
+        print(request.GET['arrival'])
+        print(request.GET['daytogo'])
+        print(request.GET['comingDay'])
         return render(request, 'ReservationApp/course_list.html', {'courses': courses})
     else:
         return render(request, 'ReservationApp/sch_does_not_exist.html')
@@ -73,7 +77,7 @@ def course_search(request):
 #    })
 
 
-@login_required
+# @login_required
 def date_search_result(request):
     try:
         courses = flightSection.objects.filter(daytogo=request.GET['daytogo'])
