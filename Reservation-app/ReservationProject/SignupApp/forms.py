@@ -15,11 +15,12 @@ class registrationForm(forms.ModelForm):
     email = forms.EmailField(label="이메일")
     password = forms.CharField(label="패스워드", widget=forms.PasswordInput())
 
+
     def clean_username(self):
         username = self.cleaned_data['username']
         if MyUser.objects.filter(username=username).exists():
             print("이미 해당 아이디는 존재합니다")
-        return username
+        return HttpResponseRedirect('/auth/register/')
 
 
 
