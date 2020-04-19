@@ -19,9 +19,7 @@ class registrationForm(forms.ModelForm):
     def clean_username(self):
         username = self.cleaned_data['username']
         if MyUser.objects.filter(username=username).exists():
-            print("이미 해당 아이디는 존재합니다")
-        return HttpResponseRedirect('/auth/register/')
-
+            raise forms.ValidationError('이미 해당 아이디는 존재합니다')
 
 
 class loginForm(forms.ModelForm):
