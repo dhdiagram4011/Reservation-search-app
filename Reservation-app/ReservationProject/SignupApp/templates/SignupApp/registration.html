@@ -1,6 +1,6 @@
 {% block content %}
 <form method="POST">
-{% csrf_token %}
+    {% csrf_token %}
 <div>
 <p style=font-size:13px;>
 <br/>
@@ -15,6 +15,14 @@
 <br/>
 <br/>
 <div>
+{% if messages %}
+<ul class="messages">
+    {% for message in messages %}
+    <li>{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+    {% endfor %}
+</ul>
+{% endif %}
+
 <!--{{ form.as_p }}-->
 아이디 | {{ form.username }}<br/>
 <br/>

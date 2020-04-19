@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 from django.urls import path
-from .views import login, logout, registration, registrationSuccess
+from .views import login, logout, registration, registrationSuccess, already_exists
 
 
 urlpatterns = [
@@ -8,4 +8,5 @@ urlpatterns = [
     path('logout/', logout, name='logout'),
     path('register/', registration, name='registration'),
     path('registrationSuccess/', registrationSuccess, name='registrationSuccess'),
+    path('already_exists/', already_exists, name='already_exists'),
 ]

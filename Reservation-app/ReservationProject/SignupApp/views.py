@@ -55,8 +55,11 @@ def registration(request):
 
 def registrationSuccess(request):
     userlists = MyUser.objects.filter(created_date__lte=timezone.now()).order_by('-created_date')[:1]
-    return render(request, 'SignUpApp/registration_success.html', {'userlists': userlists})
+    return render(request, 'SignupApp/registration_success.html', {'userlists': userlists})
 
+
+def already_exists(request):
+    return render(request, 'SignupApp/already_exists.html')
 
 # koreanLastname, koreanFirstname, englishLastname, englishFirstname, address, detailAddress , phoneNumber
 # 로그인 시 아이디 존재여부 확인
