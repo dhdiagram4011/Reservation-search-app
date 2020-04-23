@@ -79,7 +79,7 @@ def login(request):
         else:
             customer = MyUser.objects.get(username=username)
             if check_password(password, customer.password):
-                request.session['username'] = customer.id
+                request.session['user'] = customer.id
                 
                 return redirect('loginSuccess')
             else:
@@ -88,12 +88,12 @@ def login(request):
 
 
 def loginSuccess(request):
-    userinfo = request.session.get('username')
-    print(userinfo)
+    user_pk = request.session.get('user')
+    print(user_pk)
 
-    if userinfo:
-        customer = MyUser.objects.get(pk=userinfo)
-        return HttpResponse(customer.username)  
+    if user_pk:
+        user_pk = MyUser.objects.get(pk=user_pk)
+        return HttpResponse(user_pk.username)  
     
     return HttpResponse("로그인이 완료되었습니다")
 
