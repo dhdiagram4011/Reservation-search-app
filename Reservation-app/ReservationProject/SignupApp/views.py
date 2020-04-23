@@ -6,6 +6,8 @@ from django.utils import timezone
 from django.template.loader import render_to_string
 from django.core.mail import EmailMessage
 from django.http import JsonResponse
+from django.contrib.auth.hashers import check_password
+from django.http import HttpResponse
 
 
 # 회원가입 후 가입정보 이메일 발송
@@ -26,7 +28,9 @@ def registration(request):
         return render(request, 'SignupApp/registration.html' , {'form':form})
     elif request.method == 'POST':
         form = registrationForm(request.POST)
-        if form.is_valid():
+        if MyUser.objects.filter(username=request.GET['username'],password=request.GET['password']).exists():
+            return render(request, 'SignupApp/already_exists.html')
+        else:
             post = form.save()
             username = request.POST["username"]
             email = request.POST["email"]
@@ -49,7 +53,6 @@ def registration(request):
             print(request.POST["detailAddress"])
             print(request.POST["phoneNumber"])
             usermail()
-        ###post.published_date = timezone.now()
         return redirect('registrationSuccess')
 
 
@@ -61,26 +64,42 @@ def registrationSuccess(request):
 def already_exists(request):
     return render(request, 'SignupApp/already_exists.html')
 
-# koreanLastname, koreanFirstname, englishLastname, englishFirstname, address, detailAddress , phoneNumber
-# 로그인 시 아이디 존재여부 확인
+
 def login(request):
-    if MyUser.objects.filter(username = request.GET['username'],password = request.GET['password']).exists():
-        customer = MyUser.objects.filter(username = request.GET['username'],password = request.GET['password'])
-        return render(request, 'ReservationApp/rev_start.html', {'customer': customer})
-    else:
+    if request.method == 'GET':
         form = loginForm()
         return render(request, 'SignupApp/login.html', {'form': form})
+    else:
+        username = request.POST.get('username')
+        password = request.POST.get('password')
+        
+        res_data = {}
+        if not (username and password):
+            res_data['error'] = "아이디 패스워드를 모두 채워주세요"
+        else:
+            customer = MyUser.objects.get(username=username)
+            if check_password(password, customer.password):
+                request.session['username'] = customer.id
+                
+                return redirect('loginSuccess')
+            else:
+                res_data['error'] = "아이디/패스워드가 올바르지 않습니다"
+        return render(request, 'SignupApp/login.html', res_data)
 
 
-#def login(request):
-#    if MyUser.objects.filter(username=request.GET['username'], password=request.GET['password']).exists():
-#        customer = MyUser.objects.filter(username=request.GET['username'], password=request.GET['password'])
-#        print(request.GET['username'])
-#        print(request.GET['password'])
-#        return render(request, 'ReservationApp/rev_start.html')
-#    else:
-#        form = loginForm()
-#        return render(request, 'SignupApp/login.html', {'form': form})
+def loginSuccess(request):
+    userinfo = request.session.get('username')
+    print(userinfo)
+
+    if userinfo:
+        customer = MyUser.objects.get(pk=userinfo)
+        return HttpResponse(customer.username)  
+    
+    return HttpResponse("로그인이 완료되었습니다")
+
+        #customer = MyUser.objects.filter(username=request.GET['username'])
+        #print(customer)
+        #return render(request, 'SignupApp/login_success.html')
 
 
 def logout(request):
@@ -90,3 +109,6 @@ def logout(request):
         return render(request, 'ReservationApp/logout_error.html')
 
 
+
+def unregister(request):
+    pass
