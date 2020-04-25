@@ -88,7 +88,8 @@ def loginSuccess(request):
         username = request.GET['username']
         print(username)
         user_pk = MyUser.objects.get(username=username)
-        #return HttpResponse(user_pk.username, user_pk.email)
+        #return render(request, 'SignupApp/login_success.html')
+        #return HttpResponse(user_pk.username)
         return redirect('/reservation/revstart/')
     else:
         return HttpResponse("아이디 또는 패스워드를 다시 확인해 주세요")
