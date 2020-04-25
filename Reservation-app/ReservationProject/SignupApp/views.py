@@ -67,7 +67,10 @@ def already_exists(request):
 def login(request):
     username = request.GET.get('username')
     password = request.GET.get('password')
-    user = authenticate(request, username=username, password=password)
+    email = request.GET.get('email')
+    address = request.GET.get('address')
+    detailAddress = request.GET.get('detailAddress')
+    user = authenticate(request, username=username, password=password, email=email, address=address, detailAddress=detailAddress)
     if user is not None:
     #if MyUser.objects.filter(username=request.GET['username'],password=request.GET['password']).exists():
         login(request, user)
@@ -81,7 +84,7 @@ def login(request):
 
 
 def loginSuccess(request):
-    user_pk = request.session.get('user')
+    user_pk = MyUser.objects.filter(username=request.GET['username'])
     print(user_pk)
 
     if MyUser.objects.filter(username=request.GET['username'],password=request.GET['password']).exists():
@@ -89,10 +92,18 @@ def loginSuccess(request):
         print(username)
         user_pk = MyUser.objects.get(username=username)
         #return render(request, 'SignupApp/login_success.html')
-        #return HttpResponse(user_pk.username)
-        return redirect('/reservation/revstart/')
+        return HttpResponse(
+            user_pk.username + '님 로그인 되었습니다.<br/>'
+            '<br/>'
+            '<a href="/reservation/revstart/" style="font-size:15px">항공권 예매 페이지 바로가기</a><br/>'
+            '<a href="/auth/myinfo/" style="font-size:15px">내 정보 바로가기</a><br/>'
+         )
     else:
-        return HttpResponse("아이디 또는 패스워드를 다시 확인해 주세요")
+        return HttpResponse(
+            '아이디 또는 패스워드를 다시 확인해 주세요<br/>'
+            '<br/>'
+            '<a href="/auth/login/" style="font-size:15px">로그인 페이지로 돌아가기</a>'
+            )
 
 
 def logout(request):
@@ -101,6 +112,20 @@ def logout(request):
     else:
         return render(request, 'ReservationApp/logout_error.html')
 
+
+def myinfo(request):
+    myprofile_pk = MyUser.objects.filter(username=request.GET['username'])
+
+    if myprofile_pk:
+        myprofile = MyUser.objects.get(pk=myprofile_pk)
+        print(myprofile)
+        return HttpResponse(
+            "아이디 : " + myprofile.username + '<br/>',
+            "이메일 : " + myprofile.email + '<br/>', 
+            "주소 : " + myprofile.address + '<br/>',
+            "상세주소 : " + myprofile.detailAddress + '<br/>',
+            "가입일 : " + myprofile.created_date + '<br/>',  
+    )
 
 
 def unregister(request):
