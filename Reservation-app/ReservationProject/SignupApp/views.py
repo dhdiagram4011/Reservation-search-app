@@ -8,6 +8,7 @@ from django.core.mail import EmailMessage
 from django.http import JsonResponse
 from django.contrib.auth.hashers import check_password
 from django.http import HttpResponse
+from django.contrib.auth import authenticate
 
 
 # 회원가입 후 가입정보 이메일 발송
@@ -28,9 +29,7 @@ def registration(request):
         return render(request, 'SignupApp/registration.html' , {'form':form})
     elif request.method == 'POST':
         form = registrationForm(request.POST)
-        if MyUser.objects.filter(username=request.GET['username'],password=request.GET['password']).exists():
-            return render(request, 'SignupApp/already_exists.html')
-        else:
+        if form.is_valid():
             post = form.save()
             username = request.POST["username"]
             email = request.POST["email"]
@@ -66,40 +65,33 @@ def already_exists(request):
 
 
 def login(request):
-    if request.method == 'GET':
-        form = loginForm()
-        return render(request, 'SignupApp/login.html', {'form': form})
+    username = request.GET.get('username')
+    password = request.GET.get('password')
+    user = authenticate(request, username=username, password=password)
+    if user is not None:
+    #if MyUser.objects.filter(username=request.GET['username'],password=request.GET['password']).exists():
+        login(request, user)
+        print(username)
+        print(password)
+        return redirect('loginSuccess')
     else:
-        username = request.POST.get('username')
-        password = request.POST.get('password')
-        
-        res_data = {}
-        if not (username and password):
-            res_data['error'] = "아이디 패스워드를 모두 채워주세요"
-        else:
-            customer = MyUser.objects.get(username=username)
-            if check_password(password, customer.password):
-                request.session['user'] = customer.id
-                
-                return redirect('loginSuccess')
-            else:
-                res_data['error'] = "아이디/패스워드가 올바르지 않습니다"
-        return render(request, 'SignupApp/login.html', res_data)
+        form = loginForm()
+        return render(request, 'SignupApp/login.html', {'form':form})
+
 
 
 def loginSuccess(request):
     user_pk = request.session.get('user')
     print(user_pk)
 
-    if user_pk:
-        user_pk = MyUser.objects.get(pk=user_pk)
-        return HttpResponse(user_pk.username)  
-    
-    return HttpResponse("로그인이 완료되었습니다")
-
-        #customer = MyUser.objects.filter(username=request.GET['username'])
-        #print(customer)
-        #return render(request, 'SignupApp/login_success.html')
+    if MyUser.objects.filter(username=request.GET['username'],password=request.GET['password']).exists():
+        username = request.GET['username']
+        print(username)
+        user_pk = MyUser.objects.get(username=username)
+        #return HttpResponse(user_pk.username, user_pk.email)
+        return redirect('/reservation/revstart/')
+    else:
+        return HttpResponse("아이디 또는 패스워드를 다시 확인해 주세요")
 
 
 def logout(request):

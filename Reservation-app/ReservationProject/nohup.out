@@ -1,0 +1,209 @@
+Watching for file changes with StatReloader
+Not Found: /
+[25/Apr/2020 12:46:41] "GET / HTTP/1.1" 404 12812
+Not Found: /favicon.ico
+[25/Apr/2020 12:46:41] "GET /favicon.ico HTTP/1.1" 404 12863
+[25/Apr/2020 12:46:48] "GET /auth/register/ HTTP/1.1" 200 4095
+[25/Apr/2020 12:56:08] "GET /auth/register/ HTTP/1.1" 200 4095
+[25/Apr/2020 13:01:53] "GET /admin/ HTTP/1.1" 200 20569
+[25/Apr/2020 13:01:53] "GET /Users/dohyoungkim/Downloads/Reservation-search-app/Reservation-app/ReservationProject/static/admin/fonts/Roboto-Bold-webfont.woff HTTP/1.1" 200 86184
+[25/Apr/2020 13:01:53] "GET /Users/dohyoungkim/Downloads/Reservation-search-app/Reservation-app/ReservationProject/static/admin/fonts/Roboto-Light-webfont.woff HTTP/1.1" 200 85692
+[25/Apr/2020 13:01:53] "GET /Users/dohyoungkim/Downloads/Reservation-search-app/Reservation-app/ReservationProject/static/admin/fonts/Roboto-Regular-webfont.woff HTTP/1.1" 200 85876
+[25/Apr/2020 13:02:01] "GET /admin/SignupApp/myuser/ HTTP/1.1" 200 43601
+[25/Apr/2020 13:02:01] "GET /Users/dohyoungkim/Downloads/Reservation-search-app/Reservation-app/ReservationProject/static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 200 271751
+[25/Apr/2020 13:02:01] "GET /Users/dohyoungkim/Downloads/Reservation-search-app/Reservation-app/ReservationProject/static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 200 128820
+[25/Apr/2020 13:02:01] "GET /admin/jsi18n/ HTTP/1.1" 200 3223
+Internal Server Error: /auth/register/
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/django/utils/datastructures.py", line 78, in __getitem__
+    list_ = super().__getitem__(key)
+KeyError: 'username'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/dohyoungkim/Downloads/Reservation-search-app/Reservation-app/ReservationProject/SignupApp/views.py", line 31, in registration
+    if MyUser.objects.filter(username=request.GET['username'],password=request.GET['password']).exists():
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/django/utils/datastructures.py", line 80, in __getitem__
+    raise MultiValueDictKeyError(key)
+django.utils.datastructures.MultiValueDictKeyError: 'username'
+[25/Apr/2020 13:03:07] "POST /auth/register/ HTTP/1.1" 500 84546
+Internal Server Error: /auth/register/
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/django/utils/datastructures.py", line 78, in __getitem__
+    list_ = super().__getitem__(key)
+KeyError: 'username'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/dohyoungkim/Downloads/Reservation-search-app/Reservation-app/ReservationProject/SignupApp/views.py", line 31, in registration
+    if MyUser.objects.filter(username=request.GET['username'],password=request.GET['password']).exists():
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/django/utils/datastructures.py", line 80, in __getitem__
+    raise MultiValueDictKeyError(key)
+django.utils.datastructures.MultiValueDictKeyError: 'username'
+[25/Apr/2020 13:03:21] "POST /auth/register/ HTTP/1.1" 500 84548
+/Users/dohyoungkim/Downloads/Reservation-search-app/Reservation-app/ReservationProject/SignupApp/views.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+April 25, 2020 - 12:46:26
+Django version 2.2.1, using settings 'ReservationProject.settings'
+Starting development server at http://0:80/
+Quit the server with CONTROL-C.
+Watching for file changes with StatReloader
+[25/Apr/2020 13:05:27] "GET /auth/register/ HTTP/1.1" 200 4095
+[25/Apr/2020 13:06:07] "POST /auth/register/ HTTP/1.1" 302 0
+[25/Apr/2020 13:06:07] "GET /auth/registrationSuccess/ HTTP/1.1" 200 687
+/Users/dohyoungkim/Downloads/Reservation-search-app/Reservation-app/ReservationProject/SignupApp/views.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+April 25, 2020 - 13:05:21
+Django version 2.2.1, using settings 'ReservationProject.settings'
+Starting development server at http://0:80/
+Quit the server with CONTROL-C.
+dhdiagram0425
+dhdiagram@gmail.com
+k20504003
+김
+도형
+dohyoung
+kim
+서울특별시 마포구 큰우물로 래미안용강
+107동 301호
+010-2176-4011
+Watching for file changes with StatReloader
+[25/Apr/2020 13:06:22] "GET /auth/login/ HTTP/1.1" 200 11355
+Not Found: /asian01.jpeg
+[25/Apr/2020 13:06:22] "GET /asian01.jpeg HTTP/1.1" 404 12866
+[25/Apr/2020 13:06:36] "GET /admin/SignupApp/myuser/ HTTP/1.1" 200 44309
+[25/Apr/2020 13:06:36] "GET /admin/jsi18n/ HTTP/1.1" 200 3223
+[25/Apr/2020 13:06:41] "GET /auth/loginSuccess/?csrfmiddlewaretoken=zjcNmjRoHZjcUgzOE2Oi2hmLmV4vbODsoYgWdks46WsrH3rpO50sTNHLQjFQBZct&username=dhdiagram0425&password=%E3%85%8F20504003 HTTP/1.1" 200 34
+[25/Apr/2020 13:06:46] "GET /auth/loginSuccess/?csrfmiddlewaretoken=zjcNmjRoHZjcUgzOE2Oi2hmLmV4vbODsoYgWdks46WsrH3rpO50sTNHLQjFQBZct&username=dhdiagram0425&password=1111 HTTP/1.1" 200 34
+/Users/dohyoungkim/Downloads/Reservation-search-app/Reservation-app/ReservationProject/SignupApp/views.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+April 25, 2020 - 13:06:18
+Django version 2.2.1, using settings 'ReservationProject.settings'
+Starting development server at http://0:80/
+Quit the server with CONTROL-C.
+None
+None
+Watching for file changes with StatReloader
+/Users/dohyoungkim/Downloads/Reservation-search-app/Reservation-app/ReservationProject/SignupApp/views.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+April 25, 2020 - 13:07:22
+Django version 2.2.1, using settings 'ReservationProject.settings'
+Starting development server at http://0:80/
+Quit the server with CONTROL-C.
+Watching for file changes with StatReloader
+/Users/dohyoungkim/Downloads/Reservation-search-app/Reservation-app/ReservationProject/SignupApp/views.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+April 25, 2020 - 13:08:03
+Django version 2.2.1, using settings 'ReservationProject.settings'
+Starting development server at http://0:80/
+Quit the server with CONTROL-C.
+Watching for file changes with StatReloader
+/Users/dohyoungkim/Downloads/Reservation-search-app/Reservation-app/ReservationProject/SignupApp/views.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+April 25, 2020 - 13:08:34
+Django version 2.2.1, using settings 'ReservationProject.settings'
+Starting development server at http://0:80/
+Quit the server with CONTROL-C.
+Watching for file changes with StatReloader
+/Users/dohyoungkim/Downloads/Reservation-search-app/Reservation-app/ReservationProject/SignupApp/views.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+April 25, 2020 - 13:09:01
+Django version 2.2.1, using settings 'ReservationProject.settings'
+Starting development server at http://0:80/
+Quit the server with CONTROL-C.
+Watching for file changes with StatReloader
+/Users/dohyoungkim/Downloads/Reservation-search-app/Reservation-app/ReservationProject/SignupApp/views.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+April 25, 2020 - 13:10:22
+Django version 2.2.1, using settings 'ReservationProject.settings'
+Starting development server at http://0:80/
+Quit the server with CONTROL-C.
+Watching for file changes with StatReloader
+/Users/dohyoungkim/Downloads/Reservation-search-app/Reservation-app/ReservationProject/SignupApp/views.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+April 25, 2020 - 13:11:01
+Django version 2.2.1, using settings 'ReservationProject.settings'
+Starting development server at http://0:80/
+Quit the server with CONTROL-C.
+Watching for file changes with StatReloader
+/Users/dohyoungkim/Downloads/Reservation-search-app/Reservation-app/ReservationProject/SignupApp/views.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+April 25, 2020 - 13:11:27
+Django version 2.2.1, using settings 'ReservationProject.settings'
+Starting development server at http://0:80/
+Quit the server with CONTROL-C.
+Watching for file changes with StatReloader
+/Users/dohyoungkim/Downloads/Reservation-search-app/Reservation-app/ReservationProject/SignupApp/views.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+April 25, 2020 - 13:11:40
+Django version 2.2.1, using settings 'ReservationProject.settings'
+Starting development server at http://0:80/
+Quit the server with CONTROL-C.
+Watching for file changes with StatReloader
+/Users/dohyoungkim/Downloads/Reservation-search-app/Reservation-app/ReservationProject/SignupApp/views.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+April 25, 2020 - 13:13:09
+Django version 2.2.1, using settings 'ReservationProject.settings'
+Starting development server at http://0:80/
+Quit the server with CONTROL-C.
+Watching for file changes with StatReloader
+/Users/dohyoungkim/Downloads/Reservation-search-app/Reservation-app/ReservationProject/SignupApp/views.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+April 25, 2020 - 13:13:44
+Django version 2.2.1, using settings 'ReservationProject.settings'
+Starting development server at http://0:80/
+Quit the server with CONTROL-C.
+Watching for file changes with StatReloader
+/Users/dohyoungkim/Downloads/Reservation-search-app/Reservation-app/ReservationProject/SignupApp/views.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+April 25, 2020 - 13:13:52
+Django version 2.2.1, using settings 'ReservationProject.settings'
+Starting development server at http://0:80/
+Quit the server with CONTROL-C.
+Watching for file changes with StatReloader
+[25/Apr/2020 13:14:27] "GET /auth/login/ HTTP/1.1" 200 11355
+Not Found: /asian01.jpeg
+[25/Apr/2020 13:14:27] "GET /asian01.jpeg HTTP/1.1" 404 12866
+[25/Apr/2020 13:14:34] "GET /auth/loginSuccess/?csrfmiddlewaretoken=HWO7gG6qDPjcgIFGp2C21qmYnIeOYizbwBSg7HH62Msr3vxhz5OcSWHYR6P9ot8c&username=dhdiagram0425&password=k20504003 HTTP/1.1" 200 34
