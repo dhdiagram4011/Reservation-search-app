@@ -10,7 +10,6 @@ class registrationForm(forms.ModelForm):
         model = MyUser
         fields = ['username', 'koreanLastname', 'koreanFirstname', 'englishLastname', 'englishFirstname', 'email', 'password', 'address', 'detailAddress', 'phoneNumber']
 
-
     username = forms.CharField(label="로그인아이디")
     password = forms.CharField(label="패스워드", widget=forms.PasswordInput())
 

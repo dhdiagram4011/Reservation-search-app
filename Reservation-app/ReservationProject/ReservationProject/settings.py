@@ -159,3 +159,4 @@ STATICFILES_DIRS = [
     '/Users/dohyoungkim/Downloads/Reservation-search-app/Reservation-app/ReservationProject/static/',
 ]
 
+SESSION_SAVE_EVERY_REQUEST = True
