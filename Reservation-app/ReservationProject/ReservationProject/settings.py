@@ -158,5 +158,3 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "static"),
     '/Users/dohyoungkim/Downloads/Reservation-search-app/Reservation-app/ReservationProject/static/',
 ]
-
-SESSION_SAVE_EVERY_REQUEST = True
