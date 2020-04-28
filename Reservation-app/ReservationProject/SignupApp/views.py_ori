@@ -78,19 +78,18 @@ def login(request):
     if not (username and password):
         res_data['error'] = "아이디/패스워드를 정확히 입력하여 주세요"
     else:
-        fuser = MyUser.objects.get(username=request.POST['username'])
-        print("0 :" + fuser)
-        #fuser = request.GET['username']
-        print("0 :" + fuser)
+        fuser = MyUser.objects.get(request.POST['username'])
 
-        if check_password(password, fuser.password):
-        #if fuser.password == request.GET['password']:
-            request.GET['username'] = fuser
-            res = request.GET['username']
+        #if check_password(password, fuser.password):
+        if fuser.password == request.POST['password']:
+            request.POST['username'] = fuser.username
+            res = request.POST['username']
             print(res)
+            request.session.modified = True
             return redirect('loginSuccess')
         else:
-            #return render(request, 'SignupApp/login_failed.html')
+            return render(request, 'SignupApp/login_failed.html')
+            #res_data['error'] = "패스워드가 올바르지 않습니다"
             return HttpResponse(
                 '아이디 또는 패스워드를 다시 확인해 주세요<br/>',
                 '<br/>',
@@ -100,12 +99,26 @@ def login(request):
 
 
 def loginSuccess(request):
+    #username = MyUser.objects.get(username=request.GET['username'])
     user_pk = request.GET['username']
     print("1 : " + user_pk)
 
+    #user_pk = MyUser.objects.filter(username=request.GET['username'])
+    #if MyUser.objects.filter(username=request.GET['username'],password=request.GET['password']).exists():
     if user_pk:
         print("2 : " + user_pk)
+        #username = request.GET['username']
+        #print(username)
+        #user_pk = MyUser.objects.get(username=username)
+        #fuser = MyUser.objects.get(pk=user_pk)
+        #print("3 :" + fuser)
         return render(request, 'SignupApp/login_success.html', {'user_pk': user_pk})
+        #return HttpResponse(
+        #    fuser + '님 로그인 되었습니다.<br/>',
+        #    '<br/>',
+        #    '<a href="/reservation/revstart/" style="font-size:15px">항공권 예매 페이지 바로가기</a><br/>',
+        #    '<a href="/auth/myinfo/" style="font-size:15px">내 정보 바로가기</a><br/>',
+        # )
     else:
         return HttpResponse(
             '아이디 또는 패스워드를 다시 확인해 주세요<br/>',
@@ -122,20 +135,20 @@ def logout(request):
 
 
 def myinfo(request):
+    # myprofile_pk = MyUser.objects.filter(username=request.GET['username'])
+    # username = MyUser.objects.get(username=request.GET['username'])
     myprofile_pk = request.GET['username']
-    print("1 :" + myprofile_pk)
 
     if myprofile_pk:
-        #myprofile = MyUser.objects.get(pk=myprofile_pk)
-        return render(request, 'SignupApp/myinfo.html', {'myprofile_pk': myprofile_pk})
-        #return HttpResponse(
-        #    "아이디 : " + myprofile.username + '<br/>',
-        #    "이메일 : " + myprofile.email + '<br/>', 
-        #    "주소 : " + myprofile.address + '<br/>',
-        #    "상세주소 : " + myprofile.detailAddress + '<br/>',
-        #    "가입일 : " + myprofile.created_date + '<br/>',  
-        #    '<a href="/auth/unregister/"><strong>회원탈퇴</strong></a>',
-    #)
+        myprofile = MyUser.objects.get(pk=myprofile_pk)
+        return HttpResponse(
+            "아이디 : " + myprofile.username + '<br/>',
+            "이메일 : " + myprofile.email + '<br/>', 
+            "주소 : " + myprofile.address + '<br/>',
+            "상세주소 : " + myprofile.detailAddress + '<br/>',
+            "가입일 : " + myprofile.created_date + '<br/>',  
+            '<a href="/auth/unregister/"><strong>회원탈퇴</strong></a>',
+    )
 
 
 def unregister(request):
