@@ -69,9 +69,9 @@ def login(request):
         form = loginForm()
         return render(request, 'SignupApp/login.html', {'form': form})
     elif request.method == 'POST':
-        username = request.POST["username"]
+        username = request.POST['username']
         print(username)
-        password = request.POST["password"]
+        password = request.POST['password']
         print(password)
 
     res_data = {}
@@ -82,8 +82,8 @@ def login(request):
 
         #if check_password(password, fuser.password):
         if fuser.password == request.POST['password']:
-            request.session['username'] = fuser.username
-            res = request.session['username']
+            request.POST['username'] = fuser.username
+            res = request.POST['username']
             print(res)
             request.session.modified = True
             return redirect('loginSuccess')
@@ -100,29 +100,30 @@ def login(request):
 
 def loginSuccess(request):
     #username = MyUser.objects.get(username=request.GET['username'])
-    user_pk = request.session['username']
-    print(user_pk)
+    user_pk = request.GET['username']
+    print("1 : " + user_pk)
 
     #user_pk = MyUser.objects.filter(username=request.GET['username'])
     #if MyUser.objects.filter(username=request.GET['username'],password=request.GET['password']).exists():
     if user_pk:
-        print(user_pk)
+        print("2 : " + user_pk)
         #username = request.GET['username']
         #print(username)
         #user_pk = MyUser.objects.get(username=username)
-        fuser = MyUser.objects.get(pk=user_pk)
-        #print(user_pk)
-        return HttpResponse(
-            fuser.username + "님 로그인 되었습니다."'<br/>'
-            '<br/>'
-            '<a href="/reservation/revstart/" style="font-size:15px">항공권 예매 페이지 바로가기</a><br/>'
-            '<a href="/auth/myinfo/" style="font-size:15px">내 정보 바로가기</a><br/>'
-         )
+        #fuser = MyUser.objects.get(pk=user_pk)
+        #print("3 :" + fuser)
+        return render(request, 'SignupApp/login_success.html', {'user_pk': user_pk})
+        #return HttpResponse(
+        #    fuser + '님 로그인 되었습니다.<br/>',
+        #    '<br/>',
+        #    '<a href="/reservation/revstart/" style="font-size:15px">항공권 예매 페이지 바로가기</a><br/>',
+        #    '<a href="/auth/myinfo/" style="font-size:15px">내 정보 바로가기</a><br/>',
+        # )
     else:
         return HttpResponse(
-            '아이디 또는 패스워드를 다시 확인해 주세요<br/>'
-            '<br/>'
-            '<a href="/auth/login/" style="font-size:15px">로그인 페이지로 돌아가기</a>'
+            '아이디 또는 패스워드를 다시 확인해 주세요<br/>',
+            '<br/>',
+            '<a href="/auth/login/" style="font-size:15px">로그인 페이지로 돌아가기</a>',
             )
 
 
@@ -136,7 +137,7 @@ def logout(request):
 def myinfo(request):
     # myprofile_pk = MyUser.objects.filter(username=request.GET['username'])
     # username = MyUser.objects.get(username=request.GET['username'])
-    myprofile_pk = request.session['username']
+    myprofile_pk = request.GET['username']
 
     if myprofile_pk:
         myprofile = MyUser.objects.get(pk=myprofile_pk)
