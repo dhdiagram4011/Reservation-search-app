@@ -78,9 +78,7 @@ def login(request):
     if not (username and password):
         res_data['error'] = "아이디/패스워드를 정확히 입력하여 주세요"
     else:
-        fuser = MyUser.objects.get(username=request.POST['username'])
-        print("0 :" + fuser)
-        #fuser = request.GET['username']
+        fuser = request.GET['username']
         print("0 :" + fuser)
 
         if check_password(password, fuser.password):
