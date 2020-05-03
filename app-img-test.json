@@ -1,0 +1,30 @@
+{
+    "builders": [{
+        "type": "docker",
+        "image": "paigeeworld/centos7",
+        "export_path": "app-sample.tar"
+
+    }],
+    "provisioners": [{
+            "type": "shell",
+            "inline": [
+                "yum install -y wget",
+                "yum install -y python3*",
+                "yum install -y python3-pip",
+                "mkdir -p /var/www/html",
+                "pip3 install django==2.2.1"
+            ]
+        },
+        {
+            "type": "shell-local",
+            "inline": [
+                "docker cp /Users/dohyoungkim/Downloads/Reservation-search-app/ django-web-app:/var/www/html"
+            ]
+        }
+    ],
+    "post-processors": [{
+        "type": "docker-import",
+        "repository": "django-web-app",
+        "tag": "django"
+    }]
+}
