@@ -1,20 +1,44 @@
 {
-    "builders": [{
+    "builders": [
+        {
         "type": "docker",
-        "image": "ubuntu:14.04",
-        "export_path": "nacyot-ubuntu-wget.tar"
-    }],
-    "provisioners": [{
+        "image": "paigeeworld/centos7",
+        "export_path": "/Users/golbkim/Downloads/app-sample.tar"
+    }
+],
+    "provisioners": [
+        {
         "type": "shell",
         "inline": [
-            "apt-get update",
+            "yum install -y wget",
+            "yum install -y python3*",
             "mkdir -p /var/www/html",
-            "apt-get install -y wget"
-        ]
-    }],
-    "post-processors": [{
+            "pip3 install django==2.2.1"
+
+],
+    "post-processors": [
+        {
         "type": "docker-import",
-        "repository": "build-test",
-        "tag": "wget"
-    }]
+        "repository":"paigeeworld/centos7",
+        "tag":"app"
+        },
+    {
+        "type": "shell-local",
+        "inline": [
+                "docker ps",
+                "docker run -it -d -p 80:8000 paigeeworld/centos7",
+                "docker cp /Users/golbkim/Downloads/Reservation-search-app/ $(docker ps | sed -n '2p' | awk '{print $1}'):/opt",
+                "ls -l /opt"
+        ]
+    },
+    {
+        "type": "shell",
+        "inline": [
+            "pwd",
+                "ls -l",
+                "nohup python3 /opt/Reservation-search-app/Reservation-app/ReservationProject/manage.py runserver 0:8000 &"
+        ]
+    }
+]
 }
+
