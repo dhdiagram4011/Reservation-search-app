@@ -48,15 +48,18 @@ def revsuccess(request):
 
 def payment(request):
     #course_select_results = flightSection.objects.filter(starting_point=request.GET['starting_point'],arrival=request.GET['arrival'],daytogo=request.GET['daytogo'],comingDay=request.GET['comingDay'])
-    course_applys = flightSection.objects.get(id=2)
+    #course_applys = flightSection.objects.get(id=request.GET['id'])
+    courses = flightSection.objects.get(id=request.GET['id'])
+    #courses = flightSection.objects.get(id=7)
     print("=======console_msg======")
-    print(course_applys.id)
-    print(course_applys.starting_point)
-    print(course_applys.arrival)
-    print(course_applys.daytogo)
-    print(course_applys.comingDay)
+    print(courses)
+    print(courses.id)
+    print(courses.starting_point)
+    print(courses.arrival)
+    print(courses.daytogo)
+    print(courses.comingDay)
     return render(request, 'ReservationApp/payment.html', {
-        'course_applys': course_applys,
+        'courses': courses,
     })
 
 
