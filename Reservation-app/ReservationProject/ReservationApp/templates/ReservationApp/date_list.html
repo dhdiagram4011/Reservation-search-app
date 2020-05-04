@@ -10,11 +10,12 @@ ul{
 </style>
 <div id="wrapper" style="margin-bottom:30px;">
 <ul style="border:1px; color:gray;">
-<li style="float:left">출발지 | {{ course.starting_point }}<br/></li>
+<li style="float:left">ID_T | {{ course.id }}<br/></li>
+<li style="float:left; margin-left:30px;">출발지 | {{ course.starting_point }}<br/></li>
 <li style="float:left; margin-left:30px;">도착지 | {{ course.arrival }}</strong><br/></li>
-<li style="float:left; margin-left:30px;"><strong>가는날 | {{ course.daytogo | date:'Y-m-d' }}</strong><br/></li>
-<li style="float:left; margin-left:30px;"><strong>오는날 | {{ course.comingDay | date:'Y-m-d' }}</strong> <br/></li>
-<li style="float:left; margin-left:30px;">비행시간 | {{ course.flight_time | date:'H:i' }}<br/></li>
+<li style="float:left; margin-left:30px;"><strong>가는날 | {{ course.daytogo | date:'Y년m월d일' }}</strong><br/></li>
+<li style="float:left; margin-left:30px;"><strong>오는날 | {{ course.comingDay | date:'Y년m월d' }}</strong> <br/></li>
+<li style="float:left; margin-left:30px;">비행시간 | {{ course.flight_time | date:'H 시간 i 분' }}<br/></li>
 </ul>
 
 <br/>

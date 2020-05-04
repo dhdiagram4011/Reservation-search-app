@@ -47,9 +47,16 @@ def revsuccess(request):
 
 
 def payment(request):
-    course_select_result = flightSection.objects.filter(starting_point=request.GET['starting_point'],arrival=request.GET['arrival'])
+    #course_select_results = flightSection.objects.filter(starting_point=request.GET['starting_point'],arrival=request.GET['arrival'],daytogo=request.GET['daytogo'],comingDay=request.GET['comingDay'])
+    course_applys = flightSection.objects.get(id=2)
+    print("=======console_msg======")
+    print(course_applys.id)
+    print(course_applys.starting_point)
+    print(course_applys.arrival)
+    print(course_applys.daytogo)
+    print(course_applys.comingDay)
     return render(request, 'ReservationApp/payment.html', {
-        'course_select_result': course_select_result,
+        'course_applys': course_applys,
     })
 
 
@@ -67,17 +74,6 @@ def course_search(request):
         return render(request, 'ReservationApp/sch_does_not_exist.html')
 
 
-#def course_search(request):
-#    try:
-#        courses = flightSection.objects.filter(starting_point=request.GET['starting_point'],arrival=request.GET['arrival'],daytogo=request.GET['daytogo'],comingDay=request.GET['comingDay'])
-#    except 60:
-#        raise Http404("해당 출발일에 예약 가능한 항공권이 없습니다")
-#    return render(request, 'ReservationApp/course_list.html', {
-#        'courses': courses,
-#    })
-
-
-# @login_required
 def date_search_result(request):
     try:
         courses = flightSection.objects.filter(daytogo=request.GET['daytogo'])
@@ -87,16 +83,3 @@ def date_search_result(request):
         'courses': courses,
     })
 
-
-#def course_search(request):
-#    course_pk = request.GET['arrival']
-
-#    if course_pk:
-#        course = flightSection.objects.get(pk=course_pk)
-#        return HttpResponse(
-#            "출발지 :  " + str(course.starting_point) + '<br/>'
-#            "도착지 :  " + str(course.arrival) + '<br/>'
-#            "비행시간 :  " + course.flight_time + '<br/>'
-#            "가는날 :  " + course.daytogo + '<br/>'
-#            "오는날 :  " + course.comingDay + '<br/>'
-#        )

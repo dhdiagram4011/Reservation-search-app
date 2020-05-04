@@ -3,13 +3,19 @@
 <br/>
 *_결제 및 예약정보 확인
 <br/>
-출발지 | {{ course_select_result.starting_point }}<br/>     
-도착지 | {{ course_select_result.arrival }}<br/>     
-비행시간 | {{ course_select_result.flight_time }}<br/>     
-가는날 | {{ course_select_result.daytogo }}<br/>    
-오는날 | {{ course_select_result.comingDay }}<br/>
 <br/>
 <br/>
-<input type="submit" , name="arrival", value="결제하기">
+T_ID | {{ course_applys.id }}<br/>
+출발지 | {{ course_applys.starting_point }}<br/>     
+도착지 | {{ course_applys.arrival }}<br/>     
+비행시간 | {{ course_applys.flight_time | date:'H 시간 i 분' }}<br/>     
+가는날 | {{ course_applys.daytogo | date:'Y년 m월 d일' }}<br/>    
+오는날 | {{ course_applys.comingDay | date:'Y년 m월 d일' }}<br/>
+<br/>
+<br/>
+<ul style="text-decoration:none; list-style:none; margin-left:-30px">
+<li style="float:left"><input type="submit" , name="payment", value="결제하기"></li>
+<li><input type="submit" , name="eticket", value="E-티켓발송"></li>
+</ul>
 {% endblock %}
 

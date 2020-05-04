@@ -1,4 +1,4 @@
-<form action="/reservation/payment/" method="post">
+<form action="{% url 'payment' %}" method="post" value="{{ course_applys.id }}">
 {% block content %}
 {% for course in courses %}
 {% csrf_token %}
@@ -10,12 +10,13 @@ ul{
 </style>
 <div id="wrapper" style="margin-bottom:30px;">
 <ul style="border:1px; color:gray;">
-<li style="float:left"><strong>출발지 | {{ course.starting_point }}</strong><br/></li>
-<li style="float:left; margin-left:30px;"><strong>도착지 | {{ course.arrival }}</strong><br/></li>
-<li style="float:left; margin-left:30px;">가는날 | {{ course.daytogo | date:'Y-m-d' }}<br/></li>
-<li style="float:left; margin-left:30px;">오는날 | {{ course.comingDay | date:'Y-m-d' }} <br/></li>
-<li style="float:left; margin-left:30px;">비행시간 | {{ course.flight_time | date:'H:i' }}<br/></li>
-<li style="float:left; margin-left:900px; position:absolute;"><button name="choice" value="{{ id }}">해당구간 예약하기</button></li>
+<li style="float:left"><strong>ID_T| {{ course.id }}</strong><br/></li>
+<li style="float:left; margin-left:30px;"><strong>출발지_T| {{ course.starting_point }}</strong><br/></li>
+<li style="float:left; margin-left:30px;"><strong>도착지_T | {{ course.arrival }}</strong><br/></li>
+<li style="float:left; margin-left:30px;">가는날_T | {{ course.daytogo | date:'Y년 m월 d일' }}<br/></li>
+<li style="float:left; margin-left:30px;">오는날_T | {{ course.comingDay | date:'Y년 m월 d일' }} <br/></li>
+<li style="float:left; margin-left:30px;">비행시간_T | {{ course.flight_time | date:'H 시간 i 분' }}<br/></li>
+<li style="float:left; margin-left:980px; position:absolute;"><button name="choice" value="{{ course_applys.id }}">예약하기</button></li>
 </ul>
 
 <br/>
