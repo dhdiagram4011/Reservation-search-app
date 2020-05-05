@@ -1,16 +1,16 @@
 # -*- coding: utf-8 -*-
 from django.urls import path
-from .views import revstart, revsuccess, index, course_search, payment, date_search_result, date_search, intro
+from .views import revstart, index, course_search, payment, date_search_result, date_search, intro
 
 
 urlpatterns = [
     path('', index, name='index'),
-    path('revstart/', revstart, name='revstart'),
-    path('intro/', intro, name='intro'),  ##회원가입 or 예매페이지이동
+    path('revstart/', revstart, name='revstart'),  # 예약시작 페이지
+    path('intro/', intro, name='intro'),  # 회원가입 or 예매페이지이동
     #path('revstart/schedule', schedule, name='schedule'),
-    path('revsuccess/', revsuccess, name='revsuccess'),
-    path('course_search/', course_search, name='course_search'),
-    path('payment/', payment, name='payment'),
-    path('date_search/', date_search, name='date_search'),
-    path('date_search_result/', date_search_result, name='date_search_result'),
+    #path('revsuccess/', revsuccess, name='revsuccess'),
+    path('course_search/', course_search, name='course_search'),  # 조건에 따른 향공티켓 일정표 출력 페이지
+    path('payment/', payment, name='payment'),  # 결제 및 항공권 티켓 발송 페이지
+    path('date_search/', date_search, name='date_search'),  # 날짜별 항공권 조회 페이지
+    path('date_search_result/', date_search_result, name='date_search_result'),  # 날짜별 조회에 따른 결과 출력 페이지
 ]

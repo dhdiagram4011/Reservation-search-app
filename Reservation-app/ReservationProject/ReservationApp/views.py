@@ -5,6 +5,8 @@ from .models import flightSection, seatClass
 from django.http import HttpResponse, Http404, HttpResponseNotFound
 from datetime import datetime
 from django.contrib.auth.decorators import login_required
+from django.template.loader import render_to_string
+from django.core.mail import EmailMessage
 
 
 def index(request):
@@ -13,6 +15,16 @@ def index(request):
 
 def intro(request):
     return render(request, 'ReservationApp/intro.html')
+
+
+# 예약 완료 후 티켓발송
+def eticket_send(request):
+    courses = flightSection.objects.get(id=request.POST['course_choice'])
+    title = "[KAL-E-TICKET]예약이 완료되었습니다(E-TICKET발송안내)"
+    html_messsage = render_to_string('ReservationApp/eticket.html', {'courses': courses})
+    email = EmailMessage(title, html_messsage, to=['dhdiagram@gmail.com'])
+    email.content_subtype = "html"
+    return email.send()
 
 
 # @login_required
@@ -37,10 +49,6 @@ def revstart(request):
     return render(request, 'ReservationApp/rev_start.html', {'form': form})
 
 
-def revsuccess(request):
-    return render(request, 'ReservationApp/rev_success.html')
-
-
 def payment(request):
     courses = flightSection.objects.get(id=request.POST['course_choice'])
     #courses = flightSection.objects.get(id=7)
@@ -51,6 +59,7 @@ def payment(request):
     print(courses.arrival)
     print(courses.daytogo)
     print(courses.comingDay)
+    eticket_send(request)
     return render(request, 'ReservationApp/payment.html', {
         'courses': courses,
     })
@@ -70,6 +79,7 @@ def course_search(request):
         return render(request, 'ReservationApp/sch_does_not_exist.html')
 
 
+# 날짜기반 항공권 조회기능
 def date_search_result(request):
     try:
         courses = flightSection.objects.filter(daytogo=request.GET['daytogo'])
