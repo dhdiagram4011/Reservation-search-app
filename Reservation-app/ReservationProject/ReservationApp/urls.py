@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 from django.urls import path
-from .views import revstart, index, course_search, payment, date_search_result, date_search, intro
+from .views import revstart, eticket_resend, index, course_search, payment, date_search_result, date_search, intro
 
 
 urlpatterns = [
@@ -13,4 +13,7 @@ urlpatterns = [
     path('payment/', payment, name='payment'),  # 결제 및 항공권 티켓 발송 페이지
     path('date_search/', date_search, name='date_search'),  # 날짜별 항공권 조회 페이지
     path('date_search_result/', date_search_result, name='date_search_result'),  # 날짜별 조회에 따른 결과 출력 페이지
+    path('eticket_resend/', eticket_resend, name='eticket_resend'),
 ]
+
+

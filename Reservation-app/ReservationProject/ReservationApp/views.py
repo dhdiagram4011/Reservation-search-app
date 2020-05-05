@@ -27,6 +27,16 @@ def eticket_send(request):
     return email.send()
 
 
+# 예약 완료 후 티켓수동발송
+def eticket_resend(request):
+    courses = flightSection.objects.get(id=request.POST['course_choice'])
+    title = "[KAL-E-TICKET]항공권 발송완료(E-TICKET발송)"
+    html_messsage = render_to_string('ReservationApp/eticket.html', {'courses': courses})
+    email = EmailMessage(title, html_messsage, to=['dhdiagram@gmail.com'])
+    email.content_subtype = "html"
+    return email.send(courses)
+
+
 # @login_required
 def date_search(request):
     if request.method == 'POST':
