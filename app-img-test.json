@@ -2,41 +2,38 @@
     "builders": [{
         "type": "docker",
         "image": "paigeeworld/centos7",
-        "export_path": "/Users/golbkim/Downloads/app-sample.tar"
-
+        "export_path": "/Users/dohyoungkim/Downloads/app-sample.tar"
     }],
-    "provisioners": [
-        {
-            "type": "shell",
-            "inline": [
-                "yum install -y wget",
-                "yum install -y python3*",
-                "mkdir -p /var/www/html",
-                "pip3 install django==2.2.1"
-            ]
-        },   
+    "provisioners": [{
+        "type": "shell",
+        "inline": [
+            "yum install -y wget",
+            "yum install -y python3*",
+            "yum install -y procps",
+            "yum install -y net-tools",
+            "pip3 install django==2.2.1"
+        ]
+    }],
+    "post-processors": [{
+            "type": "docker-import",
+            "repository": "paigeeworld/centos7",
+            "tag": "app"
+        },
         {
             "type": "shell-local",
             "inline": [
-                "docker run -it -d -p 80:8000 paigeeworld/centos7",
                 "docker ps",
-                "docker cp /Users/golbkim/Downloads/Reservation-search-app/ $(docker ps | sed -n '2p' | awk '{print $1}'):/opt",
-                "ls -l /opt"
-
+                "docker run -it -d -p 81:8100 paigeeworld/centos7:app bash",
+                "docker ps",
+                "docker cp /Users/dohyoungkim/Downloads/Reservation-search-app/ $(docker ps | sed -n '2p' | awk '{print $1}'):/opt"
             ]
         },
         {
             "type": "shell",
             "inline": [
-                "pwd",
-                "ls -l",
-                "nohup python3 /opt/Reservation-search-app/Reservation-app/ReservationProject/manage.py runserver 0:8000 &"
+                ""
+
             ]
         }
-    ],
-    "post-processors": [{
-        "type": "docker-import",
-        "repository": "paigeeworld/centos7",
-        "tag":"app"
-    }]
+    ]
 }
