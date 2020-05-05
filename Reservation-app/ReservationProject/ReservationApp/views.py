@@ -11,10 +11,6 @@ def index(request):
     return render(request, 'ReservationApp/index.html')
 
 
-def schedule(request):
-    pass
-
-
 def intro(request):
     return render(request, 'ReservationApp/intro.html')
 
@@ -41,15 +37,12 @@ def revstart(request):
     return render(request, 'ReservationApp/rev_start.html', {'form': form})
 
 
-
 def revsuccess(request):
     return render(request, 'ReservationApp/rev_success.html')
 
 
 def payment(request):
-    #course_select_results = flightSection.objects.filter(starting_point=request.GET['starting_point'],arrival=request.GET['arrival'],daytogo=request.GET['daytogo'],comingDay=request.GET['comingDay'])
-    #course_applys = flightSection.objects.get(id=request.GET['id'])
-    courses = flightSection.objects.get(id=request.GET['id'])
+    courses = flightSection.objects.get(id=request.POST['course_choice'])
     #courses = flightSection.objects.get(id=7)
     print("=======console_msg======")
     print(courses)
