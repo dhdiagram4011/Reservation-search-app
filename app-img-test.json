@@ -27,13 +27,6 @@
                 "docker ps",
                 "docker cp /Users/dohyoungkim/Downloads/Reservation-search-app/ $(docker ps | sed -n '2p' | awk '{print $1}'):/opt"
             ]
-        },
-        {
-            "type": "shell",
-            "inline": [
-                ""
-
-            ]
         }
     ]
 }

@@ -27,7 +27,7 @@ def eticket_send(request):
     return email.send()
 
 
-# 예약 완료 후 티켓수동발송
+# 예약 완료 후 티켓수동발송 - ing...
 def eticket_resend(request):
     courses = flightSection.objects.get(id=request.POST['course_choice'])
     title = "[KAL-E-TICKET]항공권 발송완료(E-TICKET발송)"

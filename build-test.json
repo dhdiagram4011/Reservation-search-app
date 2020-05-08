@@ -16,7 +16,6 @@
                 "type": "docker-import",
                 "repository": "paigeeworld/centos7",
                 "tag": "app"
-
             },
             {
                 "type": "shell-local",
