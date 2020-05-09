@@ -9,6 +9,10 @@ background-image:url('{{ STATIC_URL }}/korean-air-img.png')
 </style>
 </head>
 <body>
+<script>
+alert("요청하신 날짜의 항공권이 존재하지 않습니다")
+location.href= "/reservation/revstart/" 
+</script>
 <form action="/reservation/revstart/" method="get">
 <div>
 <p style=font-size:12px>항공권 예매 페이지 입니다.<br/>
