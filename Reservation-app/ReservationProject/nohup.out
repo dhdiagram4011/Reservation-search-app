@@ -422,3 +422,172 @@ Traceback (most recent call last):
   File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/django/forms/fields.py", line 766, in __init__
     super().__init__(**kwargs)
 TypeError: __init__() got an unexpected keyword argument 'placeholder'
+Watching for file changes with StatReloader
+[09/May/2020 18:35:58] "GET /reservation/revstart/ HTTP/1.1" 200 13586
+Not Found: /korean-air-img.png
+[09/May/2020 18:35:58] "GET /korean-air-img.png HTTP/1.1" 404 12884
+[09/May/2020 18:36:07] "GET /reservation/course_search/?csrfmiddlewaretoken=zhIzVCwIgHfVX33NY4mSV5djYyAavVKVUJudqukUOkg6jtVfzYXLEHV7sie6FIce&daytogo=2020-05-09&comingDay=2020-05-09&starting_point=%EA%B9%80%ED%8F%AC&arrival=%EB%B6%80%EC%82%B0 HTTP/1.1" 200 12225
+Not Found: /korean-air-img.png
+[09/May/2020 18:36:07] "GET /korean-air-img.png HTTP/1.1" 404 12884
+[09/May/2020 18:36:10] "GET /reservation/revstart/ HTTP/1.1" 200 13586
+Not Found: /korean-air-img.png
+[09/May/2020 18:36:10] "GET /korean-air-img.png HTTP/1.1" 404 12884
+[09/May/2020 18:42:36] "GET /reservation/revstart/ HTTP/1.1" 200 13586
+Not Found: /korean-air-img.png
+[09/May/2020 18:42:36] "GET /korean-air-img.png HTTP/1.1" 404 12884
+/Users/dohyoungkim/Downloads/Reservation-search-app/Reservation-app/ReservationProject/ReservationApp/forms.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+May 09, 2020 - 18:35:53
+Django version 2.2.1, using settings 'ReservationProject.settings'
+Starting development server at http://0:80/
+Quit the server with CONTROL-C.
+Watching for file changes with StatReloader
+/Users/dohyoungkim/Downloads/Reservation-search-app/Reservation-app/ReservationProject/ReservationApp/forms.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+May 09, 2020 - 18:43:45
+Django version 2.2.1, using settings 'ReservationProject.settings'
+Starting development server at http://0:80/
+Quit the server with CONTROL-C.
+Watching for file changes with StatReloader
+[09/May/2020 18:44:10] "GET /reservation/revstart/ HTTP/1.1" 200 13592
+Not Found: /korean-air-img.png
+[09/May/2020 18:44:11] "GET /korean-air-img.png HTTP/1.1" 404 12884
+[09/May/2020 18:44:31] "GET /reservation/revstart/ HTTP/1.1" 200 13566
+Not Found: /korean-air-img.png
+[09/May/2020 18:44:31] "GET /korean-air-img.png HTTP/1.1" 404 12884
+[09/May/2020 18:45:24] "GET /reservation/revstart/ HTTP/1.1" 200 13585
+Not Found: /korean-air-img.png
+[09/May/2020 18:45:24] "GET /korean-air-img.png HTTP/1.1" 404 12884
+[09/May/2020 18:45:56] "GET /reservation/revstart/ HTTP/1.1" 200 13607
+Not Found: /korean-air-img.png
+[09/May/2020 18:45:56] "GET /korean-air-img.png HTTP/1.1" 404 12884
+[09/May/2020 18:45:58] "GET /reservation/revstart/ HTTP/1.1" 200 13607
+Not Found: /korean-air-img.png
+[09/May/2020 18:45:58] "GET /korean-air-img.png HTTP/1.1" 404 12884
+[09/May/2020 18:46:11] "GET /reservation/revstart/ HTTP/1.1" 200 13608
+Not Found: /korean-air-img.png
+[09/May/2020 18:46:11] "GET /korean-air-img.png HTTP/1.1" 404 12884
+[09/May/2020 18:46:26] "GET /reservation/revstart/ HTTP/1.1" 200 13617
+Not Found: /korean-air-img.png
+[09/May/2020 18:46:26] "GET /korean-air-img.png HTTP/1.1" 404 12884
+[09/May/2020 18:46:44] "GET /reservation/revstart/ HTTP/1.1" 200 13611
+Not Found: /korean-air-img.png
+[09/May/2020 18:46:44] "GET /korean-air-img.png HTTP/1.1" 404 12884
+[09/May/2020 18:47:05] "GET /reservation/revstart/ HTTP/1.1" 200 13330
+Not Found: /korean-air-img.png
+[09/May/2020 18:47:05] "GET /korean-air-img.png HTTP/1.1" 404 12884
+[09/May/2020 18:48:05] "GET /reservation/revstart/ HTTP/1.1" 200 13336
+Not Found: /korean-air-img.png
+[09/May/2020 18:48:05] "GET /korean-air-img.png HTTP/1.1" 404 12884
+[09/May/2020 18:48:18] "GET /reservation/revstart/ HTTP/1.1" 200 13329
+Not Found: /korean-air-img.png
+[09/May/2020 18:48:18] "GET /korean-air-img.png HTTP/1.1" 404 12884
+[09/May/2020 18:48:55] "GET /reservation/revstart/ HTTP/1.1" 200 13403
+Not Found: /korean-air-img.png
+[09/May/2020 18:48:55] "GET /korean-air-img.png HTTP/1.1" 404 12884
+[09/May/2020 18:49:22] "GET /reservation/revstart/ HTTP/1.1" 200 13402
+Not Found: /korean-air-img.png
+[09/May/2020 18:49:22] "GET /korean-air-img.png HTTP/1.1" 404 12884
+[09/May/2020 18:49:32] "GET /reservation/revstart/ HTTP/1.1" 200 13403
+Not Found: /korean-air-img.png
+[09/May/2020 18:49:32] "GET /korean-air-img.png HTTP/1.1" 404 12884
+[09/May/2020 18:49:40] "GET /reservation/revstart/ HTTP/1.1" 200 13403
+Not Found: /korean-air-img.png
+[09/May/2020 18:49:40] "GET /korean-air-img.png HTTP/1.1" 404 12884
+[09/May/2020 18:50:23] "GET /reservation/revstart/ HTTP/1.1" 200 13403
+Not Found: /korean-air-img.png
+[09/May/2020 18:50:23] "GET /korean-air-img.png HTTP/1.1" 404 12884
+[09/May/2020 18:50:38] "GET /reservation/revstart/ HTTP/1.1" 200 13403
+Not Found: /korean-air-img.png
+[09/May/2020 18:50:38] "GET /korean-air-img.png HTTP/1.1" 404 12884
+[09/May/2020 18:50:39] "GET /reservation/revstart/ HTTP/1.1" 200 13403
+Not Found: /korean-air-img.png
+[09/May/2020 18:50:40] "GET /korean-air-img.png HTTP/1.1" 404 12884
+[09/May/2020 18:51:18] "GET /reservation/revstart/ HTTP/1.1" 200 13402
+Not Found: /korean-air-img.png
+[09/May/2020 18:51:18] "GET /korean-air-img.png HTTP/1.1" 404 12884
+[09/May/2020 18:51:20] "GET /reservation/revstart/ HTTP/1.1" 200 13402
+Not Found: /korean-air-img.png
+[09/May/2020 18:51:20] "GET /korean-air-img.png HTTP/1.1" 404 12884
+[09/May/2020 18:51:32] "GET /reservation/revstart/ HTTP/1.1" 200 13403
+Not Found: /korean-air-img.png
+[09/May/2020 18:51:32] "GET /korean-air-img.png HTTP/1.1" 404 12884
+[09/May/2020 18:51:43] "GET /reservation/revstart/ HTTP/1.1" 200 13405
+Not Found: /korean-air-img.png
+[09/May/2020 18:51:43] "GET /korean-air-img.png HTTP/1.1" 404 12884
+[09/May/2020 18:52:13] "GET /reservation/revstart/ HTTP/1.1" 200 13405
+Not Found: /korean-air-img.png
+[09/May/2020 18:52:13] "GET /korean-air-img.png HTTP/1.1" 404 12884
+[09/May/2020 18:52:23] "GET /reservation/revstart/ HTTP/1.1" 200 13405
+Not Found: /korean-air-img.png
+[09/May/2020 18:52:23] "GET /korean-air-img.png HTTP/1.1" 404 12884
+[09/May/2020 18:53:30] "GET /reservation/revstart/ HTTP/1.1" 200 13426
+Not Found: /korean-air-img.png
+[09/May/2020 18:53:30] "GET /korean-air-img.png HTTP/1.1" 404 12884
+[09/May/2020 18:53:57] "GET /reservation/revstart/ HTTP/1.1" 200 13302
+Not Found: /korean-air-img.png
+[09/May/2020 18:53:57] "GET /korean-air-img.png HTTP/1.1" 404 12884
+[09/May/2020 18:54:17] "GET /reservation/revstart/ HTTP/1.1" 200 13416
+Not Found: /korean-air-img.png
+[09/May/2020 18:54:17] "GET /korean-air-img.png HTTP/1.1" 404 12884
+[09/May/2020 18:54:38] "GET /reservation/revstart/ HTTP/1.1" 200 13369
+Not Found: /korean-air-img.png
+[09/May/2020 18:54:38] "GET /korean-air-img.png HTTP/1.1" 404 12884
+[09/May/2020 18:55:28] "GET /reservation/revstart/ HTTP/1.1" 200 13403
+Not Found: /korean-air-img.png
+[09/May/2020 18:55:28] "GET /korean-air-img.png HTTP/1.1" 404 12884
+[09/May/2020 18:55:54] "GET /reservation/revstart/ HTTP/1.1" 200 13404
+Not Found: /korean-air-img.png
+[09/May/2020 18:55:54] "GET /korean-air-img.png HTTP/1.1" 404 12884
+[09/May/2020 18:56:06] "GET /reservation/revstart/ HTTP/1.1" 200 13407
+Not Found: /korean-air-img.png
+[09/May/2020 18:56:06] "GET /korean-air-img.png HTTP/1.1" 404 12884
+[09/May/2020 18:56:23] "GET /reservation/revstart/ HTTP/1.1" 200 13403
+Not Found: /korean-air-img.png
+[09/May/2020 18:56:23] "GET /korean-air-img.png HTTP/1.1" 404 12884
+[09/May/2020 18:56:41] "GET /reservation/revstart/ HTTP/1.1" 200 13423
+Not Found: /korean-air-img.png
+[09/May/2020 18:56:41] "GET /korean-air-img.png HTTP/1.1" 404 12884
+[09/May/2020 18:56:51] "GET /reservation/revstart/ HTTP/1.1" 200 13422
+Not Found: /korean-air-img.png
+[09/May/2020 18:56:51] "GET /korean-air-img.png HTTP/1.1" 404 12884
+[09/May/2020 18:57:08] "GET /reservation/revstart/ HTTP/1.1" 200 13421
+Not Found: /korean-air-img.png
+[09/May/2020 18:57:08] "GET /korean-air-img.png HTTP/1.1" 404 12884
+[09/May/2020 18:57:21] "GET /reservation/revstart/ HTTP/1.1" 200 13422
+Not Found: /korean-air-img.png
+[09/May/2020 18:57:21] "GET /korean-air-img.png HTTP/1.1" 404 12884
+[09/May/2020 18:57:33] "GET /reservation/revstart/ HTTP/1.1" 200 13423
+Not Found: /korean-air-img.png
+[09/May/2020 18:57:33] "GET /korean-air-img.png HTTP/1.1" 404 12884
+[09/May/2020 18:57:49] "GET /reservation/revstart/ HTTP/1.1" 200 13421
+Not Found: /korean-air-img.png
+[09/May/2020 18:57:50] "GET /korean-air-img.png HTTP/1.1" 404 12884
+[09/May/2020 18:58:01] "GET /reservation/revstart/ HTTP/1.1" 200 13421
+Not Found: /korean-air-img.png
+[09/May/2020 18:58:01] "GET /korean-air-img.png HTTP/1.1" 404 12884
+[09/May/2020 18:58:11] "GET /reservation/revstart/ HTTP/1.1" 200 13422
+Not Found: /korean-air-img.png
+[09/May/2020 18:58:11] "GET /korean-air-img.png HTTP/1.1" 404 12884
+[09/May/2020 18:58:18] "GET /reservation/revstart/ HTTP/1.1" 200 13422
+Not Found: /korean-air-img.png
+[09/May/2020 18:58:18] "GET /korean-air-img.png HTTP/1.1" 404 12884
+[09/May/2020 18:58:59] "GET /reservation/revstart/ HTTP/1.1" 200 13424
+Not Found: /korean-air-img.png
+[09/May/2020 18:58:59] "GET /korean-air-img.png HTTP/1.1" 404 12884
+[09/May/2020 18:59:18] "GET /reservation/revstart/ HTTP/1.1" 200 13424
+Not Found: /korean-air-img.png
+[09/May/2020 18:59:18] "GET /korean-air-img.png HTTP/1.1" 404 12884
+[09/May/2020 18:59:32] "GET /reservation/revstart/ HTTP/1.1" 200 13424
+Not Found: /korean-air-img.png
+[09/May/2020 18:59:32] "GET /korean-air-img.png HTTP/1.1" 404 12884
+[09/May/2020 18:59:47] "GET /reservation/revstart/ HTTP/1.1" 200 13424
+Not Found: /korean-air-img.png
+[09/May/2020 18:59:47] "GET /korean-air-img.png HTTP/1.1" 404 12884
+[09/May/2020 18:59:56] "GET /reservation/revstart/ HTTP/1.1" 200 13424
+Not Found: /korean-air-img.png
+[09/May/2020 18:59:56] "GET /korean-air-img.png HTTP/1.1" 404 12884

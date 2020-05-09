@@ -57,5 +57,5 @@ class reservationForm(forms.ModelForm):
     starting_point = forms.ChoiceField(label='출발지', choices=STARTINGPOINT)
     arrival = forms.ChoiceField(label='도착지', choices=ARRIVAL)
     ranking = forms.ChoiceField(label='좌석등급', choices=RANKING)
-    daytogo = forms.DateField(label='가는날', input_formats=['%m-%d-%Y'], widget=forms.TextInput(attrs={'placeholder': '예시)2020-05-05'}))
-    comingDay = forms.DateField(label='오는날', input_formats=['%m-%d-%Y'], widget=forms.TextInput(attrs={'placeholder': '예시)2020-05-05'}))
+    daytogo = forms.DateField(label='가는날', input_formats=['%m-%d-%Y'], widget=forms.TextInput(attrs={'placeholder': '가는날:2020-05-05'}))
+    comingDay = forms.DateField(label='오는날', input_formats=['%m-%d-%Y'], widget=forms.TextInput(attrs={'placeholder': '오는날:2020-05-05'}))
