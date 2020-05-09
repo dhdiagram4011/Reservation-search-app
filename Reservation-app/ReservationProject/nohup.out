@@ -345,3 +345,80 @@ flightSection object (10)
 2020-05-05
 2020-05-05
 Watching for file changes with StatReloader
+/Users/dohyoungkim/Downloads/Reservation-search-app/Reservation-app/ReservationProject/ReservationApp/forms.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+May 09, 2020 - 17:14:05
+Django version 2.2.1, using settings 'ReservationProject.settings'
+Starting development server at http://0:80/
+Quit the server with CONTROL-C.
+Watching for file changes with StatReloader
+/Users/dohyoungkim/Downloads/Reservation-search-app/Reservation-app/ReservationProject/ReservationApp/forms.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+May 09, 2020 - 18:07:55
+Django version 2.2.1, using settings 'ReservationProject.settings'
+Starting development server at http://0:80/
+Quit the server with CONTROL-C.
+Watching for file changes with StatReloader
+Exception in thread django-main-thread:
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/threading.py", line 932, in _bootstrap_inner
+    self.run()
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/threading.py", line 870, in run
+    self._target(*self._args, **self._kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/django/utils/autoreload.py", line 54, in wrapper
+    fn(*args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/django/core/management/commands/runserver.py", line 117, in inner_run
+    self.check(display_num_errors=True)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/django/core/management/base.py", line 387, in check
+    all_issues = self._run_checks(
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/django/core/management/base.py", line 377, in _run_checks
+    return checks.run_checks(**kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/django/core/checks/registry.py", line 72, in run_checks
+    new_errors = check(app_configs=app_configs)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/django/core/checks/urls.py", line 40, in check_url_namespaces_unique
+    all_namespaces = _load_all_namespaces(resolver)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/django/core/checks/urls.py", line 57, in _load_all_namespaces
+    url_patterns = getattr(resolver, 'url_patterns', [])
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/django/utils/functional.py", line 80, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/django/urls/resolvers.py", line 579, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/django/utils/functional.py", line 80, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/django/urls/resolvers.py", line 572, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 783, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/Users/dohyoungkim/Downloads/Reservation-search-app/Reservation-app/ReservationProject/ReservationProject/urls.py", line 25, in <module>
+    path('reservation/', include('ReservationApp.urls')),
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/django/urls/conf.py", line 34, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 783, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/Users/dohyoungkim/Downloads/Reservation-search-app/Reservation-app/ReservationProject/ReservationApp/urls.py", line 3, in <module>
+    from .views import revstart, eticket_resend, index, course_search, payment, date_search_result, date_search, intro
+  File "/Users/dohyoungkim/Downloads/Reservation-search-app/Reservation-app/ReservationProject/ReservationApp/views.py", line 3, in <module>
+    from .forms import reservationForm, datesearchForm
+  File "/Users/dohyoungkim/Downloads/Reservation-search-app/Reservation-app/ReservationProject/ReservationApp/forms.py", line 14, in <module>
+    class reservationForm(forms.ModelForm):
+  File "/Users/dohyoungkim/Downloads/Reservation-search-app/Reservation-app/ReservationProject/ReservationApp/forms.py", line 57, in reservationForm
+    starting_point = forms.ChoiceField(label='출발지', choices=STARTINGPOINT, placeholder='김포/부신/제주')
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/django/forms/fields.py", line 766, in __init__
+    super().__init__(**kwargs)
+TypeError: __init__() got an unexpected keyword argument 'placeholder'
