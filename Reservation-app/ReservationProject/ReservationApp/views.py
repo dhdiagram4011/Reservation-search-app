@@ -48,7 +48,7 @@ def date_search(request):
     return render(request, 'ReservationApp/date_search.html', {'form': form})
 
 
-@login_required
+#@login_required
 def revstart(request):
     if request.method == 'POST':
         form = reservationForm(request.POST)

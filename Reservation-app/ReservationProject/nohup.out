@@ -258,3 +258,90 @@ Not Found: /korean-air-img.png
 [09/May/2020 17:07:10] "GET /reservation/revstart/ HTTP/1.1" 302 0
 Not Found: /accounts/login/
 [09/May/2020 17:07:10] "GET /accounts/login/?next=/reservation/revstart/ HTTP/1.1" 404 12903
+[09/May/2020 17:09:49] "GET /reservation/revstart/ HTTP/1.1" 200 13520
+Not Found: /korean-air-img.png
+[09/May/2020 17:09:49] "GET /korean-air-img.png HTTP/1.1" 404 12884
+/Users/dohyoungkim/Downloads/Reservation-search-app/Reservation-app/ReservationProject/ReservationProject/settings.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+May 09, 2020 - 16:57:39
+Django version 2.2.1, using settings 'ReservationProject.settings'
+Starting development server at http://0:80/
+Quit the server with CONTROL-C.
+Watching for file changes with StatReloader
+[09/May/2020 17:11:33] "GET /admin/ HTTP/1.1" 200 20629
+[09/May/2020 17:11:35] "GET /admin/logout/ HTTP/1.1" 200 11978
+[09/May/2020 17:11:42] "GET /reservation/revstart/ HTTP/1.1" 302 0
+Not Found: /accounts/login/
+[09/May/2020 17:11:42] "GET /accounts/login/?next=/reservation/revstart/ HTTP/1.1" 404 12903
+/Users/dohyoungkim/Downloads/Reservation-search-app/Reservation-app/ReservationProject/ReservationProject/settings.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+May 09, 2020 - 17:11:27
+Django version 2.2.1, using settings 'ReservationProject.settings'
+Starting development server at http://0:80/
+Quit the server with CONTROL-C.
+Watching for file changes with StatReloader
+/Users/dohyoungkim/Downloads/Reservation-search-app/Reservation-app/ReservationProject/ReservationApp/views.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+May 09, 2020 - 17:11:51
+Django version 2.2.1, using settings 'ReservationProject.settings'
+Starting development server at http://0:80/
+Quit the server with CONTROL-C.
+Watching for file changes with StatReloader
+[09/May/2020 17:12:10] "GET /reservation/revstart/ HTTP/1.1" 200 13522
+Not Found: /korean-air-img.png
+[09/May/2020 17:12:10] "GET /korean-air-img.png HTTP/1.1" 404 12884
+[09/May/2020 17:12:15] "GET /reservation/revstart/ HTTP/1.1" 200 13522
+Not Found: /korean-air-img.png
+[09/May/2020 17:12:15] "GET /korean-air-img.png HTTP/1.1" 404 12884
+[09/May/2020 17:12:36] "GET /reservation/revstart/ HTTP/1.1" 200 13522
+Not Found: /korean-air-img.png
+[09/May/2020 17:12:36] "GET /korean-air-img.png HTTP/1.1" 404 12884
+[09/May/2020 17:12:47] "GET /admin/ HTTP/1.1" 302 0
+[09/May/2020 17:12:47] "GET /admin/login/?next=/admin/ HTTP/1.1" 200 12663
+[09/May/2020 17:12:47] "GET /Users/dohyoungkim/Downloads/Reservation-search-app/Reservation-app/ReservationProject/static/admin/css/login.css HTTP/1.1" 304 0
+[09/May/2020 17:12:49] "GET /admin/ HTTP/1.1" 302 0
+[09/May/2020 17:12:49] "GET /admin/login/?next=/admin/ HTTP/1.1" 200 12663
+[09/May/2020 17:12:53] "POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+[09/May/2020 17:12:53] "GET /admin/ HTTP/1.1" 200 20627
+[09/May/2020 17:12:54] "GET /admin/ReservationApp/flightsection/ HTTP/1.1" 200 21284
+[09/May/2020 17:12:54] "GET /Users/dohyoungkim/Downloads/Reservation-search-app/Reservation-app/ReservationProject/static/admin/js/jquery.init.js HTTP/1.1" 304 0
+[09/May/2020 17:12:54] "GET /Users/dohyoungkim/Downloads/Reservation-search-app/Reservation-app/ReservationProject/static/admin/css/changelists.css HTTP/1.1" 304 0
+[09/May/2020 17:12:54] "GET /Users/dohyoungkim/Downloads/Reservation-search-app/Reservation-app/ReservationProject/static/admin/js/urlify.js HTTP/1.1" 304 0
+[09/May/2020 17:12:54] "GET /Users/dohyoungkim/Downloads/Reservation-search-app/Reservation-app/ReservationProject/static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 304 0
+[09/May/2020 17:12:54] "GET /Users/dohyoungkim/Downloads/Reservation-search-app/Reservation-app/ReservationProject/static/admin/js/core.js HTTP/1.1" 304 0
+[09/May/2020 17:12:54] "GET /Users/dohyoungkim/Downloads/Reservation-search-app/Reservation-app/ReservationProject/static/admin/js/prepopulate.js HTTP/1.1" 304 0
+[09/May/2020 17:12:54] "GET /Users/dohyoungkim/Downloads/Reservation-search-app/Reservation-app/ReservationProject/static/admin/js/actions.js HTTP/1.1" 304 0
+[09/May/2020 17:12:54] "GET /Users/dohyoungkim/Downloads/Reservation-search-app/Reservation-app/ReservationProject/static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 200 128820
+[09/May/2020 17:12:54] "GET /Users/dohyoungkim/Downloads/Reservation-search-app/Reservation-app/ReservationProject/static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 200 271751
+[09/May/2020 17:12:54] "GET /admin/jsi18n/ HTTP/1.1" 200 3223
+[09/May/2020 17:12:54] "GET /Users/dohyoungkim/Downloads/Reservation-search-app/Reservation-app/ReservationProject/static/admin/img/tooltag-add.svg HTTP/1.1" 304 0
+[09/May/2020 17:13:17] "GET /reservation/course_search/?csrfmiddlewaretoken=Xea50jWdZEtMdkx1yAqXxJVDSXCp8SuLiGWJvbKpxhuXzKpt9u1QglDrmHgliFW4&daytogo=2020-05-05&comingDay=2020-05-05&starting_point=%EC%A7%84%EC%A3%BC%2F%EC%82%AC%EC%B2%9C&arrival=%EC%97%AC%EC%88%98%2F%EC%88%9C%EC%B2%9C HTTP/1.1" 200 970
+/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/django/template/defaulttags.py:62: UserWarning: A {% csrf_token %} was used in a template, but the context did not provide the value.  This is usually caused by not using RequestContext.
+  warnings.warn(
+[09/May/2020 17:13:29] "POST /reservation/payment/ HTTP/1.1" 200 696
+/Users/dohyoungkim/Downloads/Reservation-search-app/Reservation-app/ReservationProject/ReservationApp/views.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+May 09, 2020 - 17:12:05
+Django version 2.2.1, using settings 'ReservationProject.settings'
+Starting development server at http://0:80/
+Quit the server with CONTROL-C.
+진주/사천
+여수/순천
+2020-05-05
+2020-05-05
+=======console_msg======
+flightSection object (10)
+10
+진주/사천
+여수/순천
+2020-05-05
+2020-05-05
+Watching for file changes with StatReloader
