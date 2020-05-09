@@ -207,3 +207,54 @@ Watching for file changes with StatReloader
 Not Found: /asian01.jpeg
 [25/Apr/2020 13:14:27] "GET /asian01.jpeg HTTP/1.1" 404 12866
 [25/Apr/2020 13:14:34] "GET /auth/loginSuccess/?csrfmiddlewaretoken=HWO7gG6qDPjcgIFGp2C21qmYnIeOYizbwBSg7HH62Msr3vxhz5OcSWHYR6P9ot8c&username=dhdiagram0425&password=k20504003 HTTP/1.1" 200 34
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+May 09, 2020 - 16:57:33
+Django version 2.2.1, using settings 'ReservationProject.settings'
+Starting development server at http://0:80/
+Quit the server with CONTROL-C.
+Watching for file changes with StatReloader
+[09/May/2020 16:58:04] "GET /admin/ HTTP/1.1" 200 20629
+[09/May/2020 16:58:04] "GET /Users/dohyoungkim/Downloads/Reservation-search-app/Reservation-app/ReservationProject/static/debug_toolbar/css/toolbar.css HTTP/1.1" 200 14835
+[09/May/2020 16:58:04] "GET /Users/dohyoungkim/Downloads/Reservation-search-app/Reservation-app/ReservationProject/static/admin/css/dashboard.css HTTP/1.1" 304 0
+[09/May/2020 16:58:04] "GET /Users/dohyoungkim/Downloads/Reservation-search-app/Reservation-app/ReservationProject/static/admin/css/base.css HTTP/1.1" 200 16378
+[09/May/2020 16:58:04] "GET /Users/dohyoungkim/Downloads/Reservation-search-app/Reservation-app/ReservationProject/static/admin/css/responsive.css HTTP/1.1" 200 17944
+[09/May/2020 16:58:04] "GET /Users/dohyoungkim/Downloads/Reservation-search-app/Reservation-app/ReservationProject/static/debug_toolbar/img/ajax-loader.gif HTTP/1.1" 304 0
+[09/May/2020 16:58:04] "GET /Users/dohyoungkim/Downloads/Reservation-search-app/Reservation-app/ReservationProject/static/debug_toolbar/js/toolbar.js HTTP/1.1" 200 13188
+[09/May/2020 16:58:05] "GET /admin/ HTTP/1.1" 200 20629
+[09/May/2020 16:58:05] "GET /Users/dohyoungkim/Downloads/Reservation-search-app/Reservation-app/ReservationProject/static/debug_toolbar/css/print.css HTTP/1.1" 304 0
+[09/May/2020 16:58:05] "GET /Users/dohyoungkim/Downloads/Reservation-search-app/Reservation-app/ReservationProject/static/admin/css/fonts.css HTTP/1.1" 304 0
+[09/May/2020 16:58:05] "GET /Users/dohyoungkim/Downloads/Reservation-search-app/Reservation-app/ReservationProject/static/admin/img/icon-changelink.svg HTTP/1.1" 304 0
+[09/May/2020 16:58:05] "GET /Users/dohyoungkim/Downloads/Reservation-search-app/Reservation-app/ReservationProject/static/admin/img/icon-addlink.svg HTTP/1.1" 304 0
+[09/May/2020 16:58:05] "GET /Users/dohyoungkim/Downloads/Reservation-search-app/Reservation-app/ReservationProject/static/admin/fonts/Roboto-Regular-webfont.woff HTTP/1.1" 200 85876
+[09/May/2020 16:58:05] "GET /Users/dohyoungkim/Downloads/Reservation-search-app/Reservation-app/ReservationProject/static/admin/fonts/Roboto-Light-webfont.woff HTTP/1.1" 200 85692
+[09/May/2020 16:58:05] "GET /Users/dohyoungkim/Downloads/Reservation-search-app/Reservation-app/ReservationProject/static/admin/fonts/Roboto-Bold-webfont.woff HTTP/1.1" 200 86184
+Not Found: /favicon.ico
+[09/May/2020 16:58:05] "GET /favicon.ico HTTP/1.1" 404 12863
+[09/May/2020 16:58:09] "GET /reservation/revstart/ HTTP/1.1" 200 13522
+Not Found: /korean-air-img.png
+[09/May/2020 16:58:10] "GET /korean-air-img.png HTTP/1.1" 404 12884
+[09/May/2020 16:58:12] "GET /Users/dohyoungkim/Downloads/Reservation-search-app/Reservation-app/ReservationProject/static/debug_toolbar/img/djdt_vertical.png HTTP/1.1" 304 0
+[09/May/2020 17:05:54] "GET /reservation/revstart/ HTTP/1.1" 200 13522
+Not Found: /korean-air-img.png
+[09/May/2020 17:05:54] "GET /korean-air-img.png HTTP/1.1" 404 12884
+[09/May/2020 17:06:26] "GET /reservation/revstart/ HTTP/1.1" 302 0
+Not Found: /accounts/login/
+[09/May/2020 17:06:26] "GET /accounts/login/?next=/reservation/revstart/ HTTP/1.1" 404 12903
+[09/May/2020 17:06:26] "GET /Users/dohyoungkim/Downloads/Reservation-search-app/Reservation-app/ReservationProject/static/debug_toolbar/css/toolbar.css HTTP/1.1" 200 14835
+[09/May/2020 17:06:26] "GET /Users/dohyoungkim/Downloads/Reservation-search-app/Reservation-app/ReservationProject/static/debug_toolbar/js/toolbar.js HTTP/1.1" 200 13188
+[09/May/2020 17:06:26] "GET /Users/dohyoungkim/Downloads/Reservation-search-app/Reservation-app/ReservationProject/static/debug_toolbar/img/ajax-loader.gif HTTP/1.1" 200 404
+[09/May/2020 17:06:26] "GET /Users/dohyoungkim/Downloads/Reservation-search-app/Reservation-app/ReservationProject/static/debug_toolbar/css/print.css HTTP/1.1" 200 41
+[09/May/2020 17:06:31] "GET /Users/dohyoungkim/Downloads/Reservation-search-app/Reservation-app/ReservationProject/static/debug_toolbar/img/djdt_vertical.png HTTP/1.1" 200 882
+[09/May/2020 17:06:41] "GET /admin/ HTTP/1.1" 200 20629
+[09/May/2020 17:06:42] "GET /admin/ HTTP/1.1" 200 20629
+[09/May/2020 17:06:49] "GET /reservation/revstart/ HTTP/1.1" 200 13520
+Not Found: /reseer
+[09/May/2020 17:06:49] "GET /reseer HTTP/1.1" 404 12848
+Not Found: /korean-air-img.png
+[09/May/2020 17:06:52] "GET /korean-air-img.png HTTP/1.1" 404 12884
+[09/May/2020 17:07:10] "GET /reservation/revstart/ HTTP/1.1" 302 0
+Not Found: /accounts/login/
+[09/May/2020 17:07:10] "GET /accounts/login/?next=/reservation/revstart/ HTTP/1.1" 404 12903

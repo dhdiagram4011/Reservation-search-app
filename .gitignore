@@ -124,3 +124,6 @@ dmypy.json
 
 # terraform
 */.terraform/modules/
+
+# vagrant gcp key
+django-app-test-264502-c3bf68ae8d6c.json
