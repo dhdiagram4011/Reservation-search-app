@@ -4,6 +4,7 @@
 <br/>
 <br/>
 {% block content %}
+{% for user_pk in user_pks %}
 <strong style="font-size:13px">아이디 |</strong> {{ user_pk.username }}<br/>
 <br/>
 <div style="float:left"><strong style="font-size:13px"><a href="/auth/myinfo/">회원정보</a></strong></div><br/>     
@@ -11,4 +12,5 @@
 <br/>
 <br/>
 <br/>
+{% endfor %}
 {% endblock %}

@@ -74,28 +74,13 @@ def login(request):
         password = request.POST['password']
         print(password)
 
-    res_data = {}
-    if not (username and password):
-        res_data['error'] = "아이디/패스워드를 정확히 입력하여 주세요"
-    else:
-        fuser = request.GET['username']
-        print("0 :" + fuser)
-
-        if fuser.password == request.GET['password']:
-            request.GET['username'] = fuser
-            res = request.GET['username']
-            print(res)
-            return redirect('loginSuccess')
-        else:
-            return render(request, 'SignupApp/login_failed.html')
-
-
 
 def loginSuccess(request):
-    user_pk = MyUser.objects.get(username=request.POST['username'], password=request.POST['password'])
-
-    if user_pk:
-        return render(request, 'SignupApp/login_success.html', {'user_pk': user_pk})
+    user_pks = MyUser.objects.filter(username=request.POST['username'], password=request.POST['password'])
+    print(user_pks)
+    if user_pks:
+        print(user_pks)
+        return render(request, 'SignupApp/login_success.html', {'user_pks': user_pks})
     else:
         return render(request, 'SignupApp/login_failed.html')
 
@@ -108,20 +93,12 @@ def logout(request):
 
 
 def myinfo(request):
-    myprofile_pk = request.GET['username']
+    myprofile_pk = MyUser.objects.get(username=request.POST['username'])
     print("1 :" + myprofile_pk)
 
     if myprofile_pk:
-        #myprofile = MyUser.objects.get(pk=myprofile_pk)
+        myprofile = MyUser.objects.get(pk=myprofile_pk)
         return render(request, 'SignupApp/myinfo.html', {'myprofile_pk': myprofile_pk})
-        #return HttpResponse(
-        #    "아이디 : " + myprofile.username + '<br/>',
-        #    "이메일 : " + myprofile.email + '<br/>', 
-        #    "주소 : " + myprofile.address + '<br/>',
-        #    "상세주소 : " + myprofile.detailAddress + '<br/>',
-        #    "가입일 : " + myprofile.created_date + '<br/>',  
-        #    '<a href="/auth/unregister/"><strong>회원탈퇴</strong></a>',
-    #)
 
 
 def unregister(request):

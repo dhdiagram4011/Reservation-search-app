@@ -4,7 +4,11 @@
 <br/>
 <br/>
 {% block content %}
-<strong style="font-size:13px">아이디 |</strong> {{ myprofile_pk }}<br/>
+<strong style="font-size:13px">아이디 |</strong> {{ myprofile_pk.username }}<br/>
+<strong style="font-size:13px">이메일 |</strong> {{ myprofile_pk.email }}<br/>
+<strong style="font-size:13px">주소 |</strong> {{ myprofile_pk.address }}<br/>
+<strong style="font-size:13px">상세주소 |</strong> {{ myprofile_pk.detailAddress }}<br/>
+
 <br/>
 <br/>
 <br/>
