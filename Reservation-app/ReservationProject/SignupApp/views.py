@@ -81,35 +81,23 @@ def login(request):
         fuser = request.GET['username']
         print("0 :" + fuser)
 
-        if check_password(password, fuser.password):
-        #if fuser.password == request.GET['password']:
+        if fuser.password == request.GET['password']:
             request.GET['username'] = fuser
             res = request.GET['username']
             print(res)
             return redirect('loginSuccess')
         else:
-            #return render(request, 'SignupApp/login_failed.html')
-            return HttpResponse(
-                '아이디 또는 패스워드를 다시 확인해 주세요<br/>',
-                '<br/>',
-                '<a href="/auth/login/" style="font-size:15px">로그인 페이지로 돌아가기</a>',
-            )
+            return render(request, 'SignupApp/login_failed.html')
 
 
 
 def loginSuccess(request):
-    user_pk = request.GET['username']
-    print("1 : " + user_pk)
+    user_pk = MyUser.objects.get(username=request.POST['username'], password=request.POST['password'])
 
     if user_pk:
-        print("2 : " + user_pk)
         return render(request, 'SignupApp/login_success.html', {'user_pk': user_pk})
     else:
-        return HttpResponse(
-            '아이디 또는 패스워드를 다시 확인해 주세요<br/>',
-            '<br/>',
-            '<a href="/auth/login/" style="font-size:15px">로그인 페이지로 돌아가기</a>',
-            )
+        return render(request, 'SignupApp/login_failed.html')
 
 
 def logout(request):
