@@ -89,10 +89,10 @@ DATABASES = {
     }
 }
 
-#from django.urls import reverse_lazy
-#LOGIN_REDIRECT_URL = '/reservation/revstart/'
-#LOGIN_URL = '/auth/login/'
-#LOGOUT_REDRIECT_URL = ''
+from django.urls import reverse_lazy
+LOGIN_REDIRECT_URL = '/reservation/revstart/'
+LOGIN_URL = '/auth/login/'
+LOGOUT_REDRIECT_URL = ''
 
 # EMAIL
 EMAIL_HOST = 'smtp.gmail.com'

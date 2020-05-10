@@ -1,30 +1,49 @@
 {
-    "name": "reservation-search-app",
-    "version": "1.0.0",
-    "description": "Airline-Reservation-App",
-    "main": "main.js",
+    "name": "revapp",
+    "version": "0.0.1",
+    "license": "MIT",
+    "description": "Ticket reservation system",
+    "author": "dhdiagram <dhdiagram@gmail.com>",
+    "main": "/Users/dohyoungkim/Downloads/Reservation-search-app/Reservation-app/ReservationProject/main.js",
     "scripts": {
-        "start": "electron ."
+        "postinstall": "install-app-deps",
+        "start": "npm install && electron .",
+        "pack": "build --dir",
+        "dist": "build",
+        "installer-mac": "electron-installer-dmg ./dist/revapp-darwin-x64/revapp.app serial-list --out=dist --icon=assets/icon.icns --overwrite"
     },
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/electron/electron-quick-start.git"
+    "build": {
+        "appId": "dhdiagram",
+        "category": "your.app.category.type",
+        "dmg": {
+            "contents": [
+                {
+                    "x": 110,
+                    "y": 150
+                },
+                {
+                    "x": 240,
+                    "y": 150,
+                    "type": "link",
+                    "path": "/Applications"
+                }
+            ]
+        },
+        "linux": {
+            "target": [
+                "AppImage",
+                "deb"
+            ]
+        },
+        "win": {
+            "target": "squirrel",
+            "icon": "build/icon.ico"
+        }
     },
-    "keywords": [
-        "Electron",
-        "quick",
-        "start",
-        "tutorial",
-        "demo"
-    ],
-    "author": "GitHub",
-    "license": "CC0-1.0",
+    "dependencies": {},
     "devDependencies": {
-        "electron": "^8.2.5"
-    },
-    "bugs": {
-        "url": "https://github.com/electron/electron-quick-start/issues"
-    },
-    "homepage": "https://github.com/electron/electron-quick-start#readme",
-    "dependencies": {}
+        "electron": "latest",
+        "electron-builder": "^22.6.0",
+        "electron-installer-dmg": "^3.0.0"
+    }
 }

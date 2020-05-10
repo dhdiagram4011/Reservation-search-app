@@ -591,3 +591,139 @@ Not Found: /korean-air-img.png
 [09/May/2020 18:59:56] "GET /reservation/revstart/ HTTP/1.1" 200 13424
 Not Found: /korean-air-img.png
 [09/May/2020 18:59:56] "GET /korean-air-img.png HTTP/1.1" 404 12884
+[09/May/2020 19:00:56] "GET /reservation/revstart/ HTTP/1.1" 200 13422
+Not Found: /korean-air-img.png
+[09/May/2020 19:00:56] "GET /korean-air-img.png HTTP/1.1" 404 12884
+[09/May/2020 19:00:58] "GET /reservation/revstart/ HTTP/1.1" 200 13422
+Not Found: /korean-air-img.png
+[09/May/2020 19:00:58] "GET /korean-air-img.png HTTP/1.1" 404 12884
+[09/May/2020 19:01:08] "GET /reservation/revstart/ HTTP/1.1" 200 13422
+[09/May/2020 19:01:08] "GET /Users/dohyoungkim/Downloads/Reservation-search-app/Reservation-app/ReservationProject/static/debug_toolbar/css/print.css HTTP/1.1" 200 41
+[09/May/2020 19:01:08] "GET /Users/dohyoungkim/Downloads/Reservation-search-app/Reservation-app/ReservationProject/static/debug_toolbar/css/toolbar.css HTTP/1.1" 200 14835
+[09/May/2020 19:01:08] "GET /Users/dohyoungkim/Downloads/Reservation-search-app/Reservation-app/ReservationProject/static/debug_toolbar/js/toolbar.js HTTP/1.1" 200 13188
+[09/May/2020 19:01:08] "GET /Users/dohyoungkim/Downloads/Reservation-search-app/Reservation-app/ReservationProject/static/debug_toolbar/img/ajax-loader.gif HTTP/1.1" 200 404
+Not Found: /korean-air-img.png
+[09/May/2020 19:01:08] "GET /korean-air-img.png HTTP/1.1" 404 12884
+Not Found: /apple-touch-icon-precomposed.png
+[09/May/2020 19:01:08] "GET /apple-touch-icon-precomposed.png HTTP/1.1" 404 12926
+Not Found: /apple-touch-icon.png
+[09/May/2020 19:01:08] "GET /apple-touch-icon.png HTTP/1.1" 404 12890
+[09/May/2020 19:01:11] "GET /Users/dohyoungkim/Downloads/Reservation-search-app/Reservation-app/ReservationProject/static/debug_toolbar/img/djdt_vertical.png HTTP/1.1" 200 882
+[09/May/2020 19:32:57] "GET /reservation/revstart/ HTTP/1.1" 200 13424
+Not Found: /korean-air-img.png
+[09/May/2020 19:32:57] "GET /korean-air-img.png HTTP/1.1" 404 12884
+[10/May/2020 13:42:28] "GET /reservation/revstart/ HTTP/1.1" 200 13424
+[10/May/2020 13:42:28] "GET /Users/dohyoungkim/Downloads/Reservation-search-app/Reservation-app/ReservationProject/static/debug_toolbar/css/toolbar.css HTTP/1.1" 200 14835
+[10/May/2020 13:42:28] "GET /Users/dohyoungkim/Downloads/Reservation-search-app/Reservation-app/ReservationProject/static/debug_toolbar/img/ajax-loader.gif HTTP/1.1" 200 404
+[10/May/2020 13:42:28] "GET /Users/dohyoungkim/Downloads/Reservation-search-app/Reservation-app/ReservationProject/static/debug_toolbar/js/toolbar.js HTTP/1.1" 200 13188
+[10/May/2020 13:42:28] "GET /Users/dohyoungkim/Downloads/Reservation-search-app/Reservation-app/ReservationProject/static/debug_toolbar/css/print.css HTTP/1.1" 200 41
+Not Found: /korean-air-img.png
+[10/May/2020 13:42:28] "GET /korean-air-img.png HTTP/1.1" 404 12884
+[10/May/2020 13:42:31] "GET /Users/dohyoungkim/Downloads/Reservation-search-app/Reservation-app/ReservationProject/static/debug_toolbar/img/djdt_vertical.png HTTP/1.1" 200 882
+Unknown command: 'runserverr'. Did you mean runserver?
+Type 'manage.py help' for usage.
+[10/May/2020 19:08:00] "GET /reservation/revstart/ HTTP/1.1" 200 13424
+Not Found: /korean-air-img.png
+[10/May/2020 19:08:00] "GET /korean-air-img.png HTTP/1.1" 404 12884
+[10/May/2020 19:09:04] "GET /reservation/revstart/ HTTP/1.1" 200 13557
+Not Found: /korean-air-img.png
+[10/May/2020 19:09:05] "GET /korean-air-img.png HTTP/1.1" 404 12884
+[10/May/2020 19:09:17] "GET /reservation/revstart/ HTTP/1.1" 200 13557
+Not Found: /korean-air-img.png
+[10/May/2020 19:09:17] "GET /korean-air-img.png HTTP/1.1" 404 12884
+[10/May/2020 19:09:29] "GET /reservation/revstart/ HTTP/1.1" 200 13557
+Not Found: /korean-air-img.png
+[10/May/2020 19:09:30] "GET /korean-air-img.png HTTP/1.1" 404 12884
+[10/May/2020 19:09:48] "GET /reservation/revstart/ HTTP/1.1" 200 13557
+Not Found: /korean-air-img.png
+[10/May/2020 19:09:48] "GET /korean-air-img.png HTTP/1.1" 404 12884
+[10/May/2020 19:09:57] "GET /reservation/revstart/ HTTP/1.1" 200 13557
+Not Found: /korean-air-img.png
+[10/May/2020 19:09:57] "GET /korean-air-img.png HTTP/1.1" 404 12884
+[10/May/2020 19:10:09] "GET /reservation/revstart/ HTTP/1.1" 200 13557
+Not Found: /korean-air-img.png
+[10/May/2020 19:10:09] "GET /korean-air-img.png HTTP/1.1" 404 12884
+[10/May/2020 19:10:24] "GET /reservation/revstart/ HTTP/1.1" 200 13557
+Not Found: /korean-air-img.png
+[10/May/2020 19:10:24] "GET /korean-air-img.png HTTP/1.1" 404 12884
+[10/May/2020 19:10:57] "GET /reservation/revstart/ HTTP/1.1" 200 13557
+Not Found: /korean-air-img.png
+[10/May/2020 19:10:57] "GET /korean-air-img.png HTTP/1.1" 404 12884
+[10/May/2020 19:11:55] "GET /reservation/revstart/ HTTP/1.1" 200 13564
+Not Found: /korean-air-img.png
+[10/May/2020 19:11:55] "GET /korean-air-img.png HTTP/1.1" 404 12884
+[10/May/2020 19:12:08] "GET /reservation/revstart/ HTTP/1.1" 200 13431
+Not Found: /korean-air-img.png
+[10/May/2020 19:12:08] "GET /korean-air-img.png HTTP/1.1" 404 12884
+[10/May/2020 19:13:18] "GET /reservation/revstart/ HTTP/1.1" 200 13431
+Not Found: /korean-air-img.png
+[10/May/2020 19:13:18] "GET /korean-air-img.png HTTP/1.1" 404 12884
+[10/May/2020 19:13:22] "GET /reservation/revstart/ HTTP/1.1" 200 13431
+Not Found: /korean-air-img.png
+[10/May/2020 19:13:22] "GET /korean-air-img.png HTTP/1.1" 404 12884
+[10/May/2020 19:13:57] "GET /reservation/revstart/ HTTP/1.1" 200 13564
+Not Found: /korean-air-img.png
+[10/May/2020 19:13:57] "GET /korean-air-img.png HTTP/1.1" 404 12884
+[10/May/2020 19:16:02] "GET /reservation/revstart/ HTTP/1.1" 200 13583
+Not Found: /korean-air-img.png
+[10/May/2020 19:16:02] "GET /korean-air-img.png HTTP/1.1" 404 12884
+[10/May/2020 19:16:03] "GET /auth/register/ HTTP/1.1" 200 4095
+[10/May/2020 19:18:59] "GET /auth/register/ HTTP/1.1" 200 4190
+[10/May/2020 19:19:02] "GET /reservation/revstart/ HTTP/1.1" 200 13583
+Not Found: /korean-air-img.png
+[10/May/2020 19:19:02] "GET /korean-air-img.png HTTP/1.1" 404 12884
+[10/May/2020 19:20:39] "GET /reservation/revstart/ HTTP/1.1" 200 13583
+[10/May/2020 19:20:39] "GET /Users/dohyoungkim/Downloads/Reservation-search-app/Reservation-app/ReservationProject/static/debug_toolbar/css/print.css HTTP/1.1" 200 41
+[10/May/2020 19:20:39] "GET /Users/dohyoungkim/Downloads/Reservation-search-app/Reservation-app/ReservationProject/static/debug_toolbar/js/toolbar.js HTTP/1.1" 200 13188
+[10/May/2020 19:20:39] "GET /Users/dohyoungkim/Downloads/Reservation-search-app/Reservation-app/ReservationProject/static/debug_toolbar/img/ajax-loader.gif HTTP/1.1" 200 404
+[10/May/2020 19:20:39] "GET /Users/dohyoungkim/Downloads/Reservation-search-app/Reservation-app/ReservationProject/static/debug_toolbar/css/toolbar.css HTTP/1.1" 200 14835
+Not Found: /korean-air-img.png
+[10/May/2020 19:20:39] "GET /korean-air-img.png HTTP/1.1" 404 12884
+[10/May/2020 19:20:41] "GET /Users/dohyoungkim/Downloads/Reservation-search-app/Reservation-app/ReservationProject/static/debug_toolbar/img/djdt_vertical.png HTTP/1.1" 200 882
+[10/May/2020 19:24:15] "GET /reservation/revstart/ HTTP/1.1" 200 13583
+Not Found: /reservation/revstart/{ static 'korean-air-img.png' %}
+[10/May/2020 19:24:15] "GET /reservation/revstart/%7B%20static%20'korean-air-img.png'%20%%7D HTTP/1.1" 404 14421
+/Users/dohyoungkim/Downloads/Reservation-search-app/Reservation-app/ReservationProject/ReservationProject/settings.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+May 09, 2020 - 18:43:48
+Django version 2.2.1, using settings 'ReservationProject.settings'
+Starting development server at http://0:80/
+Quit the server with CONTROL-C.
+/Users/dohyoungkim/Downloads/Reservation-search-app/Reservation-app/ReservationProject/ReservationProject/settings.py changed, reloading.
+Performing system checks...
+
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+/Users/dohyoungkim/Downloads/Reservation-search-app/Reservation-app/ReservationProject/ReservationProject/settings.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+May 10, 2020 - 19:27:16
+Django version 2.2.1, using settings 'ReservationProject.settings'
+Starting development server at http://0:80/
+Quit the server with CONTROL-C.
+/Users/dohyoungkim/Downloads/Reservation-search-app/Reservation-app/ReservationProject/ReservationProject/settings.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+May 10, 2020 - 19:27:51
+Django version 2.2.1, using settings 'ReservationProject.settings'
+Starting development server at http://0:8000/
+Quit the server with CONTROL-C.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+[10/May/2020 19:31:06] "GET /reservation/revstart/ HTTP/1.1" 200 13583
+Not Found: /korean-air-img.png
+[10/May/2020 19:31:06] "GET /korean-air-img.png HTTP/1.1" 404 12884
+[10/May/2020 19:33:02] "GET /reservation/revstart/ HTTP/1.1" 200 13573
+Not Found: /korean-air-img.png
+[10/May/2020 19:33:02] "GET /korean-air-img.png HTTP/1.1" 404 12884
+[10/May/2020 19:33:59] "GET /reservation/revstart/ HTTP/1.1" 200 13666
+[10/May/2020 19:33:59] "GET /Users/dohyoungkim/Downloads/Reservation-search-app/Reservation-app/ReservationProject/static/korean-air-img.png HTTP/1.1" 200 1099350
+[10/May/2020 19:34:26] "GET /reservation/revstart/ HTTP/1.1" 200 13673
+[10/May/2020 19:35:54] "GET /reservation/revstart/ HTTP/1.1" 200 13608
+[10/May/2020 19:35:59] "GET /auth/register/ HTTP/1.1" 200 4190
+[10/May/2020 19:36:01] "GET /reservation/revstart/ HTTP/1.1" 200 13608
