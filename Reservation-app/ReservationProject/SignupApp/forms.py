@@ -20,6 +20,6 @@ class loginForm(forms.ModelForm):
         fields = ['username', 'password']
         # fields = "__all__"
 
-    username = forms.CharField(label="아이디", help_text="가입시 입력하신 아이디를 입력하여 주세요")
-    password = forms.CharField(label="패스워드", help_text="가입시 입력하신 패스워드를 입력하여 주세요", widget=forms.PasswordInput())
+    username = forms.CharField(label="아이디", help_text="가입시 입력하신 아이디를 입력하여 주세요", widget=forms.TextInput(attrs={'placeholder': '아이디', 'style' : 'width:15em; height:3em; background-color:#F1F0EF; text-align:center; border:none;'}))
+    password = forms.CharField(label="패스워드", help_text="가입시 입력하신 패스워드를 입력하여 주세요", widget=forms.PasswordInput(attrs={'placeholder': '패스워드', 'style' : 'width:15em; height:3em; background-color:#F1F0EF; text-align:center; border:none;'}))
 
