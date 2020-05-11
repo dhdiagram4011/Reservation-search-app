@@ -1,14 +1,33 @@
-<p style="font-size:13px">
+<head>
+<style>
+ul {
+    list-style:none;
+},
+body {
+    background: url("/Users/dohyoungkim/Downloads/Reservation-search-app/Reservation-app/ReservationProject/static/cloud-background.jpg")
+}
+</style>
+</head>
+<p style="font-size:13px; text-align:center; margin-top:120px;">
 로그인에 성공하였습니다. 로그인 하신 아이디는 아래와 같습니다.
 </p>
 <br/>
 <br/>
 {% block content %}
 {% for user_pk in user_pks %}
-<strong style="font-size:13px">아이디 |</strong> {{ user_pk.username }}<br/>
-<br/>
-<div style="float:left"><strong style="font-size:13px"><a href="/auth/myinfo/">회원정보</a></strong></div><br/>     
-<div><strong style="font-size:13px"><a href="/auth/unregister/">회원탈퇴</a></strong></div><br/>
+<div style="width:100%; text-align:center; font-size:12px; margin-left:-30px;">
+<ul>
+<li><strong>아이디 | {{ user_pk.username }}</strong></li>
+<li><strong>이메일 |</strong> {{ user_pk.email }}</li>
+<li><strong>주소 |</strong> {{ user_pk.address }}</li>
+<li><strong>상세주소 |</strong> {{ user_pk.detailAddress }}</li>
+</ul>
+<div style="margin-top:20px; margin-left:20px;">
+<input type="button" value="회원탈퇴" onclick="location.href='/auth/unregister/'">
+<input type="button" value="로그아웃" onclick="location.href='/auth/logout/'">
+<input type="button" value="예약하기" onclick="location.href='/reservation/revstart/'">
+</div>
+</div>
 <br/>
 <br/>
 <br/>
