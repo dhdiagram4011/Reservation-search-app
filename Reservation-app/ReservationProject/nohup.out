@@ -1493,3 +1493,32 @@ Traceback (most recent call last):
   File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/django/utils/autoreload.py", line 83, in ensure_echo_on
     if fd.isatty():
 AttributeError: 'NoneType' object has no attribute 'isatty'
+Watching for file changes with StatReloader
+[13/May/2020 21:52:05] "GET /reservation/revstart/ HTTP/1.1" 200 13754
+[13/May/2020 21:52:05] "GET /Users/dohyoungkim/Downloads/Reservation-search-app/Reservation-app/ReservationProject/static/korean-air-img.png HTTP/1.1" 304 0
+[13/May/2020 21:52:05] "GET /Users/dohyoungkim/Downloads/Reservation-search-app/Reservation-app/ReservationProject/static/debug_toolbar/img/ajax-loader.gif HTTP/1.1" 304 0
+[13/May/2020 21:52:05] "GET /Users/dohyoungkim/Downloads/Reservation-search-app/Reservation-app/ReservationProject/static/debug_toolbar/css/toolbar.css HTTP/1.1" 304 0
+[13/May/2020 21:52:05] "GET /Users/dohyoungkim/Downloads/Reservation-search-app/Reservation-app/ReservationProject/static/debug_toolbar/css/print.css HTTP/1.1" 304 0
+[13/May/2020 21:52:05] "GET /Users/dohyoungkim/Downloads/Reservation-search-app/Reservation-app/ReservationProject/static/debug_toolbar/js/toolbar.js HTTP/1.1" 304 0
+[13/May/2020 21:52:05] "GET /Users/dohyoungkim/Downloads/Reservation-search-app/Reservation-app/ReservationProject/static/debug_toolbar/img/djdt_vertical.png HTTP/1.1" 304 0
+[13/May/2020 21:52:07] "GET /auth/register/ HTTP/1.1" 200 3264
+[13/May/2020 21:52:07] "GET /Users/dohyoungkim/Downloads/Reservation-search-app/Reservation-app/ReservationProject/static/cloud.jpg HTTP/1.1" 304 0
+[13/May/2020 21:54:03] "GET /reservation/revstart/ HTTP/1.1" 200 13754
+[13/May/2020 21:56:15] "GET /reservation/revstart/ HTTP/1.1" 200 13754
+[13/May/2020 21:57:32] "GET /reservation/revstart/ HTTP/1.1" 200 13754
+[13/May/2020 22:06:43] "GET /reservation/revstart/ HTTP/1.1" 200 13754
+[13/May/2020 22:11:20] "GET /reservation/revstart/ HTTP/1.1" 200 13754
+[13/May/2020 22:25:05] "GET /reservation/revstart/ HTTP/1.1" 200 13754
+[13/May/2020 22:28:29] "GET /reservation/revstart/ HTTP/1.1" 200 13754
+[13/May/2020 22:31:51] "GET /reservation/revstart/ HTTP/1.1" 200 13754
+[13/May/2020 22:38:01] "GET /reservation/revstart/ HTTP/1.1" 200 13754
+[13/May/2020 22:38:01] "GET /Users/dohyoungkim/Downloads/Reservation-search-app/Reservation-app/ReservationProject/static/debug_toolbar/css/toolbar.css HTTP/1.1" 304 0
+[13/May/2020 22:38:01] "GET /Users/dohyoungkim/Downloads/Reservation-search-app/Reservation-app/ReservationProject/static/debug_toolbar/js/toolbar.js HTTP/1.1" 304 0
+[13/May/2020 22:38:01] "GET /Users/dohyoungkim/Downloads/Reservation-search-app/Reservation-app/ReservationProject/static/debug_toolbar/css/print.css HTTP/1.1" 304 0
+[13/May/2020 22:38:01] "GET /Users/dohyoungkim/Downloads/Reservation-search-app/Reservation-app/ReservationProject/static/debug_toolbar/img/ajax-loader.gif HTTP/1.1" 304 0
+[13/May/2020 22:38:01] "GET /Users/dohyoungkim/Downloads/Reservation-search-app/Reservation-app/ReservationProject/static/korean-air-img.png HTTP/1.1" 200 1099350
+[13/May/2020 22:38:01] "GET /Users/dohyoungkim/Downloads/Reservation-search-app/Reservation-app/ReservationProject/static/debug_toolbar/img/djdt_vertical.png HTTP/1.1" 304 0
+Not Found: /favicon.ico
+[13/May/2020 22:38:01] "GET /favicon.ico HTTP/1.1" 404 12863
+[13/May/2020 22:38:26] "GET /reservation/revstart/ HTTP/1.1" 200 13754
+[13/May/2020 22:45:34] "GET /reservation/revstart/ HTTP/1.1" 200 13754
