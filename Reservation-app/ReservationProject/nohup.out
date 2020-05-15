@@ -1522,3 +1522,147 @@ Not Found: /favicon.ico
 [13/May/2020 22:38:01] "GET /favicon.ico HTTP/1.1" 404 12863
 [13/May/2020 22:38:26] "GET /reservation/revstart/ HTTP/1.1" 200 13754
 [13/May/2020 22:45:34] "GET /reservation/revstart/ HTTP/1.1" 200 13754
+Not Found: /
+[14/May/2020 11:14:17] "HEAD / HTTP/1.1" 404 2258
+Not Found: /
+[14/May/2020 11:14:19] "GET / HTTP/1.1" 404 2257
+Not Found: /login
+[14/May/2020 11:14:21] "GET /login HTTP/1.1" 404 2290
+Not Found: /
+[14/May/2020 11:14:21] "GET / HTTP/1.1" 404 2257
+[14/May/2020 11:14:21] "GET /admin HTTP/1.1" 301 0
+[14/May/2020 11:14:23] "GET /admin/ HTTP/1.1" 302 0
+[14/May/2020 11:14:24] "GET /admin/login/?next=/admin/ HTTP/1.1" 200 2081
+Not Found: /auth-basic
+[14/May/2020 11:14:25] "GET /auth-basic HTTP/1.1" 404 2305
+[15/May/2020 14:06:14] "GET /reservation/revstart/ HTTP/1.1" 200 13754
+[15/May/2020 14:06:14] "GET /Users/dohyoungkim/Downloads/Reservation-search-app/Reservation-app/ReservationProject/static/debug_toolbar/css/toolbar.css HTTP/1.1" 304 0
+[15/May/2020 14:06:14] "GET /Users/dohyoungkim/Downloads/Reservation-search-app/Reservation-app/ReservationProject/static/debug_toolbar/img/ajax-loader.gif HTTP/1.1" 304 0
+[15/May/2020 14:06:14] "GET /Users/dohyoungkim/Downloads/Reservation-search-app/Reservation-app/ReservationProject/static/debug_toolbar/js/toolbar.js HTTP/1.1" 304 0
+[15/May/2020 14:06:14] "GET /Users/dohyoungkim/Downloads/Reservation-search-app/Reservation-app/ReservationProject/static/debug_toolbar/css/print.css HTTP/1.1" 304 0
+[15/May/2020 14:06:14] "GET /Users/dohyoungkim/Downloads/Reservation-search-app/Reservation-app/ReservationProject/static/korean-air-img.png HTTP/1.1" 304 0
+[15/May/2020 14:06:14] "GET /Users/dohyoungkim/Downloads/Reservation-search-app/Reservation-app/ReservationProject/static/debug_toolbar/img/djdt_vertical.png HTTP/1.1" 304 0
+[15/May/2020 14:07:31] "GET /admin/ HTTP/1.1" 200 20629
+[15/May/2020 14:07:31] "GET /Users/dohyoungkim/Downloads/Reservation-search-app/Reservation-app/ReservationProject/static/debug_toolbar/img/ajax-loader.gif HTTP/1.1" 304 0
+[15/May/2020 14:07:31] "GET /Users/dohyoungkim/Downloads/Reservation-search-app/Reservation-app/ReservationProject/static/admin/css/base.css HTTP/1.1" 304 0
+[15/May/2020 14:07:31] "GET /Users/dohyoungkim/Downloads/Reservation-search-app/Reservation-app/ReservationProject/static/admin/css/dashboard.css HTTP/1.1" 304 0
+[15/May/2020 14:07:31] "GET /Users/dohyoungkim/Downloads/Reservation-search-app/Reservation-app/ReservationProject/static/admin/css/responsive.css HTTP/1.1" 304 0
+[15/May/2020 14:07:31] "GET /Users/dohyoungkim/Downloads/Reservation-search-app/Reservation-app/ReservationProject/static/debug_toolbar/js/toolbar.js HTTP/1.1" 304 0
+[15/May/2020 14:07:31] "GET /Users/dohyoungkim/Downloads/Reservation-search-app/Reservation-app/ReservationProject/static/debug_toolbar/css/toolbar.css HTTP/1.1" 304 0
+[15/May/2020 14:07:33] "GET /admin/ HTTP/1.1" 200 20629
+[15/May/2020 14:07:33] "GET /Users/dohyoungkim/Downloads/Reservation-search-app/Reservation-app/ReservationProject/static/admin/css/fonts.css HTTP/1.1" 304 0
+[15/May/2020 14:07:33] "GET /Users/dohyoungkim/Downloads/Reservation-search-app/Reservation-app/ReservationProject/static/debug_toolbar/css/print.css HTTP/1.1" 304 0
+[15/May/2020 14:07:33] "GET /Users/dohyoungkim/Downloads/Reservation-search-app/Reservation-app/ReservationProject/static/admin/img/icon-addlink.svg HTTP/1.1" 304 0
+[15/May/2020 14:07:33] "GET /Users/dohyoungkim/Downloads/Reservation-search-app/Reservation-app/ReservationProject/static/admin/img/icon-changelink.svg HTTP/1.1" 304 0
+[15/May/2020 14:07:33] "GET /Users/dohyoungkim/Downloads/Reservation-search-app/Reservation-app/ReservationProject/static/debug_toolbar/img/djdt_vertical.png HTTP/1.1" 304 0
+[15/May/2020 14:07:33] "GET /Users/dohyoungkim/Downloads/Reservation-search-app/Reservation-app/ReservationProject/static/admin/fonts/Roboto-Light-webfont.woff HTTP/1.1" 200 85692
+[15/May/2020 14:07:33] "GET /Users/dohyoungkim/Downloads/Reservation-search-app/Reservation-app/ReservationProject/static/admin/fonts/Roboto-Regular-webfont.woff HTTP/1.1" 200 85876
+[15/May/2020 14:07:33] "GET /Users/dohyoungkim/Downloads/Reservation-search-app/Reservation-app/ReservationProject/static/admin/fonts/Roboto-Bold-webfont.woff HTTP/1.1" 200 86184
+[15/May/2020 14:07:46] "GET /admin/ReservationApp/flightsection/ HTTP/1.1" 200 21284
+[15/May/2020 14:07:46] "GET /Users/dohyoungkim/Downloads/Reservation-search-app/Reservation-app/ReservationProject/static/admin/css/changelists.css HTTP/1.1" 304 0
+[15/May/2020 14:07:46] "GET /Users/dohyoungkim/Downloads/Reservation-search-app/Reservation-app/ReservationProject/static/admin/js/core.js HTTP/1.1" 304 0
+[15/May/2020 14:07:46] "GET /Users/dohyoungkim/Downloads/Reservation-search-app/Reservation-app/ReservationProject/static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 304 0
+[15/May/2020 14:07:46] "GET /Users/dohyoungkim/Downloads/Reservation-search-app/Reservation-app/ReservationProject/static/admin/js/jquery.init.js HTTP/1.1" 304 0
+[15/May/2020 14:07:46] "GET /Users/dohyoungkim/Downloads/Reservation-search-app/Reservation-app/ReservationProject/static/admin/js/actions.js HTTP/1.1" 304 0
+[15/May/2020 14:07:46] "GET /Users/dohyoungkim/Downloads/Reservation-search-app/Reservation-app/ReservationProject/static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 200 128820
+[15/May/2020 14:07:46] "GET /Users/dohyoungkim/Downloads/Reservation-search-app/Reservation-app/ReservationProject/static/admin/js/prepopulate.js HTTP/1.1" 304 0
+[15/May/2020 14:07:46] "GET /Users/dohyoungkim/Downloads/Reservation-search-app/Reservation-app/ReservationProject/static/admin/js/urlify.js HTTP/1.1" 304 0
+[15/May/2020 14:07:46] "GET /Users/dohyoungkim/Downloads/Reservation-search-app/Reservation-app/ReservationProject/static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 200 271751
+[15/May/2020 14:07:46] "GET /admin/jsi18n/ HTTP/1.1" 200 3223
+[15/May/2020 14:07:46] "GET /Users/dohyoungkim/Downloads/Reservation-search-app/Reservation-app/ReservationProject/static/admin/img/tooltag-add.svg HTTP/1.1" 304 0
+[15/May/2020 14:08:14] "GET /admin/ HTTP/1.1" 200 20627
+[15/May/2020 14:08:20] "GET /admin/SignupApp/myuser/ HTTP/1.1" 200 24729
+[15/May/2020 14:08:20] "GET /admin/jsi18n/ HTTP/1.1" 200 3223
+[15/May/2020 14:08:29] "GET /admin/ HTTP/1.1" 200 20629
+[15/May/2020 14:08:31] "GET /admin/SignupApp/myuser/ HTTP/1.1" 200 24729
+[15/May/2020 14:08:31] "GET /admin/jsi18n/ HTTP/1.1" 200 3223
+[15/May/2020 14:09:09] "GET /reservation/revstart/ HTTP/1.1" 200 13754
+[15/May/2020 14:09:17] "GET /admin/ HTTP/1.1" 200 20629
+[15/May/2020 14:09:18] "GET /admin/ReservationApp/flightsection/ HTTP/1.1" 200 21284
+[15/May/2020 14:09:19] "GET /admin/jsi18n/ HTTP/1.1" 200 3223
+[15/May/2020 14:09:34] "GET /admin/ReservationApp/flightsection/add/ HTTP/1.1" 200 19267
+[15/May/2020 14:09:34] "GET /Users/dohyoungkim/Downloads/Reservation-search-app/Reservation-app/ReservationProject/static/admin/css/forms.css HTTP/1.1" 200 8518
+[15/May/2020 14:09:34] "GET /Users/dohyoungkim/Downloads/Reservation-search-app/Reservation-app/ReservationProject/static/admin/js/calendar.js HTTP/1.1" 200 7777
+[15/May/2020 14:09:34] "GET /Users/dohyoungkim/Downloads/Reservation-search-app/Reservation-app/ReservationProject/static/admin/js/change_form.js HTTP/1.1" 200 712
+[15/May/2020 14:09:34] "GET /Users/dohyoungkim/Downloads/Reservation-search-app/Reservation-app/ReservationProject/static/admin/js/prepopulate_init.js HTTP/1.1" 200 495
+[15/May/2020 14:09:34] "GET /Users/dohyoungkim/Downloads/Reservation-search-app/Reservation-app/ReservationProject/static/admin/js/admin/DateTimeShortcuts.js HTTP/1.1" 200 20274
+[15/May/2020 14:09:34] "GET /Users/dohyoungkim/Downloads/Reservation-search-app/Reservation-app/ReservationProject/static/admin/css/widgets.css HTTP/1.1" 200 10340
+[15/May/2020 14:09:34] "GET /admin/jsi18n/ HTTP/1.1" 200 3223
+[15/May/2020 14:09:34] "GET /Users/dohyoungkim/Downloads/Reservation-search-app/Reservation-app/ReservationProject/static/admin/img/icon-clock.svg HTTP/1.1" 200 677
+[15/May/2020 14:09:34] "GET /Users/dohyoungkim/Downloads/Reservation-search-app/Reservation-app/ReservationProject/static/admin/img/icon-calendar.svg HTTP/1.1" 200 1086
+[15/May/2020 14:09:36] "GET /Users/dohyoungkim/Downloads/Reservation-search-app/Reservation-app/ReservationProject/static/admin/img/calendar-icons.svg HTTP/1.1" 200 1094
+[15/May/2020 14:10:01] "GET /reservation/course_search/?csrfmiddlewaretoken=06UbtRfrxgSpFUR4P5Fib30oymyAuGtpKUAvVmnOfa6RvVzvAPFhwmzMXS93o8Ta&daytogo=2020-05-05&comingDay=2020-05-05&starting_point=%EC%A7%84%EC%A3%BC%2F%EC%82%AC%EC%B2%9C&arrival=%EC%97%AC%EC%88%98%2F%EC%88%9C%EC%B2%9C HTTP/1.1" 200 1114
+/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/django/template/defaulttags.py:62: UserWarning: A {% csrf_token %} was used in a template, but the context did not provide the value.  This is usually caused by not using RequestContext.
+  warnings.warn(
+[15/May/2020 14:10:12] "POST /reservation/payment/ HTTP/1.1" 200 696
+[15/May/2020 14:10:34] "GET /admin/ReservationApp/flightsection/ HTTP/1.1" 200 21284
+[15/May/2020 14:10:44] "GET /reservation/revstart/ HTTP/1.1" 200 13754
+[15/May/2020 14:10:46] "GET /auth/register/ HTTP/1.1" 200 3264
+[15/May/2020 14:10:46] "GET /Users/dohyoungkim/Downloads/Reservation-search-app/Reservation-app/ReservationProject/static/cloud.jpg HTTP/1.1" 304 0
+[15/May/2020 14:11:37] "POST /auth/register/ HTTP/1.1" 302 0
+[15/May/2020 14:11:37] "GET /auth/registrationSuccess/ HTTP/1.1" 200 1088
+[15/May/2020 14:11:46] "GET /auth/login/ HTTP/1.1" 200 11926
+[15/May/2020 14:11:46] "GET /Users/dohyoungkim/Downloads/Reservation-search-app/Reservation-app/ReservationProject/static/asina01.jpeg HTTP/1.1" 304 0
+[15/May/2020 14:13:06] "GET /reservation/revstart/ HTTP/1.1" 200 13754
+[15/May/2020 14:44:24] "GET /reservation/revstart/ HTTP/1.1" 200 13754
+[15/May/2020 14:44:44] "GET /reservation/course_search/?csrfmiddlewaretoken=oBWPnJ0d3v2Hpg40XP22cgDN5Rz0HozL8pC9Pe8ALpg9fhMrIz21xzcbunatBQZw&daytogo=2020-05-05&comingDay=2020-05-05&starting_point=%EC%A7%84%EC%A3%BC%2F%EC%82%AC%EC%B2%9C&arrival=%EC%97%AC%EC%88%98%2F%EC%88%9C%EC%B2%9C HTTP/1.1" 200 1114
+/Users/dohyoungkim/Downloads/Reservation-search-app/Reservation-app/ReservationProject/ReservationApp/models.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+May 13, 2020 - 21:51:54
+Django version 2.2.1, using settings 'ReservationProject.settings'
+Starting development server at http://0:80/
+Quit the server with CONTROL-C.
+진주/사천
+여수/순천
+2020-05-05
+2020-05-05
+=======console_msg======
+flightSection object (10)
+10
+진주/사천
+여수/순천
+2020-05-05
+2020-05-05
+golbkim
+golbkim@daum.net
+k20504003
+김
+도형
+dohyoung
+kim
+서울
+서울
+010-222-2222
+진주/사천
+여수/순천
+2020-05-05
+2020-05-05
+Watching for file changes with StatReloader
+Traceback (most recent call last):
+  File "manage.py", line 22, in <module>
+    main()
+  File "manage.py", line 18, in main
+    execute_from_command_line(sys.argv)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/django/core/management/__init__.py", line 381, in execute_from_command_line
+    utility.execute()
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/django/core/management/__init__.py", line 375, in execute
+    self.fetch_command(subcommand).run_from_argv(self.argv)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/django/core/management/base.py", line 323, in run_from_argv
+    self.execute(*args, **cmd_options)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/django/core/management/commands/runserver.py", line 60, in execute
+    super().execute(*args, **options)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/django/core/management/base.py", line 364, in execute
+    output = self.handle(*args, **options)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/django/core/management/commands/runserver.py", line 95, in handle
+    self.run(**options)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/django/core/management/commands/runserver.py", line 102, in run
+    autoreload.run_with_reloader(self.inner_run, **options)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/django/utils/autoreload.py", line 577, in run_with_reloader
+    start_django(reloader, main_func, *args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/django/utils/autoreload.py", line 553, in start_django
+    ensure_echo_on()
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/django/utils/autoreload.py", line 83, in ensure_echo_on
+    if fd.isatty():
+AttributeError: 'NoneType' object has no attribute 'isatty'

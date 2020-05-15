@@ -41,10 +41,10 @@ class flightAircraft(models.Model):
     aircraft_number = models.CharField(max_length=10)
 
 
-class flightSection(models.Model):
+class flightSection(models.Model): # 테이블명
     #price = models.ForeignKey('price', on_delete=models.CASCADE, default='', null=True)
     #seatClass = models.ForeignKey('seatClass', on_delete=models.CASCADE, default='', null=True)
-    starting_point = models.CharField(max_length=5, choices=STARTINGPOINT, default='구간선택', null=True)
+    starting_point = models.CharField(max_length=5, choices=STARTINGPOINT, default='구간선택', null=True) # 필드명
     arrival = models.CharField(max_length=5, choices=ARRIVAL, default='구간선택', null=True)
     flight_time = models.DateTimeField()
     daytogo = models.DateField()
