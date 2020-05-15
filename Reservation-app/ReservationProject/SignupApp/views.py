@@ -12,12 +12,12 @@ from django.contrib import auth
 
 
 # 회원가입 후 가입정보 이메일 발송
-def usermail():
-    #userlists = MyUser.objects.filter(date_joined__lte=timezone.now()).order_by('-id')[:1]
+def usermail(request):
     userlists = MyUser.objects.filter(created_date__lte=timezone.now()).order_by('-created_date')[:1]
+    print(userlists)
     title = "[KOREANAIR]회원가입을 환영합니다"
     html_messsage = render_to_string('SignupApp/registration_success.html', {'userlists': userlists})
-    email = EmailMessage(title, html_messsage, to=['dhdiagram@gmail.com'])
+    email = EmailMessage(title, html_messsage, to=[request.POST["email"]])
     email.content_subtype = "html"
     return email.send()
 
@@ -51,7 +51,7 @@ def registration(request):
             print(request.POST["address"])
             print(request.POST["detailAddress"])
             print(request.POST["phoneNumber"])
-            usermail()
+            usermail(request)
         return redirect('registrationSuccess')
 
 
