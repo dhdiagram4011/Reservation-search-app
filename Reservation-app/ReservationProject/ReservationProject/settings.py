@@ -95,9 +95,9 @@ LOGIN_URL = '/auth/login/'
 LOGOUT_REDRIECT_URL = ''
 
 # EMAIL
-EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_PORT = '587'
-EMAIL_HOST_USER = 'rlaehgud21764011@gmail.com'
+EMAIL_HOST = 'smtp.daum.net'
+EMAIL_PORT = '465'
+EMAIL_HOST_USER = 'golbkim@daum.net'
 EMAIL_HOST_PASSWORD = '08425256@kdh'
 EMAIL_USE_TLS = True
 
