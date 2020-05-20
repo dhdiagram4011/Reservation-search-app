@@ -61,7 +61,6 @@ def revstart(request):
 
 def payment(request):
     courses = flightSection.objects.get(id=request.POST['course_choice'])
-    #courses = flightSection.objects.get(id=7)
     print("=======console_msg======")
     print(courses)
     print(courses.id)

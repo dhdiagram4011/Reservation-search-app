@@ -9,6 +9,7 @@ from django.http import JsonResponse
 from django.contrib.auth.hashers import check_password
 from django.contrib.auth import login, authenticate
 from django.contrib import auth
+from django.contrib.auth.hashers import make_password
 
 
 # 회원가입 후 가입정보 이메일 발송
@@ -70,16 +71,12 @@ def login(request):
         return render(request, 'SignupApp/login.html', {'form': form})
     elif request.method == 'POST':
         username = request.POST['username']
-        print(username)
         password = request.POST['password']
-        print(password)
 
 
 def loginSuccess(request):
     user_pks = MyUser.objects.filter(username=request.POST['username'], password=request.POST['password'])
-    print(user_pks)
     if user_pks:
-        print(user_pks)
         return render(request, 'SignupApp/login_success.html', {'user_pks': user_pks})
     else:
         return render(request, 'SignupApp/login_failed.html')
@@ -93,13 +90,12 @@ def logout(request):
 
 
 def myinfo(request):
-    myprofile_pk = MyUser.objects.get(username=request.POST['username'])
-    print("1 :" + myprofile_pk)
+    myprofile_pks = MyUser.objects.get(id=request.POST['myinfo'])
+    return render(request, 'SignupApp/myinfo.html', {'myprofile_pks': myprofile_pks})
 
-    if myprofile_pk:
-        myprofile = MyUser.objects.get(pk=myprofile_pk)
-        return render(request, 'SignupApp/myinfo.html', {'myprofile_pk': myprofile_pk})
 
+def myrevlist(request):
+    pass
 
 def unregister(request):
     pass

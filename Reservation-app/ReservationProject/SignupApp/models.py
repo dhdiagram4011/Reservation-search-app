@@ -2,8 +2,11 @@
 from django.db import models
 from django.utils import timezone
 from django.contrib.auth.models import AbstractUser
+from django.contrib.auth.hashers import make_password, is_password_usable
+from django.db.models.signals import pre_save
+from django.dispatch import receiver
 
-
+#  회원가입
 class MyUser(AbstractUser):
     koreanLastname = models.CharField(max_length=5, help_text='국문 이름을 입력해 주세요')
     koreanFirstname = models.CharField(max_length=5, help_text='국문 성을 입력해 주세요')
@@ -15,8 +18,16 @@ class MyUser(AbstractUser):
     created_date = models.DateTimeField(default=timezone.now)
     published_date = models.DateTimeField(default=timezone.now)
 
+
+# @receiver(pre_save, sender=MyUser)
+# def password_hashing(instance, **kwargs):
+#     if not is_password_usable(instance.password):
+#         instance.passoword = make_password(instance.password)
+
     def publish(self):
         self.published_date = timezone.now()
 
     def __str__(self):
         return self.email
+
+
