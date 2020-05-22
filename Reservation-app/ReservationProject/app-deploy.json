@@ -1,0 +1,38 @@
+{
+    "builders": [{
+        "type": "docker",
+        "image": "docker.io/conda/miniconda3-centos7",
+        "export_path": "/app/app-sample.tar"
+    }],
+    "provisioners": [{
+        "type": "shell",
+        "inline": [
+            "conda init bash",
+            "source /root/.bashrc",
+            "conda update conda -y",
+            "conda env list",
+            "conda create -n reservation-app python=3.7 -y",
+            "conda activate reservation-app",
+            "mkdir /app ; cd /app",
+            "yum install -y git gcc* gcc-* openldap-devel openldap-dev linux-gnu",
+            "git clone https://github.com/dhdiagram4011/Reservation-search-app.git",
+            "pip install -r /app/Reservation-search-app/requirements.txt",
+            "pip install Django==2.2.1",
+            "python /app/Reservation-search-app/Reservation-app/ReservationProject/manage.py migrate"
+        ]
+    }],
+    "post-processors": [{
+            "type": "docker-import",
+            "repository": "docker.io/conda/miniconda3-centos7",
+            "tag": "app"
+        },
+        {
+            "type": "shell-local",
+            "inline": [
+                "docker ps",
+                "docker run -it -d -p 80:80 docker.io/conda/miniconda3-centos7:app bash",
+                "docker ps"
+            ]
+        }
+    ]
+}
