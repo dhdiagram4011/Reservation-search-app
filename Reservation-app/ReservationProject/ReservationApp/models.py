@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 from django.db import models
+from django.utils import timezone
 
 STARTINGPOINT = (
     ('김포', '김포'),
@@ -49,6 +50,7 @@ class flightSection(models.Model): # 테이블명
     flight_time = models.DateTimeField()
     daytogo = models.DateField()
     comingDay = models.DateField()
+    created_date = models.DateTimeField(default=timezone.now())
 
     #def __str__(self):
     #    return self.price
@@ -67,12 +69,9 @@ class price(models.Model):
 
 
 class emailTicket(models.Model):
-    method_of_payment = models.CharField(max_length=10)
-    price = models.DecimalField(decimal_places=2, max_digits=8)
-    ranking = models.CharField(max_length=10)
-    starting_point = models.CharField(max_length=10)
-    arrival = models.CharField(max_length=10)
-    flight_time = models.CharField(max_length=20)
-    seat_number = models.CharField(max_length=5)
-    aircraft_name = models.CharField(max_length=10)
-    number = models.CharField(max_length=10)
+    starting_point = models.CharField(max_length=5, choices=STARTINGPOINT, default='구간선택', null=True)
+    arrival = models.CharField(max_length=5, choices=ARRIVAL, default='구간선택', null=True)
+    flight_time = models.DateTimeField()
+    daytogo = models.DateField()
+    comingDay = models.DateField()
+    created_date = models.DateTimeField(default=timezone.now())

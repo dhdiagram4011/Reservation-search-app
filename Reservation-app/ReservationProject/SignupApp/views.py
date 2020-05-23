@@ -89,13 +89,12 @@ def logout(request):
         return render(request, 'ReservationApp/logout_error.html')
 
 
+#나의 정보 보기
 def myinfo(request):
     myprofile_pks = MyUser.objects.get(id=request.POST['myinfo'])
     return render(request, 'SignupApp/myinfo.html', {'myprofile_pks': myprofile_pks})
 
 
-def myrevlist(request):
-    pass
 
 def unregister(request):
-    pass
+        pass

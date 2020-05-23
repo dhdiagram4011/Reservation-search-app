@@ -13,7 +13,7 @@ class flightNumberAdmin(admin.ModelAdmin):
 
 
 class flightSectionAdmin(admin.ModelAdmin):
-    list_display = ['id', 'starting_point', 'arrival', 'flight_time', 'daytogo', 'comingDay']
+    list_display = ['id', 'starting_point', 'arrival', 'flight_time', 'daytogo', 'comingDay','created_date']
 
 
 class priceAdmin(admin.ModelAdmin):
@@ -25,7 +25,7 @@ class seatClassAdmin(admin.ModelAdmin):
 
 
 class emailTicketAdmin(admin.ModelAdmin):
-    list_display = ['id', 'method_of_payment', 'price', 'ranking', 'starting_point', 'arrival', 'flight_time', 'seat_number','aircraft_name','number']
+    list_display = ['id', 'starting_point', 'arrival', 'flight_time', 'daytogo','comingDay','created_date']
 
 
 admin.site.register(flightAircraft, flightAircraftAdmin)

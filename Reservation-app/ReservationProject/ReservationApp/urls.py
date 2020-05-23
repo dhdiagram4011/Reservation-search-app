@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 from django.urls import path
-from .views import revstart, eticket_resend, index, course_search, payment, date_search_result, date_search, intro
+from .views import revstart, eticket_resend, index, course_search, payment, date_search_result, date_search, intro, payment
 
 
 urlpatterns = [

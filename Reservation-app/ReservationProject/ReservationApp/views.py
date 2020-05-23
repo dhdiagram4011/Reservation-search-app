@@ -1,12 +1,13 @@
 # -*- coding: utf-8 -*-
 from django.shortcuts import render, redirect
-from .forms import reservationForm, datesearchForm
-from .models import flightSection, seatClass
+from .forms import reservationForm, datesearchForm, emailTicketForm
+from .models import flightSection, seatClass, emailTicket
 from django.http import HttpResponse, Http404, HttpResponseNotFound
 from datetime import datetime
 from django.contrib.auth.decorators import login_required
 from django.template.loader import render_to_string
 from django.core.mail import EmailMessage
+from django.utils import timezone
 
 
 def index(request):
@@ -27,12 +28,12 @@ def eticket_send(request):
     return email.send()
 
 
-# 예약 완료 후 티켓수동발송 - ing...
+# 예약 완료 후 티켓수동발송
 def eticket_resend(request):
     courses = flightSection.objects.get(id=request.POST['course_choice'])
     title = "[KAL-E-TICKET]항공권 발송완료(E-TICKET발송)"
     html_messsage = render_to_string('ReservationApp/eticket.html', {'courses': courses})
-    email = EmailMessage(title, html_messsage, to=['dhdiagram@gmail.com'])
+    email = EmailMessage(title, html_messsage, to=[request.POST["email"]])
     email.content_subtype = "html"
     return email.send(courses)
 
@@ -53,26 +54,75 @@ def revstart(request):
     if request.method == 'POST':
         form = reservationForm(request.POST)
         if form.is_valid():
-            return render(request, 'ReservationApp/rev_success.html') 
+            post = form.save()
+            starting_point = request.POST["starting_point"]
+            arrival = request.POST["arrival"]
+            flight_time = request.POST["flight_time"]
+            daytogo = request.POST["daytogo"]
+            comingDay = request.POST["comingDay"]
+            return redirect('payment')
     else:
         form = reservationForm()
     return render(request, 'ReservationApp/rev_start.html', {'form': form})
 
 
-def payment(request):
-    courses = flightSection.objects.get(id=request.POST['course_choice'])
-    print("=======console_msg======")
-    print(courses)
-    print(courses.id)
-    print(courses.starting_point)
-    print(courses.arrival)
-    print(courses.daytogo)
-    print(courses.comingDay)
-    eticket_send(request)
-    return render(request, 'ReservationApp/payment.html', {
-        'courses': courses,
-    })
+#예약내역 확인 및 예약내역 이메일 발송
+# def payment(request):
+#     if request.method == 'GET':
+#         form = emailTicketForm(request.GET)
+#         return render(request, 'ReservationApp/rev_start.html', { 'form': form })
+#     elif request.method == 'POST':
+#         form = emailTicketForm(request.POST)
+#         courses = emailTicket.objects.get(id=request.POST['course_choice'])
+#         if form.is_valid():
+#             post = form.save()
+#             starting_point = request.POST["starting_point"]
+#             arrival = request.POST["arrival"]
+#             flight_time = request.POST["flight_time"]
+#             daytogo = request.POST["daytogo"]
+#             comingDay = request.POST["comingDay"]
+#             print(request.POST["id"])
+#             print(request.POST["starting_point"])
+#             print(request.POST["arrival"])
+#             print(request.POST["flight_time"])
+#             print(request.POST["daytogo"])
+#             print(request.POST["comingDay"])
+#             eticket_send(request)
+#         return redirect('paymentsuccess')
 
+
+def payment(request):
+    if request.method == 'POST':
+        form = emailTicketForm(request.POST)
+        courses = flightSection.objects.get(id=request.POST['course_choice'])
+        if form.is_valid():
+            post = form.save()
+            starting_point = request.POST["starting_point"]
+            arrival = request.POST["arrival"]
+            flight_time = request.POST["flight_time"]
+            daytogo = request.POST["daytogo"]
+            comingDay = request.POST["comingDay"]
+            created_date = request.POST["created_date"]
+        print("=======console_msg======")
+        print(courses)
+        print(courses.id)
+        print(courses.starting_point)
+        print(courses.arrival)
+        print(courses.flight_time)
+        print(courses.daytogo)
+        print(courses.comingDay)
+        print(courses.created_date)
+        eticket_send(request)
+        return render(request, 'ReservationApp/payment.html', {
+            'courses': courses,
+        })
+
+
+# def paymentsuccess(request):
+#     courses = emailTicket.objects.filter(created_date__lte=timezone.now()).order_by('-created_date')[:1]
+#     return render(request, 'ReservationApp/payment.html', { 'courses': courses })
+
+        
 
 # 티켓조회 및 해당 일자에 티켓이 없을 시 별도 안내 페이지 요청
 # @login_required

@@ -1,6 +1,21 @@
 from django import forms
 from .models import flightNumber, flightAircraft, flightSection, seatClass, price, emailTicket
 import datetime
+from django.utils import timezone
+
+
+class emailTicketForm(forms.ModelForm):
+    class Meta:
+        model = emailTicket
+        fields = ['starting_point', 'arrival', 'flight_time', 'daytogo', 'comingDay','created_date']
+        #fields = '__all__'
+
+    starting_point = forms.CharField(max_length=10)
+    arrival = forms.CharField(max_length=10)
+    flight_time = forms.CharField(max_length=20)
+    daytogo = forms.CharField(max_length=10)
+    comingDay = forms.CharField(max_length=10)
+    #created_date = forms.DateTimeField(default=timezone.now())    
 
 
 class datesearchForm(forms.ModelForm):

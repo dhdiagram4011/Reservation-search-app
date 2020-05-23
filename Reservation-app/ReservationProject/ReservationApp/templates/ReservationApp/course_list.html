@@ -1,7 +1,7 @@
-<form action="{% url 'payment' %}" method="post">
+<form action="{% url 'payment' %}" method="POST">
 {% block content %}
-{% for course in courses %}
 {% csrf_token %}
+{% for course in courses %}
 <br/>
 <style>
 /*body {    
