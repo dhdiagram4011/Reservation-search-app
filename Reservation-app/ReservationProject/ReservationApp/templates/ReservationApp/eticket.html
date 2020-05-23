@@ -1,15 +1,18 @@
 <form action="" method="post">{% csrf_token %}
 {% block content %}
 <br/>
-*_결제 및 예약정보 확인
+<strong>| 예약정보 확인 |</strong>
 <br/>
 <br/>
 <br/>
+승객성명 | 
+이메일 | 
 출발지 | {{ courses.starting_point }}<br/>     
 도착지 | {{ courses.arrival }}<br/>     
 비행시간 | {{ courses.flight_time | date:'H 시간 i 분' }}<br/>     
 가는날 | {{ courses.daytogo | date:'Y년 m월 d일' }}<br/>    
 오는날 | {{ courses.comingDay | date:'Y년 m월 d일' }}<br/>
+예약시간 | {{ courses.created_date | date:'Y년 m월 d일 H시 i분' }}
 <br/>
 <br/>
 <div id="address" style="position:absoltue; margin-top:300px">
@@ -21,4 +24,3 @@
 <br/>
 </div>
 {% endblock %}
-

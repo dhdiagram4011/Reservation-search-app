@@ -36,36 +36,50 @@ ARRIVAL = (
 class flightNumber(models.Model):
     number = models.CharField(max_length=10)
 
+    def __str__(self):
+        return self.number
+
 
 class flightAircraft(models.Model):
     aircraft_name = models.CharField(max_length=10)
     aircraft_number = models.CharField(max_length=10)
 
+    def __str__(self):
+        return self.aircraft_name
+
+    def __str__(self):
+        return self.aircraft_number
+
 
 class flightSection(models.Model): # 테이블명
-    #price = models.ForeignKey('price', on_delete=models.CASCADE, default='', null=True)
-    #seatClass = models.ForeignKey('seatClass', on_delete=models.CASCADE, default='', null=True)
     starting_point = models.CharField(max_length=5, choices=STARTINGPOINT, default='구간선택', null=True) # 필드명
     arrival = models.CharField(max_length=5, choices=ARRIVAL, default='구간선택', null=True)
     flight_time = models.DateTimeField()
     daytogo = models.DateField()
     comingDay = models.DateField()
     created_date = models.DateTimeField(default=timezone.now())
-
-    #def __str__(self):
-    #    return self.price
-
-    #def __str__(self):
-    #    return self.seatClass
+    SeatClass = models.ForeignKey('seatClass', on_delete=models.CASCADE)
+    FlightNumber = models.ForeignKey('flightNumber', on_delete=models.CASCADE)
+    FlightAircraft = models.ForeignKey('flightAircraft', on_delete=models.CASCADE)
+    Price = models.ForeignKey('price', on_delete=models.CASCADE)
 
 
 class seatClass(models.Model):
     ranking = models.CharField(max_length=10)
 
+    def __str__(self):
+        return self.ranking
+
 
 class price(models.Model):
     peak_season_price = models.DecimalField(decimal_places=2, max_digits=8)
     low_season_price = models.DecimalField(decimal_places=2, max_digits=8)
+
+    def __str__(self):
+        return str(self.peak_season_price)
+
+    def __str__(self):
+        return str(self.low_season_price)
 
 
 class emailTicket(models.Model):
