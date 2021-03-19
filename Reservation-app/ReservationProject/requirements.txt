@@ -62,7 +62,7 @@ django-shell-plus==1.1.7
 django-storages==1.7.1
 django-utils==0.0.2
 django-weasyprint==0.5.4
-djangorestframework==3.11.0
+djangorestframework==3.11.2
 djangorestframework-filters==0.11.1
 djangorestframework-jwt==1.11.0
 dnspython==1.16.0
