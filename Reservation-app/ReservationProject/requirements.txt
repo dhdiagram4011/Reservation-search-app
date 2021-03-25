@@ -154,7 +154,7 @@ python-http-client==3.2.1
 python-ldap==3.2.0
 python3-openid==3.1.0
 pytz==2019.3
-PyYAML==5.3
+PyYAML==5.4
 reportlab==3.5.32
 requests==2.21.0
 requests-oauthlib==1.2.0
