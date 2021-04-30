@@ -158,7 +158,7 @@ PyYAML==5.3
 reportlab==3.5.32
 requests==2.21.0
 requests-oauthlib==1.2.0
-rsa==4.0
+rsa==4.7
 s3transfer==0.2.1
 sendgrid==6.1.0
 simplejson==3.17.0
